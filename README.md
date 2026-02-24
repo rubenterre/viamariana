@@ -38,6 +38,10 @@ Proyecto web desarrollado en el contexto de las prácticas no laborales del cert
   - Página “Vía Mariana – Diseño UI”: kit de UI, referencias de diseño y enlaces a Sketch.
   - Base de datos “Tareas Vía Mariana”: Kanban con estados `Pendiente`, `En curso`, `En revisión`, `Hecho`.
 
+- **Sketch**
+  - Diseño de elementos de UI y secciones.
+  - [Ver el diseño UI](https://sketch.com/s/942353ed-d8a1-434a-a536-ae6919726686)
+
 - **GitHub**
   - Rama principal protegida (`main`).
   - Desarrollo en ramas de feature: `feature/ui-home`, `feature/page-ruta`, etc.
