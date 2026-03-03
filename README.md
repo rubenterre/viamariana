@@ -78,7 +78,10 @@ La estructura puede evolucionar, pero el punto de partida previsto es:
 /
 ├─ public/              # Recursos estáticos (imágenes, etc.)
 ├─ src/
-│  ├─ components/       # Componentes compartidos (header, footer, cards, etc.)
+│  ├─ components/       # Componentes compartidos
+│  │  ├─ ui/            # Componentes de interfaz (botones, inputs, etc.)
+│  │  ├─ sections/      # Componentes de secciones
+│  │  └─ layout/        # Componentes de layout (Header, Footer)
 │  ├─ layouts/          # Layouts generales de página
 │  ├─ pages/            # Páginas del sitio (Astro)
 │  └─ styles/           # Hojas de estilo globales / parciales
