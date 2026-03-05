@@ -1,0 +1,95 @@
+---
+
+---
+
+<footer class="footer">
+  
+
+        <div class="footer__title">
+            <img src="img/Bitmap.png" alt="via mariana">
+            <p>La Vía Mariana Luso-Galaica recupera y promueve un itinerario de peregrinación entre santuarios marianos.</p>
+            <div class="footer__social">
+                <button><img src="img/facebook.svg" alt="facebook"></button>
+                <button><img src="img/instagram.svg" alt="instagram"></button>
+                <button><img src="img/linkedin.svg" alt="linkedin"></button>
+            </div>
+    
+        </div>
+        <div class="footer__menus">
+    
+            <div class="footer__menu">
+                <p class="menu--title">Mapa del sitio</p>
+                <a href="#">Via mariana</a>
+                <a href="#">La ruta</a>
+                <a href="#">Patrimonio</a>
+                <a href="#">El proyecto</a>
+            </div>
+    
+            <div class="footer__menu">
+                <p class="menu--title">Contact</p>
+                <a href="#">Soporte</a>
+                <a href="#">Ayuda</a>
+                
+            </div>
+    
+            <div class="footer__menu">
+                <p class="menu--title">Encuentranos</p>
+                <a href="#">(62) 1111 2222</a>
+                <a href="#">viamariana@gmail.com</a>
+                <p>Villagarcia de Arousa</p>
+            </div>
+    
+        </div>
+
+</footer>
+
+<style>
+
+    @font-face {
+        font-family: OpenSans;
+        src: url(fonts/OpenSans-VariableFont.ttf);
+    }
+    *{
+        font-family: OpenSans;
+    }
+
+    .footer{
+        color: white;
+        background-color: rgba(0, 55, 143, 1);
+        width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 0;
+
+    }
+    .footer__title{
+        width: 355px;
+
+    }
+
+    button{
+        background:none;
+        border: none;
+    }
+    .menu--title{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .footer__menus{
+        display:flex;
+        gap: 100px;
+    }
+
+    .footer__menu{
+        display:flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+</style>
