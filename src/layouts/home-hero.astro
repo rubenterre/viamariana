@@ -1,0 +1,130 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Hero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <img src="./assets/santuario-bom-jesus.jpg" alt="bomjesus" class="img__back">
+    </div>
+    <main>
+        <div class="text__check">
+            <img src="assets/Vector.svg" alt="check" class="img__check">
+            <p class="p__check">
+                Ruta que combina espiritualidad, naturaleza, patrimonio e identidad cultural.
+            </p>
+        </div>
+        <h1 class="h1__main">VÍA MARIANA</h1>
+        <p class="main__p">
+            Una escapada donde el patrimonio, la cultura y la religiosidad se convierte en una experiencia inolvidable.
+        </p>
+        <div class="button">
+            <button class="video">
+                <img src="assets/Play.svg" alt="Play" class="img__play">
+                <p class="p__video">Ver vídeo</p>
+            </button>
+        </div>
+    </main>
+    
+    
+</body>
+</html>
+
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+    width: 100vh;
+    height: 100wh;
+
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+button {
+  font-size: 16px;
+  font-family: var(--main-font);
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+    background-color: rgb(128, 128, 128, 0.7);
+    border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 0%;
+
+  padding: 30px;
+}
+
+.background {
+  display: flex;
+  position: absolute;
+  z-index: 0;
+}
+
+.img__back {
+  width: 100vw;
+  height: 100vh;
+}
+
+.text__check {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.img__check {
+  width: 30px;
+  height: 30px;
+}
+
+.h1__main {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.main__p {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.video {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  width: 150px;
+  height: 50px;
+}
+
+.img__play {
+  width: 30px;
+  height: 30px;
+}
+
+</style>
