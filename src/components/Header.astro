@@ -3,7 +3,7 @@ import ButtonContacto from "./ui/ButtonContacto.astro";
 ---
 
 <header class="header__all">
-  <img src="/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img" />
+  <img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img" />
 
   <nav class="header__navbar">
     <a href="#placeholder" class="navbar__a">Vía Mariana</a>
@@ -11,15 +11,15 @@ import ButtonContacto from "./ui/ButtonContacto.astro";
     <a href="#placeholder" class="navbar__a">Patrimonio</a>
     <a href="#placeholder" class="navbar__a">El proyecto</a>
   </nav>
-  <ButtonContacto></ButtonContacto>
+  <ButtonContacto />
   <!-- <button class="btn__contacto">Contacto</button> -->
 </header>
 
 <style>
   /*Provisional  */
   @font-face {
-    font-family: fp;
-    src: url(/Poppins-Medium.ttf);
+    font-family: pm;
+    src: url(/fonts/Poppins-Medium.ttf);
   }
 
   /* fin */
@@ -48,23 +48,9 @@ import ButtonContacto from "./ui/ButtonContacto.astro";
 
   .navbar__a {
     text-decoration: none;
-    font-family: fp;
+    font-family: pm;
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
-  }
-
-  /* .btn__contacto {
-    width: 146px;
-    height: 63px;
-    border-style: none;
-    color: rgba(255, 255, 255, 1);
-    font-family: fp;
-    font-size: 19px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 19px;
-    border-radius: 999px;
-    background-color: rgba(0, 55, 143, 1); */
   }
 </style>
