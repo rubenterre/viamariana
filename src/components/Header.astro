@@ -12,17 +12,9 @@ import ButtonContacto from "./ui/ButtonContacto.astro";
     <a href="#placeholder" class="navbar__a">El proyecto</a>
   </nav>
   <ButtonContacto />
-  <!-- <button class="btn__contacto">Contacto</button> -->
 </header>
 
 <style>
-  /*Provisional  */
-  @font-face {
-    font-family: pm;
-    src: url(/fonts/Poppins-Medium.ttf);
-  }
-
-  /* fin */
 
   .logo__img {
     max-width: 165px;
@@ -35,7 +27,7 @@ import ButtonContacto from "./ui/ButtonContacto.astro";
     align-items: center;
     border-radius: 999px;
     height: 120px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--light)
     padding: 0 30px;
   }
 
@@ -48,7 +40,8 @@ import ButtonContacto from "./ui/ButtonContacto.astro";
 
   .navbar__a {
     text-decoration: none;
-    font-family: pm;
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
