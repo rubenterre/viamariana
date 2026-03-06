@@ -19,15 +19,12 @@
             </h3>
             
             <p class="localizacion__patrimonio">Braga, Portugal</p>
-            <button class="button__ver">Ver más</button>
+            <a class="button__ver">Ver más</a>
         </div>
     </div>
 
     <style>
-        @font-face {
-            font-family:Poppins-Medium ;
-            src: url(public/fonts/Poppins-Medium.ttf);
-        }
+        
         .CardPatrimonio{
             display: flex;
 flex-direction: column;
@@ -35,7 +32,7 @@ padding: 24px;
 width: 499px;
 height: 788px;
 border-radius: 25px;
-background-color: rgba(248, 249, 251, 1);
+background-color: var(--color-tertiary);
 border: 1px solid;
 
         }
@@ -56,8 +53,8 @@ border-radius: 25px;
         }
         .clasificacion__nombre{
             
-color: rgba(239, 185, 31, 1);
-font-family: Poppins-Medium;
+color: var(--color-secondary);
+font-family: var(--font-secondary);
 font-size: 24px;
 font-weight: 500;
 
@@ -68,8 +65,8 @@ width: 20.99px;
 height: 20.25px;
         }
         .clasificacion__estrellas{
-color: rgba(239, 185, 31, 1);
-font-family: Poppins-Medium;
+color: var(--color-secondary);
+font-family:var(--font-secondary);
 font-size: 20px;
 font-weight: 500;
         }
@@ -83,19 +80,18 @@ font-weight: 500;
 .nombre__patrimonio{
     display: flex;
     align-items: center;
-color: rgba(26, 26, 26, 1);
-font-family: Poppins-Medium;
+color: var(--dark);
+font-family: var(--font-secondary);
 font-size: 32px;
 font-weight: 700;
 margin-left: 25px;
 
 }
 .localizacion__patrimonio{
-    color: rgba(26, 26, 26, 1);
-font-family: Poppins-Medium;
+    color: var(--dark);
+font-family: var(--font-secondary);
 font-size: 20px;
 font-weight: 500;
-font-style: Poppins-medium;
 margin-left: 25px;
 
 
@@ -111,10 +107,10 @@ padding: 24px;
 width: 451px;
 height: 74px;
 border-radius: 999px;
-background-color: rgba(239, 185, 31, 1);
+background-color: var(--color-secondary);
 border: none;
-font-family: Poppins-medium;
-color: rgba(255, 255, 255, 1);
+font-family: var(--font-secondary);
+color: var(--light);
 font-size: 20px;
  margin-top: 50px;
  margin-left: 23px;
