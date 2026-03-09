@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La ruta - Via Mariana</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main class="main">
+
+        <section class="section">
+       <div class="main__div">
+        <h1 class="tittle">La ruta</h1>
+        <h2 class="second__tittle">Trazado completo</h2>
+        <h3 class="text">La Vía Mariana recorre más de 350km desde Braga (Portugal) hasta Muxía (Galicia), atravesando 6 GDR gallegos y múltiples ayuntamientos. Su trazado conecta santuarios marianos, espacios naturales, aldeas y villas, configurando una ruta de gran riqueza paisajística y cultural.</h3>
+       </div>
+      </section>
+
+      <section class="section__two">
+        <h2 class="etapas">Etapas</h2>
+        <!-- 
+            <div class="controles">
+            <div class="slider">
+        <div class="slide active">Slide 1</div>
+        <div class="slide">Slide 2</div>
+        <div class="slide">Slide 3</div> -->
+    
+   
+         <!-- <div class="buttons">
+      <button id="00" class="rutas">00</button>
+      <button id="01" class="rutas">01</button>
+      <button id="02" class="rutas">02</button>
+      <button id="03" class="rutas">03</button>
+      <button id="04" class="rutas">04</button>
+      <button id="05" class="rutas">05</button>
+      <button id="06" class="rutas">06</button>
+      <button id="07" class="rutas">07</button>
+      <button id="08" class="rutas">08</button>
+      <button id="09-10" class="rutas">09-10</button>
+      <button id="11" class="rutas">11</button>
+      <button id="12" class="rutas">12</button>
+      <button id="13" class="rutas">13</button>
+      <button id="14" class="rutas">14</button>
+      <button id="15" class="rutas">15</button>
+      <button id="16" class="rutas">16</button>
+      <button id="17" class="rutas">17</button>
+    </div> -->
+    <div class="mapa">
+        <iframe
+        id="map"
+        
+        src="https://es.wikiloc.com/wikiloc/embedv2.do?id=140385452&elevation=off&images=off&maptype=H"
+        width="850"
+        height="500"
+        ></iframe>
+        <div style="color: #777; font-size: 11px; line-height: 16px">
+            Powered by&nbsp;<a
+            style="color: #4c8c2b; font-size: 11px; line-height: 16px"
+            target="_blank"
+            href="https://es.wikiloc.com"
+            >Wikiloc</a
+            >
+        </div>
+    </div>
+    <div class="botones">
+        <!-- <button id="prev"> -->
+            <img class="arrow" id="prev" src="./assets/flecha.png" alt="flecha">
+        <!-- </button> -->
+        <!-- <button id="next"> -->
+            <img class="arrow--next" id="next" src="./assets/flecha.png" alt="flecha">
+        <!-- </button> -->
+    </div>
+      </section>
+
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
+
+<style>
+
+    .main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.main__div{
+  margin-top: 1rem;
+  margin: 2rem;
+}
+
+.second__tittle{
+  margin-top: 2rem;
+}
+
+.text{
+  margin-top: 1.5rem;
+  color: var(--grey);
+}
+
+
+.rutas{
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  padding: 0.5rem;
+}
+
+.section__two{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.etapas{
+  margin-top: 3rem;
+  margin: 2rem;
+}
+
+
+
+/* Botones */
+
+.botones{
+  display: flex;
+  justify-content: center;
+ align-items: center;
+  gap: 1.5rem;
+
+}
+
+.arrow{
+  transform: scaleX(-1);
+}
+</style>
+
+<script>
+    const rutas = {
+    "0": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252719171&elevation=off&images=off&maptype=H",
+    "1": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941955&elevation=off&images=off&maptype=H",
+    "2": "https://es.wikiloc.com/wikiloc/embedv2.do?id=253051127&elevation=off&images=off&maptype=H",
+    "3": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941078&elevation=off&images=off&maptype=H",
+    "4":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252827474&elevation=off&images=off&maptype=H",
+     "5":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252730617&elevation=off&images=off&maptype=H",
+    "6":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252940609&elevation=off&images=off&maptype=H",
+  "7":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252827878&elevation=off&images=off&maptype=H",
+  "8": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252847567&elevation=off&images=off&maptype=H",
+  "9":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252941458&elevation=off&images=off&maptype=H",
+  "10": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252836166&elevation=off&images=off&maptype=H",
+  "11": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252835799&elevation=off&images=off&maptype=H",
+  "12":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252828322&elevation=off&images=off&maptype=H",
+  "13": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252739322&elevation=off&images=off&maptype=H",
+  "14": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252829209&elevation=off&images=off&maptype=H",
+  "15": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848987&elevation=off&images=off&maptype=H",
+  "16": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848215&elevation=off&images=off&maptype=H",
+  "17":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252820716&elevation=off&images=off&maptype=H"
+
+};
+
+const srcMap = document.getElementById("map").getAttribute("src");
+const changeSrcMap = (src)=>{
+    document.getElementById("map").setAttribute("src", src);
+}
+const buttons = document.querySelectorAll(".rutas");
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+let index = 0;
+changeSrcMap(rutas[index]);
+
+
+  next.addEventListener("click", () => {
+      index++;
+      if (index >= 18) {
+          index = 0;
+      }
+      changeSrcMap(rutas[index]);
+      console.log(index);
+  });
+
+
+
+  prev.addEventListener("click", () => {
+      index--;
+      if (index <= -1) {
+          index = 17;
+      }
+      changeSrcMap(rutas[index]);
+  });
+
+</script>
