@@ -15,23 +15,29 @@ import ButtonPrimary from "../ui/ButtonPrimary.astro";
 <style>
     .home__hero{
   display: flex;
-  background-image: url(/assets/santuario-bom-jesus.jpg);
+  background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.35) 100%), url(/img/santuario-bom-jesus.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 80vh;
+}
+
+.textabove{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0px 10%;
 }
 
 h1{
   font-family: var(--font-primary);
   font-size: 80px;
-  font-weight: 700;
-  color: #EFB91F;
+  font-weight: 500;
+  color: var(--light);
   text-align: center;
-
-  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-               1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
-}
+  margin: 0px;
+ }
 
 h2{
   font-family: var(--font-secondary);
@@ -39,6 +45,7 @@ h2{
   font-weight: 700;
   color: var(--light);
   text-align: justify;
+ 
 }
 
 .hero__p{
@@ -47,5 +54,6 @@ h2{
   font-weight: 800;
   color: var(--light);
   text-align: justify;
+  margin-top: 0px;
 }
 </style>
