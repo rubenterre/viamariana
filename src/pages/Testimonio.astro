@@ -1,45 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const track = document.getElementById("track");
-const cards = document.querySelectorAll(".card");
-
-let index = 1;
-
-function moveSlider() {
-    const cardWidth = cards[0].offsetWidth + 10;
-    track.style.transform = `translateX(-${index * cardWidth}px)`;
-}
-
-moveSlider();
-
-document.getElementById("next").onclick = () => {
-    index++;
-    track.style.transition = "transform 0.4s ease";
-    moveSlider();
-};
-
-document.getElementById("prev").onclick = () => {
-    index--;
-    track.style.transition = "transform 0.4s ease";
-    moveSlider();
-};
-
-track.addEventListener("transitionend", () => {
-    const cardWidth = cards[0].offsetWidth + 10;
-
-    if (index === cards.length - 1) {
-        track.style.transition = "none";
-        index = 1;
-        track.style.transform = `translateX(-${cardWidth}px)`;
-    }
-
-    if (index === 0) {
-        track.style.transition = "none";
-        index = cards.length - 2;
-        track.style.transform = `translateX(-${index * cardWidth}px)`;
-    }
-});
 ---
 
 <Layout>
@@ -261,3 +221,45 @@ track.addEventListener("transitionend", () => {
         font-size: 20px;
     }
 </style>
+
+<script>
+    const track = document.getElementById("track");
+    const cards = document.querySelectorAll(".card");
+
+    let index = 1;
+
+    function moveSlider() {
+        const cardWidth = cards[0].offsetWidth + 10;
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+
+    moveSlider();
+
+    document.getElementById("next").onclick = () => {
+        index++;
+        track.style.transition = "transform 0.4s ease";
+        moveSlider();
+    };
+
+    document.getElementById("prev").onclick = () => {
+        index--;
+        track.style.transition = "transform 0.4s ease";
+        moveSlider();
+    };
+
+    track.addEventListener("transitionend", () => {
+        const cardWidth = cards[0].offsetWidth + 10;
+
+        if (index === cards.length - 1) {
+            track.style.transition = "none";
+            index = 1;
+            track.style.transform = `translateX(-${cardWidth}px)`;
+        }
+
+        if (index === 0) {
+            track.style.transition = "none";
+            index = cards.length - 2;
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+    });
+</script>
