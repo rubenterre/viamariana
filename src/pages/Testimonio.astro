@@ -1,4 +1,6 @@
 ---
+import Layout from "../layouts/Layout.astro";
+
 const track = document.getElementById("track");
 const cards = document.querySelectorAll(".card");
 
@@ -40,7 +42,7 @@ track.addEventListener("transitionend", () => {
 });
 ---
 
-<section>
+<Layout>
     <div class="div-hp">
         <h2 class="h2-1">Testimonios de esta experiencia</h2>
         <p class="p-1">Escuche a los viajeros que descubrieron la ruta y momentos inolvidables en Via Mariana.</p>
@@ -144,7 +146,7 @@ track.addEventListener("transitionend", () => {
             </button>
         </div>
     </div>
-</section>
+</Layout>
 
 <style>
     button {
