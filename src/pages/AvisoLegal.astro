@@ -1,0 +1,151 @@
+---
+
+import Header from "../components/layout/Header.astro";
+
+import Footer from "../components/layout/Footer.astro";
+
+
+---
+
+<script>
+
+var acc = document.getElementsByClassName("acordeon");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+</script>
+
+<Header></Header>
+
+    <main class="main__aviso">
+      <div class="h2__box">
+        <h2>AVISO LEGAL Y CONDICIONES DE USO</h2>
+      </div>
+
+      <div class="boxes">
+
+        <button class="acordeon">DATOS IDENTIFICATIVOS</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            aspernatur quae nemo aut aliquam velit doloribus consectetur,
+            debitis provident repudiandae?
+          </p>
+        </div>
+
+        <button class="acordeon">USO DEL SITIO WEB</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            aspernatur quae nemo aut aliquam velit doloribus consectetur,
+            debitis provident repudiandae?
+          </p>
+        </div>
+
+        <button class="acordeon">PROPIEDAD INTELECTUAL E INDUSTRIAL</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            aspernatur quae nemo aut aliquam velit doloribus consectetur,
+            debitis provident repudiandae?
+          </p>
+        </div>
+
+        <button class="acordeon">EXCLUSIÓN DE RESPONSABILIDAD</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            aspernatur quae nemo aut aliquam velit doloribus consectetur,
+            debitis provident repudiandae?
+          </p>
+        </div>
+
+        <button class="acordeon">PROTECCIÓN DE DATOS</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            aspernatur quae nemo aut aliquam velit doloribus consectetur,
+            debitis provident repudiandae?
+          </p>
+        </div>
+
+        <button class="acordeon">MODIFICACIONES</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            aspernatur quae nemo aut aliquam velit doloribus consectetur,
+            debitis provident repudiandae?
+          </p>
+        </div>
+
+        <button class="acordeon">LEGISLACIÓN APLICABLE Y JURISDICCIÓN</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            aspernatur quae nemo aut aliquam velit doloribus consectetur,
+            debitis provident repudiandae?
+          </p>
+        </div>
+
+        </div>
+
+    </main>
+
+<Footer></Footer>
+
+
+<style>
+    .main__aviso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.acordeon {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .acordeon:hover {
+  background-color: #ccc;
+}
+
+.acordeon:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
