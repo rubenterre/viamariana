@@ -1,13 +1,15 @@
 ---
 
+import Layout from "../layouts/Layout.astro";
+
 import Header from "../components/layout/Header.astro";
 
 import Footer from "../components/layout/Footer.astro";
 
-
 ---
 
 <script>
+
 
 var acc = document.getElementsByClassName("acordeon");
 var i;
@@ -25,16 +27,9 @@ for (i = 0; i < acc.length; i++) {
 }
 
 </script>
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aviso Legal</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-<Header></Header>
-<body>
+
+<Layout>
+<Header/>
     
     <main class="main__aviso">
         <div class="h2__box">
@@ -109,10 +104,10 @@ for (i = 0; i < acc.length; i++) {
     </div>
     
 </main>
-</body>
 
-<Footer></Footer>
+<Footer/>
 
+</Layout>
 
 <style>
     .main__aviso {
