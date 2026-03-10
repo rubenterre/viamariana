@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La ruta - Via Mariana</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
+---
+import Layout from "../layouts/Layout.astro"
+import flecha from "../assets/logo_arrow_viamariana.svg"
+import Header from "../components/layout/Header.astro"
+import Footer from "../components/layout/Footer.astro"
+import HeroSections from "../components/layout/HeroSections.astro"
+---
+<Layout>
+  <Header/>
+  <HeroSections title="La Ruta"/>
     <main class="main">
 
-        <section class="section">
+    <section class="section">
        <div class="main__div">
         <h1 class="tittle">La ruta</h1>
         <h2 class="second__tittle">Trazado completo</h2>
@@ -65,19 +66,17 @@
     </div>
     <div class="botones">
         <!-- <button id="prev"> -->
-            <img class="arrow" id="prev" src="./assets/flecha.png" alt="flecha">
+            <img class="arrow" id="prev" src={flecha.src} alt="flecha">
         <!-- </button> -->
         <!-- <button id="next"> -->
-            <img class="arrow--next" id="next" src="./assets/flecha.png" alt="flecha">
+            <img class="arrow--next" id="next" src={flecha.src} alt="flecha">
         <!-- </button> -->
     </div>
       </section>
 
     </main>
-    <script src="./js/script.js"></script>
-</body>
-
-</html>
+   <Footer/>
+</Layout>
 
 <style>
 
