@@ -1,0 +1,51 @@
+---
+import ButtonPrimary from "../ui/ButtonPrimary.astro";
+
+
+---
+
+<section class="home__hero">
+    <div class="textabove">
+        <h1 class="h1__hero">VIA MARIANA</h1>
+        <p class="hero__p">Ruta que combina espiritualidad, natureza, patrimonio e identidad rural.</p>
+        <ButtonPrimary/>
+      </div>
+</section>
+
+<style>
+    .home__hero{
+  display: flex;
+  background-image: url(/assets/santuario-bom-jesus.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+h1{
+  font-family: var(--font-primary);
+  font-size: 80px;
+  font-weight: 700;
+  color: #EFB91F;
+  text-align: center;
+
+  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+               1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+h2{
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--light);
+  text-align: justify;
+}
+
+.hero__p{
+  font-size: 24px;
+  font-family: var(--font-secondary);
+  font-weight: 800;
+  color: var(--light);
+  text-align: justify;
+}
+</style>
