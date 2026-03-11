@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/layout/Footer.astro";
-import Header from ".";
+import Header from "../components/layout/Header.astro";
+import HeroSections from "../components/layout/HeroSections.astro";
 ---
 
 <Layout>
     <Header />
+    <HeroSections tite="Vía Mariana"/>
     <main class="main">
         <section class="container">
             <div class="img">
@@ -67,7 +69,7 @@ import Header from ".";
                         nuestra cultura.
                     </p>
                 </div>
-                <button class="button__tradicion" id="open2"">Saber más</button>
+                <button class="button__tradicion" id="open2">Saber más</button>
             </div>
         </section>
         <section class="container__modal">
@@ -75,8 +77,7 @@ import Header from ".";
             <div class="modal" id="popup1">
                 <div class="modal__content">
                     <span id="close1" class="pechar" onclick="cerrarPopups()"
-                        >&times;</span
-                    >
+                        >&times;</span>
                     <h2 class="modal1__h2">Saber más</h2>
                     <p class="modal1__p">
                         La Vía Mariana fue concebida al margen de la red oficial
@@ -118,29 +119,16 @@ import Header from ".";
         outline: 0;
         box-sizing: border-box;
     }
-     html {
-        font-size: 16px;
-        font-family: var(--font-primary);
-    }
+    
 
     body {
-        background: white;
-        color: black;
+        background: var(--light);
+	 color: var(--dark);
         -webkit-font-smoothing: antialiased;
         width: 100vw;
         height: 100vh;
     }
 
-    body,
-    input,
-    button {
-        font-size:;
-        font-family:;
-    }
-
-    button {
-        cursor: pointer;
-    }
     .container {
         width: 50%;
         display: flex;
@@ -161,7 +149,7 @@ import Header from ".";
 
     }
      .modal__content {
-        background: white;
+        background:var(--light);
         margin: auto;
         padding: 10px;
         /* width: 100px; */
@@ -265,8 +253,8 @@ import Header from ".";
     .button{
         width: 180px;
         height: 40px;
-        background-color:blue;
-        color:yellow;
+        background-color:var(--color-primary);
+        color:var(--color-secondary);
         font-weight: 100;
         text-align: center;
     }
@@ -281,11 +269,11 @@ import Header from ".";
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: 2px solid black;
-        background-color: white;
+        border: 2px solid var(--dark);
+        background-color: var(--color-tertiary);
         padding: 20px;
         z-index: 1000;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 10px var(--dark);
     }
     .overlay {
         display: none;
@@ -294,16 +282,16 @@ import Header from ".";
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--dark);
         z-index: 999;
     }
     .show {
         display: block;
     }
     
-</style>
+</style >
 
-<script>
+<script is:inline>
     // obtener elementos
     const btn1 = document.getElementById("open1");
     const btn2 = document.getElementById("open2");
