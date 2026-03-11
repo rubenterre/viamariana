@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/layout/Footer.astro";
-import Header from "";
+import Header from ".";
 ---
 
 <Layout>
@@ -9,7 +9,7 @@ import Header from "";
     <main class="main">
         <section class="container">
             <div class="img">
-                <img src="./Picture.png" alt="img provisional" />
+                <img src="public/img/Picture.png" alt="img provisional" />
             </div>
             <div class="text">
                 <h1 class="text__h1">¿Por qué?</h1>
@@ -30,7 +30,7 @@ import Header from "";
             <div class="historia" id="historia">
                 <img
                     class="img__historia"
-                    src="Picture.png"
+                    src="public/img/Picture.png"
                     alt="img provisional"
                     id="img__historia"
                 />
@@ -52,7 +52,7 @@ import Header from "";
             <div class="tradicion" id="tradicion">
                 <img
                     class="img__tradicion"
-                    src="Picture.png"
+                    src="public/img/Picture.png"
                     alt="img provisional"
                     id="img__tradicion"
                 />
@@ -67,11 +67,7 @@ import Header from "";
                         nuestra cultura.
                     </p>
                 </div>
-                <button
-                    class="button__tradicion"
-                    id="open2"
-                    onclick="modalTradicion()">Saber más</button
-                >
+                <button class="button__tradicion" id="open2"">Saber más</button>
             </div>
         </section>
         <section class="container__modal">
