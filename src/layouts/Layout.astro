@@ -1,23 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Via Mariana - Ruta luso-galaica</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
 	</head>
 	<body>
 		<slot />
+		 <script client src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 	</body>
 </html>
 
-<style>
-	html,
+<style is:global>
+	* {
+	  margin: 0;
+	  padding: 0;
+	  outline: 0;
+	  box-sizing: border-box;
+	}
+
+	html{
+		font-size: 14px;
+		scroll-behavior: smooth;
+	}
+
+	@font-face {
+		font-family: Poppins-Regular;
+		src: url(./fonts/Poppins-Regular.ttf);
+	}
+
+	@font-face {
+		font-family: Poppins-Medium;
+		src: url(./fonts/Poppins-Medium.ttf);
+	}
+
+	@font-face {
+		font-family: OpenSans;
+		src: url(./fonts/OpenSans-VariableFont_wdth.ttf);
+	}
+
+	:root{
+		--font-primary: Poppins-Regular;
+		--font-secondary: Poppins-Medium;
+		--font-tertiary: OpenSans;
+		--color-primary: #00378F;
+		--color-secondary: #EFB91F;
+		--color-tertiary: #F8F9FB;
+		--grey: #7F7F7F;
+		--light: #FFFFFF;
+		--dark:#1A1A1A;
+	}
+	
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	 background: var(--light);
+	 color: var(--dark);
+	 -webkit-font-smoothing: antialiased;
+	}
+	
+	body, input, button {
+	 font-family: var(--font-primary);
+	}
+	
+	button {
+	 cursor: pointer;
 	}
 </style>

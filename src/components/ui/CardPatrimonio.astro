@@ -1,0 +1,119 @@
+  
+    ---
+
+    ---
+
+    <div class="CardPatrimonio">
+        <img class="img__patrimonio" src="public/Replace this image.png" alt="basilica">
+        <div class="textos">
+            <div class="clasificacion">
+                <p class="clasificacion__nombre"> Santuario </p>
+                <div class="clasificacion__derecha">
+                    <img class="icon__estrella" src="public/estrella.png" alt="icon estrella" >
+                    <p class="clasificacion__estrellas">4.9/5.0</p>
+                </div>
+
+            </div>
+            <h3 class="nombre__patrimonio">
+                Basílica do Bom Jesus do Monte
+            </h3>
+            
+            <p class="localizacion__patrimonio">Braga, Portugal</p>
+            <a class="button__ver">Ver más</a>
+        </div>
+    </div>
+
+    <style>
+        
+        .CardPatrimonio{
+            display: flex;
+flex-direction: column;
+padding: 24px;
+width: 499px;
+height: 788px;
+border-radius: 25px;
+background-color: var(--color-tertiary);
+border: 1px solid;
+
+        }
+        .img__patrimonio{
+            display: flex;
+            align-self: center;
+          width: 492px;
+height: 390px;
+border-radius: 25px;
+
+
+        }
+        .clasificacion{
+            display: flex;
+            justify-content: space-between;
+            margin-left:25px;
+            margin-right: 25px;
+        }
+        .clasificacion__nombre{
+            
+color: var(--color-secondary);
+font-family: var(--font-secondary);
+font-size: 24px;
+font-weight: 500;
+
+
+        }
+                .icon__estrella{            
+width: 20.99px;
+height: 20.25px;
+        }
+        .clasificacion__estrellas{
+color: var(--color-secondary);
+font-family:var(--font-secondary);
+font-size: 20px;
+font-weight: 500;
+        }
+        .clasificacion__derecha{
+            display: flex;
+            justify-content: start;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+.nombre__patrimonio{
+    display: flex;
+    align-items: center;
+color: var(--dark);
+font-family: var(--font-secondary);
+font-size: 32px;
+font-weight: 700;
+margin-left: 25px;
+
+}
+.localizacion__patrimonio{
+    color: var(--dark);
+font-family: var(--font-secondary);
+font-size: 20px;
+font-weight: 500;
+margin-left: 25px;
+
+
+}
+.button__ver{
+   
+    display: flex;
+justify-content: center;
+align-items: center;
+align-self: center;
+gap: 10px;
+padding: 24px;
+width: 451px;
+height: 74px;
+border-radius: 999px;
+background-color: var(--color-secondary);
+border: none;
+font-family: var(--font-secondary);
+color: var(--light);
+font-size: 20px;
+ margin-top: 50px;
+ margin-left: 23px;
+
+}
+    </style>
