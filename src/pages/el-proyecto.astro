@@ -1,0 +1,246 @@
+---
+
+import Layout from "../layouts/Layout.astro"
+
+import Header from "../components/layout/Header.astro"
+
+import Colaboradores from "../components/layout/Colaboradores.astro"
+
+import Footer from "../components/layout/Footer.astro"
+
+import HeroSections from "../components/layout/HeroSections.astro"
+
+---
+
+<Layout>
+
+<Header/>
+
+<HeroSections/>
+
+<main class="main">
+
+    <section class="quienes__somos">
+
+        <h2 class="quienes__h2">¿QUIÉNES SOMOS?</h2>
+
+        <div class="quienes__container">
+
+            <div class="quienes__img"></div>
+
+            <div class="quienes__p">
+
+                <p>
+                    La Vía Mariana Luso-Galaica es un proyecto interterritorial que nace con el
+                    objetivo de recuperar, señalizar y promover un itinerario de peregrinación que
+                    conecta los principales santuarios marianos del norte de Portugal y Galicia,
+                    desde Braga hasta Muxía. Esta ruta constituye que combina espiritualidad,
+                    naturaleza, patrimonio e identidad rural y uniendo 10 santuarios dedicados a la
+                    Virgen María en un recorrido de aproximadamente 372 a 400 km.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="objetivos">
+
+        <h2 class="quienes__h2">OBJETIVOS PRINCIPALES</h2>
+
+        <div class="objetivo__p">
+            <p>
+                Posicionar la Vía Mariana como un itinerario singular que combina
+                espiritualidad, naturaleza, patrimonio e identidad rural, reforzando su visibilidad
+                y reconocimiento tanto a nivel local como internacional.
+            </p>
+        </div>
+
+        <h2 class="quienes__h2">OBJETIVOS ESPECIFICOS</h2>
+
+        <div class="obj__espec">
+
+            <div class="espec__card">
+                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <p class="p__espec">Reforzar la identidad visual y narrativa de la ruta.</p>
+            </div>
+
+            <div class="espec__card">
+                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <p class="p__espec">Poner en valor caminos históricos, paisajes y el patrimonio cultural y religioso inmaterial.</p>
+            </div>
+       
+            <div class="espec__card">
+                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <p class="p__espec">Ofrecer una alternativa al Camino de Santiago, enfocada en la naturaleza, la gastronomía y la cultura local.</p>
+            </div>
+
+            <div class="espec__card">
+                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <p class="p__espec">Difundir el valor patrimonial, cultural y natural de los territorios visitados en la ruta.</p>
+            </div>
+
+            <div class="espec__card">
+                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <p class="p__espec">Fomentar la participación de todos los colaboradores creando un sentimiento de pertenencia y orgullo.</p>
+            </div>
+
+            <div class="espec__card">
+                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <p class="p__espec">Establecer canales de comunicación estables y accesibles tanto físicos como digitales para atraer público a la vía.</p>
+            </div>
+
+            <div class="espec__card">
+                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <p class="p__espec">Promover la colaboración institucional para favorecer la continuidad y expansión del proyecto de la Vía Mariana.</p>
+            </div>
+
+            <div class="espec__card">
+                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <p class="p__espec">Difusión y sensibilización y su conexión espiritual, ecológica y comunitaria.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <Colaboradores/>
+</main>
+
+<footer/>
+
+</Layout>
+
+<style>
+
+/*MAIN*/
+
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*QUIENES SOMOS*/
+
+.quienes__somos{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 2rem;
+}
+
+.quienes__h2{
+    font-family: var(--font-secondary);
+    font-size: 30px;
+    text-align: left;
+}
+
+.quienes__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.quienes__img{
+    background: url(public/img/image.png);
+    background-color: var(--grey);
+    width: 100%;
+    height: 400px;
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quienes__p{
+    width: 100%;
+    border-radius: 25px;
+    background-color: var(--color-tertiary);
+    padding: 1.5rem;
+}
+
+.quienes__p p{
+    font-family: var(--font-tertiary);
+    font-size: 16px;
+    text-align: center;
+}
+
+/*OBJETIVOS*/
+
+.objetivos{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*OBJETIVOS PRINCIPALES*/
+
+.objetivo__p{
+    width: 100%;
+    border-radius: 25px;
+    background-color: var(--color-tertiary);
+    padding: 1.5rem;
+}
+
+.objetivo__p p{
+    font-family: var(--font-tertiary);
+    font-size: 16px;
+    text-align: center;
+}
+
+/*OBJETIVOS ESPECÍFICOS*/
+
+.obj__espec{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.espec__card{
+    width: 280px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 25px;
+    background-color: var(--color-tertiary);
+    padding: 1.5rem;
+}
+
+.card__img{
+    width: 26px;
+    height: 26px;
+    background-color: var(--grey);
+}
+
+.p__espec{
+    font-family: var(--font-tertiary);
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--grey);
+}
+
+</style>
