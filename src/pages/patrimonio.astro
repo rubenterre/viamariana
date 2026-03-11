@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../componentes/layout/Header.astro";
+import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import HeroSections from "../components/layout/HeroSections.astro";
 
@@ -9,7 +9,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
    
 <Header/>
 <main>
-    <HeroSections/>
+    <HeroSections title="Patrimonio"/>
     <div class="rectangulo">
         <h1 class="h1__patrimonio">PATRIMONIO</h1>
         <img class="logo__blanco" src="public/img/logo3.png" alt="logo via mariana">
@@ -235,13 +235,19 @@ import HeroSections from "../components/layout/HeroSections.astro";
         .patrimonio__clasificado {
             display: flex;
             align-items: center;
+            flex-direction: row;
+            gap: 1rem;
+            padding-bottom: 30px;
             justify-content: center;
-            gap: 30px;
+            margin-left: 1rem;
+            margin-right: 1rem;
+
+      
 
         }
 
         .img {
-            width: 100%;
+            width: 25vw;
             height: 280px;
             object-fit: cover;
             border-radius: 30px;
@@ -307,8 +313,9 @@ import HeroSections from "../components/layout/HeroSections.astro";
         }
 
         .swiper {
-            width: 300px;
+            width:26vw;
             height: auto;
+
         }
 
         .swiper-button-next {
@@ -419,7 +426,9 @@ font-weight: 500;
         }
     </style>
 
-   <script>
+   <script is:inline>
+
+
     const swipers = document.querySelectorAll(".mySwiper");
 
 swipers.forEach((swiperEl) => {
