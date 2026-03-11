@@ -241,6 +241,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
             justify-content: center;
             margin-left: 1rem;
             margin-right: 1rem;
+            flex-wrap: wrap;
 
       
 
@@ -251,14 +252,14 @@ import HeroSections from "../components/layout/HeroSections.astro";
             height: 280px;
             object-fit: cover;
             border-radius: 30px;
-            transition: transform 0.3s ease;
+            /* transition: transform 0.3s ease; */
         }
 
-        .img:hover {
+        /* .img:hover {
             transform: scale(1.05);
             border-radius: 20px;
 
-        }
+        } */
 
         .patrimonio__portugal {
             display: flex;
@@ -270,8 +271,13 @@ import HeroSections from "../components/layout/HeroSections.astro";
 
             border: 3px solid var(--color-secondary);
             border-radius: 30px;
+             transition: transform 0.3s ease;
         }
+  .patrimonio__portugal:hover {
+            transform: scale(1.05);
+            border-radius: 20px;
 
+        }
         .patrimonio__pontevedra {
             display: flex;
             justify-content: center;
@@ -282,6 +288,12 @@ import HeroSections from "../components/layout/HeroSections.astro";
 
             border: 3px solid var(--color-secondary);
             border-radius: 30px;
+             transition: transform 0.3s ease;
+        }
+          .patrimonio__pontevedra:hover {
+            transform: scale(1.05);
+            border-radius: 20px;
+
         }
 
         .patrimonio__acorunha {
@@ -294,6 +306,12 @@ import HeroSections from "../components/layout/HeroSections.astro";
 
             border: 3px solid var(--color-secondary);
             border-radius: 30px;
+             transition: transform 0.3s ease;
+        }
+          .patrimonio__acorunha:hover {
+            transform: scale(1.05);
+            border-radius: 20px;
+
         }
 
         .h3__patrimonio {
@@ -303,6 +321,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
             font-family: var(--font-secundary);
             color: var(--color-primary);
             font-size: 25px;
+            margin-bottom: .8rem;
         }
 
         .swiper-slide {
@@ -424,6 +443,31 @@ font-weight: 500;
             text-decoration: none;
             color: var(--color-tertiary);
         }
+
+         @media (max-width: 768px){
+           .swiper {
+            width:40vw;
+            height: auto;
+
+        }
+        .img{
+            width: 40vw;
+            margin-top: 1rem;
+        }
+        }
+        @media (max-width: 508px){
+           .swiper {
+            width:60vw;
+            height: auto;
+
+        }
+        .img{
+            width: 60vw;
+            margin-top: 1rem;
+        }
+        }
+
+
     </style>
 
    <script is:inline>
