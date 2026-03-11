@@ -13,7 +13,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
     <section class="section">
        <div class="main__div">
-        <h1 class="tittle">La ruta</h1>
+        
         <h2 class="second__tittle">Trazado completo</h2>
         <h3 class="text">La Vía Mariana recorre más de 350km desde Braga (Portugal) hasta Muxía (Galicia), atravesando 6 GDR gallegos y múltiples ayuntamientos. Su trazado conecta santuarios marianos, espacios naturales, aldeas y villas, configurando una ruta de gran riqueza paisajística y cultural.</h3>
        </div>
@@ -129,12 +129,143 @@ import HeroSections from "../components/layout/HeroSections.astro"
   justify-content: center;
  align-items: center;
   gap: 1.5rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
 
 }
 
 .arrow{
   transform: scaleX(-1);
 }
+
+
+/* Media queries */
+ @media (max-width: 480px) {
+  
+ }
+
+.main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.main__div{
+  margin: 1rem;
+  text-align: center;
+}
+
+.second__tittle{
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.text{
+  margin-top: 1rem;
+  color: var(--grey);
+  font-size: 0.95rem;
+}
+
+.section__two{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.etapas{
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.mapa iframe{
+  max-width: 100%;
+  height: 500px;
+  
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.arrow{
+  transform: scaleX(-1);
+  width: 35px;
+}
+
+.arrow--next{
+  width: 35px;
+}
+
+
+@media (min-width: 768px){
+
+.main__div{
+  max-width: 700px;
+  margin: auto;
+}
+
+.second__tittle{
+  font-size: 2rem;
+}
+
+.text{
+  font-size: 1.1rem;
+}
+
+.mapa iframe{
+  width: 750px;
+  height: 420px;
+}
+
+.arrow,
+.arrow--next{
+  width: 45px;
+}
+
+}
+
+
+@media (min-width: 1920px){
+
+.main{
+  max-width: 1400px;
+  margin: auto;
+}
+
+.main__div{
+  max-width: 900px;
+}
+
+.second__tittle{
+  font-size: 2.5rem;
+}
+
+.text{
+  font-size: 1.25rem;
+}
+
+.mapa iframe{
+  width: 1000px;
+  height: 550px;
+}
+
+.botones{
+  gap: 2rem;
+}
+
+.arrow,
+.arrow--next{
+  width: 55px;
+}
+
+}
+
 </style>
 
 <script>
