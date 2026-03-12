@@ -477,7 +477,7 @@ font-weight: 500;
 
         }
         .img{
-            width:60 ;
+            width:60vw ;
         }
 }
 
@@ -487,7 +487,7 @@ font-weight: 500;
     </style>
 
    <script is:inline>
-
+document.addEventListener("DOMContentLoaded", () => {
 
     const swipers = document.querySelectorAll(".mySwiper");
 
@@ -505,6 +505,7 @@ swipers.forEach((swiperEl) => {
       prevEl: swiperEl.querySelector(".swiper-button-prev"),
     },
   });
+});
 });
    </script>
 
