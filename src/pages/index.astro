@@ -13,7 +13,7 @@ import HomeHero from "../components/layout/HomeHero.astro"
             <p class="etapas__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi reiciendis voluptate nemo ducimus deleniti tempora facilis exercitationem iusto? Voluptatem deleniti, tenetur commodi corrupti iure eligendi consectetur veniam. Aspernatur alias necessitatibus illum quia id explicabo assumenda accusamus sint, deserunt aliquid, quam quo? Adipisci cupiditate dolor impedit alias sunt facilis maiores modi?</p>
         </div>
         <div class="col">
-            <img src="img/Picture.png" alt="image">
+            <img src="img/Picture.png" alt="image" class="etapas__img">
         </div>
 
     </div>
@@ -32,12 +32,24 @@ import HomeHero from "../components/layout/HomeHero.astro"
         justify-content: center;
     }
     .col{
-        padding:100px;
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    @media (max-width:768px) {
+        .row{
+            flex-direction: column;
+        }
+        .col{
+            width: 100%;
+        }
+        .etapas__img{
+            width: 70%;
+        }
+        
     }
 
 </style>
