@@ -67,7 +67,6 @@ import Layout from "../../layouts/Layout.astro"
 }
 
 .text__h1{
-    height: auto;
     font-family: var(--font-primary);
     font-size: 55px;
     font-weight: 400;
@@ -81,5 +80,43 @@ import Layout from "../../layouts/Layout.astro"
     font-size: 16px;
     line-height: 25px;
     color: var(--light);
+}
+
+/*MEDIA QUERY*/
+
+/*1920PX*/
+
+@media (min-width: 1920px) {
+
+    .hero__text{
+        width: 50vw;
+        height: auto;
+        padding-left: 8rem;
+        padding-top: 19rem;
+    }
+
+    .text__superior{
+        width: 24vw;
+    }
+
+    .superior__icon{
+        width: 18px;
+        height: 18px;
+    }
+
+    .superior__p{
+        font-size: 17px;
+    }
+
+    .text__h1{
+        height: auto;
+        width: 50vw;
+        font-size: 90px;
+    }
+
+    .inferior__p{
+        width: 40vw;
+        font-size: 19px;
+    }
 }
 </style>

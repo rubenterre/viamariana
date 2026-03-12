@@ -62,42 +62,42 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="obj__espec">
 
             <div class="espec__card">
-                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <img src="public/img/arrow-yellow.png" alt="icono de check" class="card__img">
                 <p class="p__espec">Reforzar la identidad visual y narrativa de la ruta.</p>
             </div>
 
             <div class="espec__card">
-                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <img src="public/img/arrow-yellow.png" alt="icono de check" class="card__img">
                 <p class="p__espec">Poner en valor caminos históricos, paisajes y el patrimonio cultural y religioso inmaterial.</p>
             </div>
        
             <div class="espec__card">
-                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <img src="public/img/arrow-yellow.png" alt="icono de check" class="card__img">
                 <p class="p__espec">Ofrecer una alternativa al Camino de Santiago, enfocada en la naturaleza, la gastronomía y la cultura local.</p>
             </div>
 
             <div class="espec__card">
-                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <img src="public/img/arrow-yellow.png" alt="icono de check" class="card__img">
                 <p class="p__espec">Difundir el valor patrimonial, cultural y natural de los territorios visitados en la ruta.</p>
             </div>
 
             <div class="espec__card">
-                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <img src="public/img/arrow-yellow.png" alt="icono de check" class="card__img">
                 <p class="p__espec">Fomentar la participación de todos los colaboradores creando un sentimiento de pertenencia y orgullo.</p>
             </div>
 
             <div class="espec__card">
-                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <img src="public/img/arrow-yellow.png" alt="icono de check" class="card__img">
                 <p class="p__espec">Establecer canales de comunicación estables y accesibles tanto físicos como digitales para atraer público a la vía.</p>
             </div>
 
             <div class="espec__card">
-                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <img src="public/img/arrow-yellow.png" alt="icono de check" class="card__img">
                 <p class="p__espec">Promover la colaboración institucional para favorecer la continuidad y expansión del proyecto de la Vía Mariana.</p>
             </div>
 
             <div class="espec__card">
-                <img src="public/img/Vector_check.png" alt="icono de check" class="card__img">
+                <img src="public/img/arrow-yellow.png" alt="icono de check" class="card__img">
                 <p class="p__espec">Difusión y sensibilización y su conexión espiritual, ecológica y comunitaria.</p>
             </div>
 
@@ -105,8 +105,9 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
     </section>
 
-    <Colaboradores/>
 </main>
+
+<Colaboradores/>
 
 <Footer/>
 
@@ -143,6 +144,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
     font-family: var(--font-secondary);
     font-size: 30px;
     text-align: left;
+    color: var(--color-primary);
 }
 
 .quienes__container{
@@ -176,6 +178,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
     font-family: var(--font-tertiary);
     font-size: 16px;
     text-align: center;
+    color: var(--grey);
 }
 
 /*OBJETIVOS*/
@@ -203,6 +206,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
     font-family: var(--font-tertiary);
     font-size: 16px;
     text-align: center;
+    color: var(--grey);
 }
 
 /*OBJETIVOS ESPECÍFICOS*/
@@ -240,6 +244,87 @@ import HeroSections from "../components/layout/HeroSections.astro"
     font-size: 16px;
     line-height: 26px;
     color: var(--grey);
+}
+
+/*MEDIA QUERYS*/
+
+/*1920PX*/
+
+@media (min-width: 1920px) {
+
+    .quienes__h2{
+        font-size: 40px;
+    }
+
+    .quienes__p p{
+        font-size: 18px;
+    }
+
+    .objetivo__p p{
+        font-size: 18px;
+    }
+
+    .espec__card{
+        width: 340px;
+        height: 170px;
+    }
+
+    .p__espec{
+        font-size: 18px;
+    }
+    
+}
+
+@media (max-width: 768px){
+
+    .quienes__h2{
+        font-size: 30px;
+    }
+
+    .quienes__p p{
+        font-size: 16px;
+    }
+
+    .objetivo__p p{
+        font-size: 16px;
+    }
+
+    .espec__card{
+        width: 280px;
+        height: 180px;
+    }
+
+    .p__espec{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .quienes__h2{
+        font-size: 30px;
+    }
+
+    .quienes__p p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .objetivo__p p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .espec__card{
+        width: 280px;
+        height: 180px;
+    }
+
+    .p__espec{
+        font-size: 16px;
+    }
+
 }
 
 </style>
