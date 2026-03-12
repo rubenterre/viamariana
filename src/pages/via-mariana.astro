@@ -1,0 +1,348 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/layout/Footer.astro";
+import Header from "../components/layout/Header.astro";
+import HeroSections from "../components/layout/HeroSections.astro";
+---
+
+<Layout>
+    <Header />
+    <HeroSections title="Vía Mariana" />
+    <main class="main">
+        <section class="container">
+            <img
+                src="public/img/Picture.png"
+                alt="img provisional"
+                width="350px"
+                class="img__container"
+            />
+
+            <div class="text">
+                <h1 class="text__h1">¿Por qué?</h1>
+                <p class="text__p">
+                    Es una oportunidad para poner en valor el patrimonio de las
+                    comarcas que atraviesa y reforzar la identidad compartida
+                    entre los territorios. De este modo, se convierte en un
+                    recurso estratégico para el desarrollo sostenible del medio
+                    rural, al conectar lugares de culto mariano de gran
+                    tradición vinculados a romerías históricas y allegando un
+                    fuerte valor simbólico. Todo ello permite enriquecer la
+                    experiencia del caminante gracias al descubrimiento de
+                    espacios naturales, aldeas y elementos etnográficos
+                </p>
+            </div>
+        </section>
+        <section class="container2">
+            <div class="historia" id="historia">
+                <img
+                    class="img__historia"
+                    src="public/img/Picture.png"
+                    alt="img provisional"
+                    id="img__historia"
+                />
+                <div class="text__historia">
+                    <h1 class="h1__historia">Historia</h1>
+                    <p class="p__historia" id="p__historia">
+                        A finales la década de 2010 surgió la idea de trazar un
+                        camino de largo recorrido que rescatara y uniera
+                        antiguos senderos entre ermitas. Proyecto que fue
+                        impulsado con el objetivo de ofrecer una peregrinación
+                        diferente, potenciando el carácter histórico, natural y
+                        patrimonial de las distintas zonas rurales, enfocada en
+                        María en lugar de Santiago. La apertura oficial de la
+                        ruta fue en 2019.
+                    </p>
+                </div>
+                <button class="button" id="open1">Saber más </button>
+            </div>
+            <div class="tradicion" id="tradicion">
+                <img
+                    class="img__tradicion"
+                    src="public/img/Picture.png"
+                    alt="img provisional"
+                    id="img__tradicion"
+                />
+                <div class="text__tradicion">
+                    <h1 class="h1__tradicion">Tradición</h1>
+                    <p class="p__tradicion" id="p__tradicion">
+                        La tradición mariana se remonta a la época de la
+                        Gallaecia romana y se mantiene viva hasta el día de hoy.
+                        Esta vía recupera y da significado a la tradición de las
+                        romerías, caminos de fe y celebración del territorio,
+                        las cuales forman parte del patrimonio inmaterial de
+                        nuestra cultura.
+                    </p>
+                </div>
+                <button class="button" id="open2">Saber más</button>
+            </div>
+        </section>
+        <section class="container__modal">
+            <div class="overlay" id="overlay"></div>
+            <div class="modal" id="popup1">
+                <div class="modal__content">
+                    <span id="close1" class="pechar" onclick="cerrarPopups()"
+                        >&times;</span
+                    >
+                    <h2 class="modal1__h2">Saber más</h2>
+                    <p class="modal1__p">
+                        La Vía Mariana fue concebida al margen de la red oficial
+                        de Caminos de Santiago, con su propia identidad,
+                        símbolos y señalización. No busca reinventar un camino
+                        histórico, sino enlazar diversos santuarios en un
+                        itinerario espiritual nuevo. Aun así, sus creadores han
+                        respetado senderos tradicionales (viejas rutas de carros
+                        y senderos) dando continuidad a trayectos ya existentes
+                        entre pueblos devotos.
+                    </p>
+                </div>
+            </div>
+            <div class="modal" id="popup2">
+                <div class="modal__content">
+                    <span id="close2" class="pechar" onclick="cerrarPopups()"
+                        >&times;</span
+                    >
+                    <h2 class="modal2__h2">Saber más</h2>
+                    <p class="modal2__p">
+                        La ruta permite revivir estas prácticas poniendo en
+                        valor espacios como el Santuario de la Virgen de la
+                        Franqueira, los Milagros de Amil y la Virgen de la
+                        Barca, conectándolos en un relato común que transciende
+                        fronteras y generaciones, creando lazos y caminos entre
+                        comunidades con una fe e identidad compartidas.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+    .main {
+        width: 100vw;
+        height: 50%;
+    }
+
+    .container {
+        width: 90vw;
+        height: 50vh;
+        /* border: 2px solid var(--color-primary);
+         border-radius: 5px;
+        box-shadow: inset 0px 0px 10px 5px var(--color-secondary); */
+        background-color: var(--color-tertiary);
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img__container {
+        width: 250px;
+        padding: 10px;
+    }
+    .text__h1 {
+        color: #00378f;
+    }
+    .text {
+        color: var(--grey);
+        font-weight: 400;
+        font-family: var(--font-tertiary);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container2 {
+        width: 90vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+    .historia {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+         border: 2px solid var(--color-primary);
+        border-radius: 25px;
+        box-shadow: inset 0px 0px 10px 5px var(--color-secondary);
+        background-color: var(--color-tertiary);
+        margin: 3px;
+    }
+    .h1__historia {
+        color: var(--color-primary);
+    }
+    .text__historia {
+        color: var(--grey);
+        font-family: var(--font-tertiary);
+        font-weight: 400;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .img__historia {
+        width: 20%;
+    }
+    .tradicion {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-tertiary);
+       border-radius: 25px;
+        /* border: 2px solid var(--color-primary);
+         border-radius: 5px;
+        box-shadow: inset 0px 0px 10px 5px var(--color-secondary); */
+        margin: 5px;
+    }
+    .h1__tradicion {
+        color: var(--color-primary);
+    }
+    .text__tradicion {
+        color: var(--grey);
+        font-family: var(--font-tertiary);
+        font-weight: 400;
+        text-align: center;
+        padding: 10px;
+    }
+    .img__tradicion {
+        width: 20%;
+    }
+
+    .modal__content {
+        background: var(--light);
+        /* margin: auto; */
+        padding: 5px;
+        /* width: 100px; */
+        /* height: 200px; */
+    }
+    .pechar {
+        cursor: pointer;
+        float: top;
+        font-size: 30px;
+        padding: 5px;
+        font-weight: 400;
+        transition: all 0.3s ease;
+    }
+
+    .peche:hover {
+        transform: scale(1.2);
+    }
+    .modal2__h2 {
+        color: var(--color-primary);
+        font-family: var(--font-tertiary);
+        font-size: 26px;
+        font-weight: 400;
+        gap: 5px;
+        text-align: center;
+        padding: 5px;
+    }
+    .modal2__p {
+        color: var(--grey);
+        font-family: var(--font-tertiary);
+        font-size: 16px;
+        font-weight: 400;
+        gap: 5px;
+        text-align: center;
+        padding: 5px;
+    }
+    .modal1__h2 {
+        color: var(--color-primary);
+        font-family: var(--font-tertiary);
+        font-size: 26px;
+        font-weight: 400;
+        gap: 5px;
+        text-align: center;
+        padding: 5px;
+    }
+    .modal1__p {
+        color: var(--grey);
+        font-family: var(--font-tertiary);
+        font-size: 16px;
+        font-weight: 400;
+        gap: 5px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .button {
+        background: rgba(239, 185, 31, 1);
+        border: none;
+        border-radius: 50px;
+        padding: 0.8rem 2em;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 20px;
+        color: white;
+    }
+    #open2 {
+        margin: 5px;
+    }
+    #text {
+        font-size: 40px;
+        font-weight: 700;
+        padding: 20px;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid var(--dark);
+        background-color: var(--color-tertiary);
+        padding: 20px;
+        z-index: 1000;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    .show {
+        display: block;
+    }
+    @media (max-width: 768px) {
+       
+    }
+</style>
+
+<script is:inline>
+    // obtener elementos
+    const btn1 = document.getElementById("open1");
+    const btn2 = document.getElementById("open2");
+    const p1 = document.getElementById("popup1");
+    const p2 = document.getElementById("popup2");
+    const overlay = document.getElementById("overlay");
+
+    // funcion para abrir cuadro1
+    btn1.addEventListener("click", () => {
+        p1.classList.add("show");
+        overlay.classList.add("show");
+    });
+    // funcion para abrir cuadro2
+    btn2.addEventListener("click", () => {
+        p2.classList.add("show");
+        overlay.classList.add("show");
+    });
+    // funcion para cerrar todo
+    function cerrarPopups() {
+        p1.classList.remove("show");
+        p2.classList.remove("show");
+        overlay.classList.remove("show");
+    }
+    // cerrar si se hace clic en el fondo escuro
+    overlay.addEventListener("click", cerrarPopups);
+</script>
