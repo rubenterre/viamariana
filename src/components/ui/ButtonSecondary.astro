@@ -1,8 +1,8 @@
 ---
-
+const {href} = Astro.props
 ---
 
-<a href="#" class="secondary__a">Saber mas</a>
+<a href={href} class="secondary__a">Saber mas</a>
 
 <style>
     .secondary__a{
