@@ -42,23 +42,64 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .img-1-1 {
-        width: 150px;
+        width: 100px;
     }
 
     .img-2 {
-        padding-top: 100px;
+        padding-top: 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .img-2-1 {
-        margin-bottom: 20px;
+        padding-bottom: 25px;
         width: 200px;
+    }
+
+    @media (max-width: 768px) {
+        .img-1-1 {
+            width: 75px;
+        }
+
+        .img-2-1 {
+            width: 150px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .img-1-1 {
+            width: 50px;
+        }
+        .img-2 {
+            padding-top: 10px;
+        }
+
+        .img-2-1 {
+            width: 100px;
+        }
+    }
+
+    @media (max-width: 424px) {
+        .img-1 {
+            flex-direction: column;
+        }
+
+        .img-1-1 {
+            padding-bottom: 15px;
+        }
+
+        .img-2 {
+            flex-direction: column;
+        }
+
+        .img-2-1 {
+            padding-bottom: 15px;
+        }
     }
 </style>
