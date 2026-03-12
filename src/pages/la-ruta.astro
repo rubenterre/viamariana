@@ -74,7 +74,29 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <!-- </button> -->
     </div>
       </section>
-
+      <h3 class="text__h3">Descarga más información de tu ruta</h3>
+      <div class="div__etapas">
+        <a class="div__a" href="public/archivos/VMLG-00.pdf" download="ruta__00" >
+        <p class="ruta0">0</p>
+        </a>
+        <a class="div__a" href="public/archivos/VMLG-01.pdf" download="ruta__01">1</a>
+        <a class="div__a" href="public/archivos/VMLG-02.pdf" download="ruta__02">2</a>
+        <a class="div__a" href="public/archivos/VMLG-03.pdf" download="ruta__03">3</a>
+        <a class="div__a" href="public/archivos/VMLG-04.pdf" download="ruta__04">4</a>
+        <a class="div__a" href="public/archivos/VMLG-05.pdf" download="ruta__05">5</a>
+        <a class="div__a" href="public/archivos/VMLG-06.pdf" download="ruta__06">6</a>
+        <a class="div__a" href="public/archivos/VMLG-07.pdf" download="ruta__07">7</a>
+        <a class="div__a" href="public/archivos/VMLG-08.pdf" download="ruta__08">8</a>
+        <a class="div__a" href="public/archivos/VMLG-09.pdf" download="ruta__09">9</a>
+        <a class="div__a" href="public/archivos/VMLG-10.pdf" download="ruta__10">10</a>
+        <a class="div__a" href="public/archivos/VMLG-11.pdf" download="ruta__11">11</a>
+        <a class="div__a" href="public/archivos/VMLG-12.pdf" download="ruta__12">12</a>
+        <a class="div__a" href="public/archivos/VMLG-13.pdf" download="ruta__13">13</a>
+        <a class="div__a" href="public/archivos/VMLG-14.pdf" download="ruta__14">14</a>
+        <a class="div__a" href="public/archivos/VMLG-15.pdf" download="ruta__15">15</a>
+        <a class="div__a" href="public/archivos/VMLG-16.pdf" download="ruta__16">16</a>
+        <a class="div__a" href="public/archivos/VMLG.17.pdf" download="ruta__17">17</a>
+      </div>
     </main>
    <Footer/>
 </Layout>
@@ -141,6 +163,49 @@ import HeroSections from "../components/layout/HeroSections.astro"
   transform: scaleX(-1);
 }
 
+/* Enlaces PDF */
+
+.text__h3{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-primary);
+  font-size: 20px;
+  color: var(--color-primary);
+  
+}
+
+.div__etapas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+
+.div__a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: var(--color-primary);
+  color: var(--color-tertiary);
+  font-family: var(--font-primary);
+  justify-content: center;
+  border-radius: 100px;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.div__a:hover{
+ background-color: var(--color-secondary);
+ color: var(--color-primary);
+ font-weight: 600;
+}
+
+
 
 /* Media queries */
  @media (max-width: 480px) {
@@ -204,6 +269,37 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .arrow--next{
   width: 35px;
 }
+ .text__h3{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.div__etapas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.div__a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--color-primary);
+  color: var(--color-tertiary);
+  font-family: var(--font-primary);
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
 
 
 @media (min-width: 768px){
@@ -232,6 +328,22 @@ import HeroSections from "../components/layout/HeroSections.astro"
 }
 
 }
+
+.text__h3{
+    font-size: 22px;
+    margin-bottom: 2rem;
+  }
+
+  .div__etapas{
+    gap: 1.5rem;
+  }
+
+  .div__a{
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
 
 
 @media (min-width: 1920px){
@@ -266,6 +378,19 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .arrow--next{
   width: 55px;
 }
+ .text__h3{
+    font-size: 28px;
+  }
+
+  .div__etapas{
+    gap: 2rem;
+  }
+
+  .div__a{
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
 
 }
 
