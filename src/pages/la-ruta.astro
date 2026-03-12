@@ -69,6 +69,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <!-- <button id="prev"> -->
             <img class="arrow" id="prev" src={flecha.src} alt="flecha">
         <!-- </button> -->
+         <p class="contador" id="contador">0</p>
         <!-- <button id="next"> -->
             <img class="arrow--next" id="next" src={flecha.src} alt="flecha">
         <!-- </button> -->
@@ -251,6 +252,16 @@ import HeroSections from "../components/layout/HeroSections.astro"
   
 }
 
+.contador{
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.mapa{
+  border: solid 2px rgb(0, 0, 0);
+}
+
 .botones{
   display: flex;
   justify-content: center;
@@ -260,13 +271,30 @@ import HeroSections from "../components/layout/HeroSections.astro"
 }
 
 .arrow{
-  transform: scaleX(-1);
+  --direccion: -1;
+  transform: scaleX(var(--direccion));
   width: 35px;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover{
+  transform: scaleX(var(--direccion)) scale(1.2);
 }
 
 .arrow--next{
+  --direccion: 1;
+  transform: scaleX(var(--direccion));
   width: 35px;
+  transition: transform 0.3s ease;
 }
+
+.arrow--next:hover{
+  transform: scaleX(var(--direccion)) scale(1.2);
+  
+}
+
+
+
  .text__h3{
   display: flex;
   justify-content: center;
@@ -396,55 +424,57 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 <script>
     const rutas = {
-    "0": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252719171&elevation=off&images=off&maptype=H",
-    "1": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941955&elevation=off&images=off&maptype=H",
-    "2": "https://es.wikiloc.com/wikiloc/embedv2.do?id=253051127&elevation=off&images=off&maptype=H",
-    "3": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941078&elevation=off&images=off&maptype=H",
-    "4":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252827474&elevation=off&images=off&maptype=H",
-     "5":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252730617&elevation=off&images=off&maptype=H",
-    "6":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252940609&elevation=off&images=off&maptype=H",
-  "7":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252827878&elevation=off&images=off&maptype=H",
-  "8": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252847567&elevation=off&images=off&maptype=H",
-  "9":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252941458&elevation=off&images=off&maptype=H",
-  "10": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252836166&elevation=off&images=off&maptype=H",
-  "11": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252835799&elevation=off&images=off&maptype=H",
-  "12":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252828322&elevation=off&images=off&maptype=H",
-  "13": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252739322&elevation=off&images=off&maptype=H",
-  "14": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252829209&elevation=off&images=off&maptype=H",
-  "15": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848987&elevation=off&images=off&maptype=H",
-  "16": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848215&elevation=off&images=off&maptype=H",
-  "17":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252820716&elevation=off&images=off&maptype=H"
+        "0": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252719171&elevation=off&images=off&maptype=H",
+        "1": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941955&elevation=off&images=off&maptype=H",
+        "2": "https://es.wikiloc.com/wikiloc/embedv2.do?id=253051127&elevation=off&images=off&maptype=H",
+        "3": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941078&elevation=off&images=off&maptype=H",
+        "4": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252827474&elevation=off&images=off&maptype=H",
+        "5": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252730617&elevation=off&images=off&maptype=H",
+        "6": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252940609&elevation=off&images=off&maptype=H",
+        "7": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252827878&elevation=off&images=off&maptype=H",
+        "8": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252847567&elevation=off&images=off&maptype=H",
+        "9": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941458&elevation=off&images=off&maptype=H",
+        "10": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252836166&elevation=off&images=off&maptype=H",
+        "11": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252835799&elevation=off&images=off&maptype=H",
+        "12": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252828322&elevation=off&images=off&maptype=H",
+        "13": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252739322&elevation=off&images=off&maptype=H",
+        "14": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252829209&elevation=off&images=off&maptype=H",
+        "15": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848987&elevation=off&images=off&maptype=H",
+        "16": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848215&elevation=off&images=off&maptype=H",
+        "17": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252820716&elevation=off&images=off&maptype=H"
+    };
 
-};
+    const mapElement = document.getElementById("map");
+    const contadorElement = document.getElementById("contador"); // El elemento que muestra el número
+    const next = document.getElementById("next");
+    const prev = document.getElementById("prev");
+    let index = 0;
 
-const srcMap = document.getElementById("map").getAttribute("src");
-const changeSrcMap = (src)=>{
-    document.getElementById("map").setAttribute("src", src);
-}
-const buttons = document.querySelectorAll(".rutas");
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
-let index = 0;
-changeSrcMap(rutas[index]);
+    // Función que actualiza el iframe y el número visual
+    const updateRoute = (idx) => {
+        mapElement.setAttribute("src", rutas[idx]);
+        if (contadorElement) {
+            // Mostramos idx + 1 para que el usuario vea "1" en vez de "0"
+            contadorElement.textContent = idx + 0;
+        }
+    };
 
+    // Inicializar
+    updateRoute(index);
 
-  next.addEventListener("click", () => {
-      index++;
-      if (index >= 18) {
-          index = 0;
-      }
-      changeSrcMap(rutas[index]);
-      console.log(index);
-  });
+    next.addEventListener("click", () => {
+        index++;
+        if (index >= 18) {
+            index = 0; // Reinicia al primero
+        }
+        updateRoute(index);
+    });
 
-
-
-  prev.addEventListener("click", () => {
-      index--;
-      if (index <= -1) {
-          index = 17;
-      }
-      changeSrcMap(rutas[index]);
-  });
-
+    prev.addEventListener("click", () => {
+        index--;
+        if (index < 0) {
+            index = 17; // Salta al último
+        }
+        updateRoute(index);
+    });
 </script>
