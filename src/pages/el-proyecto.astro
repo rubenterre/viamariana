@@ -105,8 +105,9 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
     </section>
 
-    <Colaboradores/>
 </main>
+
+<Colaboradores/>
 
 <Footer/>
 
@@ -233,7 +234,6 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .card__img{
     width: 26px;
     height: 26px;
-    background-color: var(--grey);
 }
 
 .p__espec{
@@ -241,6 +241,87 @@ import HeroSections from "../components/layout/HeroSections.astro"
     font-size: 16px;
     line-height: 26px;
     color: var(--grey);
+}
+
+/*MEDIA QUERYS*/
+
+/*1920PX*/
+
+@media (max-width: 1920px) {
+
+    .quienes__h2{
+        font-size: 40px;
+    }
+
+    .quienes__p p{
+        font-size: 18px;
+    }
+
+    .objetivo__p p{
+        font-size: 18px;
+    }
+
+    .espec__card{
+        width: 340px;
+        height: 170px;
+    }
+
+    .p__espec{
+        font-size: 18px;
+    }
+    
+}
+
+@media (max-width: 768px){
+
+    .quienes__h2{
+        font-size: 30px;
+    }
+
+    .quienes__p p{
+        font-size: 16px;
+    }
+
+    .objetivo__p p{
+        font-size: 16px;
+    }
+
+    .espec__card{
+        width: 280px;
+        height: 180px;
+    }
+
+    .p__espec{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .quienes__h2{
+        font-size: 30px;
+    }
+
+    .quienes__p p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .objetivo__p p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .espec__card{
+        width: 280px;
+        height: 180px;
+    }
+
+    .p__espec{
+        font-size: 16px;
+    }
+
 }
 
 </style>
