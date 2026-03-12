@@ -6,13 +6,23 @@ import ButtonContacto from "../ui/ButtonContacto.astro"
   <a href="/">
     <img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img">
   </a>
-  <nav class="header__navbar">
+  <button class="burger" id="burger" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="header__navbar" id="navbar">
     <a href="/via-mariana" class="navbar__a">Vía Mariana</a>
     <a href="/la-ruta" class="navbar__a">La ruta</a>
     <a href="/patrimonio" class="navbar__a">Patrimonio</a>
     <a href="/el-proyecto" class="navbar__a">El proyecto</a>
+    <div class="navbar__contact">
+      <ButtonContacto />
+    </div>
   </nav>
-  <ButtonContacto/>
+  <div class="header__contact">
+    <ButtonContacto />
+  </div>
 </header>
 
 <style>
@@ -26,9 +36,9 @@ import ButtonContacto from "../ui/ButtonContacto.astro"
     display: flex;
     align-items: center;
     justify-content: space-around;
-    overflow: hidden;
     border-radius: 999px;
-    background-color: var(--light)
+    background-color: var(--light);
+    position: relative;
   }
 
   .header__navbar {
@@ -44,18 +54,69 @@ import ButtonContacto from "../ui/ButtonContacto.astro"
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
-    line-height: 26px;
+  }
+
+  .navbar__contact {
+    display: none;
+  }
+
+  .header__contact {
+    display: block;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger span {
+    width: 28px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 3px;
   }
 
   @media (max-width: 768px) {
-        
+    .burger {
+      display: flex;
     }
 
-    @media (max-width: 480px) {
-        
+    .header__contact {
+      display: none;
     }
 
-    @media (max-width: 424px) {
-        
+    .header__navbar {
+      position: absolute;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background: var(--light);
+      padding: 25px 0;
+      gap: 20px;
+      display: none;
     }
+
+    .header__navbar.active {
+      display: flex;
+    }
+
+    .navbar__contact {
+      display: block;
+      margin-top: 10px;
+    }
+  }
 </style>
+
+<script>
+  const burger = document.querySelector("#burger");
+  const navbar = document.querySelector("#navbar");
+
+  burger?.addEventListener("click", () => {
+    navbar?.classList.toggle("active");
+  });
+</script>
