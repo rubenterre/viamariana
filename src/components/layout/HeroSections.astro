@@ -119,4 +119,65 @@ import Layout from "../../layouts/Layout.astro"
         font-size: 19px;
     }
 }
+
+@media (max-width: 768px) {
+
+    .hero{
+        height: 70vh;
+    }
+ 
+    .hero__text{
+        padding-left: 6rem;
+        padding-top: 10rem;
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+
+    .hero__text{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        padding-left: 0;
+        gap: 0.5rem;
+    }
+
+    .text__superior{
+        width: 50vw;
+    }
+
+    .superior__icon{
+        width: 18px;
+        height: 18px;
+    }
+
+    .superior__p{
+        font-size: 10px;
+    }
+
+    .text__h1{
+        height: auto;
+        width: 50vw;
+        font-size: 40px;
+    }
+
+    .inferior__p{
+        width: 70vw;
+        font-size: 11px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
 </style>
