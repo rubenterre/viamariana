@@ -3,19 +3,19 @@ import ButtonContacto from "../ui/ButtonContacto.astro"
 ---
 
 <header class="header__all">
-  <a href="/"><img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img" /></a>
-
+  <a href="/">
+    <img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img">
+  </a>
   <nav class="header__navbar">
     <a href="/via-mariana" class="navbar__a">Vía Mariana</a>
     <a href="/la-ruta" class="navbar__a">La ruta</a>
     <a href="/patrimonio" class="navbar__a">Patrimonio</a>
     <a href="/el-proyecto" class="navbar__a">El proyecto</a>
   </nav>
-  <ButtonContacto />
+  <ButtonContacto/>
 </header>
 
 <style>
-
   .logo__img {
     max-width: 165px;
   }
@@ -46,4 +46,16 @@ import ButtonContacto from "../ui/ButtonContacto.astro"
     font-weight: 500;
     line-height: 26px;
   }
+
+  @media (max-width: 768px) {
+        
+    }
+
+    @media (max-width: 480px) {
+        
+    }
+
+    @media (max-width: 424px) {
+        
+    }
 </style>
