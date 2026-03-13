@@ -56,7 +56,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
         width="850"
         height="500"
         ></iframe>
-        <div style="color: #777; font-size: 11px; line-height: 16px">
+        <div style="color: #00378f; font-size: 11px; line-height: 16px">
             Powered by&nbsp;<a
             style="color: #4c8c2b; font-size: 11px; line-height: 16px"
             target="_blank"
@@ -75,7 +75,10 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <!-- </button> -->
     </div>
       </section>
-      <h3 class="text__h3">Descarga más información de tu ruta</h3>
+      <h3 class="text__h3">
+        <img class="img__pdf" src="public/img/img-pdf.avif" alt="Icono de PDF">
+        Descarga más información de tu ruta en PDF</h3>
+
       <div class="div__etapas">
         <a class="div__a" href="public/archivos/VMLG-00.pdf" download="ruta__00" >0</a>
         <a class="div__a" href="public/archivos/VMLG-01.pdf" download="ruta__01">1</a>
@@ -116,6 +119,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 .second__title{
   font-family: var(--font-primary);
+  color: var(--color-primary);
   margin-top: 2rem;
 }
 
@@ -140,8 +144,10 @@ import HeroSections from "../components/layout/HeroSections.astro"
 }
 .etapas{
   font-family: var(--font-primary);
+  color: var(--color-primary);
   margin-top: 3rem;
   margin: 2rem;
+  
 }
 
 
@@ -171,7 +177,12 @@ import HeroSections from "../components/layout/HeroSections.astro"
   font-family: var(--font-primary);
   font-size: 20px;
   color: var(--color-primary);
+  gap: 0.8rem;
   
+}
+
+.img__pdf{
+  width: 30px;
 }
 
 .div__etapas{
