@@ -1,5 +1,5 @@
 ---
-import ButtonContacto from "../ui/ButtonContacto.astro"
+import ButtonContacto from "../ui/ButtonContacto.astro";
 ---
 
 <header class="header__all">
@@ -54,6 +54,12 @@ import ButtonContacto from "../ui/ButtonContacto.astro"
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
+    line-height: 26px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar__a:hover {
+    color: var(--color-secondary);
   }
 
   .navbar__contact {
