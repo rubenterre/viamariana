@@ -75,9 +75,17 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <!-- </button> -->
     </div>
       </section>
+
       <h3 class="text__h3">
         <img class="img__pdf" src="public/img/img-pdf.avif" alt="Icono de PDF">
         Descarga más información de tu ruta en PDF</h3>
+
+
+      <div class="div__pdf">
+      <h3 class="text__h3">
+        <img class="pdf" src="public/img/img__pdf.avif" alt="Icono PDF">
+         Descarga más información de tu ruta en PDF</h3>
+         </div>
 
       <div class="div__etapas">
         <a class="div__a" href="public/archivos/VMLG-00.pdf" download="ruta__00" >0</a>
@@ -170,6 +178,12 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 /* Enlaces PDF */
 
+.div__pdf{
+  display: flex;
+  justify-content: center;
+  
+}
+
 .text__h3{
   display: flex;
   justify-content: center;
@@ -181,7 +195,9 @@ import HeroSections from "../components/layout/HeroSections.astro"
   
 }
 
-.img__pdf{
+
+.pdf{
+
   width: 30px;
 }
 
@@ -237,6 +253,8 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .second__tittle{
   margin-top: 1.5rem;
   font-size: 1.6rem;
+  font-family: var(--font-primary);
+  color: var(--color-primary);
 }
 
 .text{
@@ -255,6 +273,8 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .etapas{
   margin: 1.5rem;
   text-align: center;
+  font-family: var(--font-primary);
+  color: var(--color-primary);
 }
 
 .mapa iframe{
