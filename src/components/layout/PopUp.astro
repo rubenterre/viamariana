@@ -71,7 +71,7 @@
 <script is:inline>
 document.addEventListener("DOMContentLoaded", function() {
     // 1. CAMBIA ESTO: Nombre de la página donde quieres que aparezca
-    const paginaObjetivo = "src/pages/index.astro"; 
+    const paginaObjetivo = "/"; 
 
     // 2. Verificar si estamos en la página correcta
     if (window.location.pathname.includes(paginaObjetivo)) {
@@ -80,9 +80,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const rejectBtn = document.getElementById("reject-cookies");
 
         // Solo mostrar si no hay una decisión guardada previamente
-        if (!localStorage.getItem("cookieConsent")) {
-            popup.style.display = "block";
-        }
+        // if (!localStorage.getItem("cookieConsent")) {
+        //     popup.style.display = "block";
+        // }
 
         // Acciones al hacer clic
         acceptBtn.onclick = function() {
