@@ -1,0 +1,99 @@
+---
+
+
+
+---
+
+
+<div class="banner__cookie" id="cookie-popup">
+    <div class="content">
+        <h3>Aviso de Cookies</h3>
+        <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios.
+            Puedes obtener más información haciendo click en los siguientes enlaces: 
+            <a href="src/pages/AvisoLegal.astro" target="_blank">Aviso Legal</a>
+            <a href="#" target="_blank">Política de Privacidad</a>
+        </p>
+
+        <div class="cookie__buttons">
+            <button class="btn__aceptar" id="aceptar">
+                Aceptar
+            </button>
+            <button class="btn__rechazar" id="rechazar">
+                Rechazar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .banner__cookie{
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    .content{
+        background-color: var(color-primary);
+        margin: 15% auto;
+        padding: 25px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 450px;
+        text-align: center;
+    }
+
+    .cookie__buttons{
+        margin-top: 20px;
+    }
+
+    .btn__aceptar{
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .btn__rechazar{
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. CAMBIA ESTO: Nombre de la página donde quieres que aparezca
+    const paginaObjetivo = "src/pages/index.astro"; 
+
+    // 2. Verificar si estamos en la página correcta
+    if (window.location.pathname.includes(paginaObjetivo)) {
+        const popup = document.getElementById("cookie-popup");
+        const acceptBtn = document.getElementById("aceptar");
+        const rejectBtn = document.getElementById("rechazar");
+
+        // Solo mostrar si no hay una decisión guardada previamente
+        if (!localStorage.getItem("cookieConsent")) {
+            popup.style.display = "block";
+        }
+
+        // Acciones al hacer clic
+        acceptBtn.onclick = function() {
+            localStorage.setItem("cookieConsent", "accepted");
+            popup.style.display = "none";
+        }
+
+        rejectBtn.onclick = function() {
+            localStorage.setItem("cookieConsent", "rejected");
+            popup.style.display = "none";
+        }
+    }
+});
+</script>
