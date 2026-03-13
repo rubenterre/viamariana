@@ -119,13 +119,18 @@ import HeroSections from "../components/layout/HeroSections.astro";
 
 <style>
     .main {
-        width: 100vw;
+        width: 100%;
         height: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .container {
         width: 90vw;
         height: 50vh;
+        border-radius: 25px;
         /* border: 2px solid var(--color-primary);
          border-radius: 5px;
         box-shadow: inset 0px 0px 10px 5px var(--color-secondary); */
@@ -136,6 +141,10 @@ import HeroSections from "../components/layout/HeroSections.astro";
         align-items: center;
     }
 
+    .container:hover{
+        box-shadow: 0px 0px 10px 5px var(--grey);
+    }
+
     .img__container {
         width: 250px;
         padding: 10px;
@@ -144,17 +153,22 @@ import HeroSections from "../components/layout/HeroSections.astro";
         color: #00378f;
     }
     .text {
-        color: var(--grey);
-        font-weight: 400;
-        font-family: var(--font-tertiary);
-        text-align: center;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         padding: 10px;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
     }
+
+    .text__p{
+        color: var(--grey);
+        font-weight: 400;
+        font-family: var(--font-tertiary);
+        text-align: center;
+    }
+
     .container2 {
         width: 90vw;
         height: 50vh;
@@ -164,15 +178,22 @@ import HeroSections from "../components/layout/HeroSections.astro";
     }
     .historia {
         width: 50%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-         border: 2px solid var(--color-primary);
         border-radius: 25px;
-        box-shadow: inset 0px 0px 10px 5px var(--color-secondary);
+         /* border: 2px solid var(--color-primary);
+        box-shadow: inset 0px 0px 10px 5px var(--color-secondary); */
         background-color: var(--color-tertiary);
         margin: 3px;
+        padding-top: 1rem;
     }
+
+    .historia:hover{
+        box-shadow: 0px 0px 10px 5px var(--grey);
+    }
+
     .h1__historia {
         color: var(--color-primary);
     }
@@ -198,7 +219,13 @@ import HeroSections from "../components/layout/HeroSections.astro";
          border-radius: 5px;
         box-shadow: inset 0px 0px 10px 5px var(--color-secondary); */
         margin: 5px;
+        padding-top: 1rem;
     }
+
+    .tradicion:hover{
+        box-shadow: 0px 0px 10px 5px var(--grey);
+    }
+
     .h1__tradicion {
         color: var(--color-primary);
     }
@@ -270,7 +297,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
     }
 
     .button {
-        background: rgba(239, 185, 31, 1);
+        background: var(--color-primary);
         border: none;
         border-radius: 50px;
         padding: 0.8rem 2em;
@@ -281,6 +308,11 @@ import HeroSections from "../components/layout/HeroSections.astro";
         margin-left: 20px;
         color: white;
     }
+
+    .button:hover{
+        background: var(--color-secondary);
+    }
+
     #open2 {
         margin: 5px;
     }
@@ -314,9 +346,69 @@ import HeroSections from "../components/layout/HeroSections.astro";
     .show {
         display: block;
     }
+
+    /*MEDIA QUERYS */
+
     @media (max-width: 768px) {
-       
+    
+        .text__p{
+            font-size: 13px;
+        }
+
+        .historia{
+            height: 325px;
+        }
+
+        .text__historia{
+            font-size: 12px;
+        }
+
+        .tradicion{
+            height: 325px;
+            
+        }
+
+        .text__tradicion{
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
     }
+
+     @media (max-width: 480px) {
+    
+        .text__p{
+            font-size: 13px;
+        }
+
+        .historia{
+            height: 325px;
+        }
+
+        .text__historia{
+            font-size: 12px;
+        }
+
+        .tradicion{
+            height: 325px;
+            
+        }
+
+        .text__tradicion{
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+    }
+
 </style>
 
 <script is:inline>
