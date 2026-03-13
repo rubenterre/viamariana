@@ -10,15 +10,15 @@
         <h3>Aviso de Cookies</h3>
         <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios.
             Puedes obtener más información haciendo click en los siguientes enlaces: 
-            <a href="src/pages/AvisoLegal.astro" target="_blank">Aviso Legal</a>
+            <a href="#" target="_blank">Aviso Legal</a>
             <a href="#" target="_blank">Política de Privacidad</a>
         </p>
 
         <div class="cookie__buttons">
-            <button class="btn__aceptar" id="aceptar">
+            <button class="btn__aceptar" id="accept-cookies">
                 Aceptar
             </button>
-            <button class="btn__rechazar" id="rechazar">
+            <button class="btn__rechazar" id="reject-cookies">
                 Rechazar
             </button>
         </div>
@@ -68,7 +68,7 @@
     }
 </style>
 
-<script>
+<script is:inline>
 document.addEventListener("DOMContentLoaded", function() {
     // 1. CAMBIA ESTO: Nombre de la página donde quieres que aparezca
     const paginaObjetivo = "src/pages/index.astro"; 
@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // 2. Verificar si estamos en la página correcta
     if (window.location.pathname.includes(paginaObjetivo)) {
         const popup = document.getElementById("cookie-popup");
-        const acceptBtn = document.getElementById("aceptar");
-        const rejectBtn = document.getElementById("rechazar");
+        const acceptBtn = document.getElementById("accept-cookies");
+        const rejectBtn = document.getElementById("reject-cookies");
 
         // Solo mostrar si no hay una decisión guardada previamente
         if (!localStorage.getItem("cookieConsent")) {
