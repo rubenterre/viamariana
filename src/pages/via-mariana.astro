@@ -119,7 +119,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
 
 <style>
     .main {
-        width: 100vw;
+        width: 100%;
         height: 50%;
         display: flex;
         justify-content: center;
@@ -153,10 +153,6 @@ import HeroSections from "../components/layout/HeroSections.astro";
         color: #00378f;
     }
     .text {
-        color: var(--grey);
-        font-weight: 400;
-        font-family: var(--font-tertiary);
-        text-align: center;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -165,6 +161,14 @@ import HeroSections from "../components/layout/HeroSections.astro";
         align-items: center;
         gap: 1rem;
     }
+
+    .text__p{
+        color: var(--grey);
+        font-weight: 400;
+        font-family: var(--font-tertiary);
+        text-align: center;
+    }
+
     .container2 {
         width: 90vw;
         height: 50vh;
@@ -174,6 +178,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
     }
     .historia {
         width: 50%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -341,10 +346,69 @@ import HeroSections from "../components/layout/HeroSections.astro";
     .show {
         display: block;
     }
+
+    /*MEDIA QUERYS */
+
     @media (max-width: 768px) {
     
-    .
+        .text__p{
+            font-size: 13px;
+        }
+
+        .historia{
+            height: 325px;
+        }
+
+        .text__historia{
+            font-size: 12px;
+        }
+
+        .tradicion{
+            height: 325px;
+            
+        }
+
+        .text__tradicion{
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
     }
+
+     @media (max-width: 480px) {
+    
+        .text__p{
+            font-size: 13px;
+        }
+
+        .historia{
+            height: 325px;
+        }
+
+        .text__historia{
+            font-size: 12px;
+        }
+
+        .tradicion{
+            height: 325px;
+            
+        }
+
+        .text__tradicion{
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+    }
+
 </style>
 
 <script is:inline>
