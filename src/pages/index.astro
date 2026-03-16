@@ -106,25 +106,24 @@ import PopUp from "../components/layout/PopUp.astro";
     .galery{
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .img--galery{
-        width: 100%;
+        width: 80%;
         border-radius: 20px;
+        transition: 1s ease-out;
     }
     .galery__img{
-        width: 25%;
+        width: 40%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 40px;
-        transition: 1s ease-out;
+        padding: 20px;
     }
-    .galery__img:hover{
-        transform:scale(1.4);
+    .img--galery:hover{
+        transform:scale(1.5);
     }
 
     @media (max-width:768px) {
