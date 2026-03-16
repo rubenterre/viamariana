@@ -8,11 +8,13 @@
 <div class="banner__cookie" id="cookie-popup">
     <div class="content">
         <h3>Aviso de Cookies</h3>
-        <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios.
-            Puedes obtener más información haciendo click en los siguientes enlaces: 
-            <a href="#" target="_blank">Aviso Legal</a>
-            <a href="#" target="_blank">Política de Privacidad</a>
+        <p class="p__cookie">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.
+            Puedes obtener más información haciendo click en los siguientes enlaces:
         </p>
+            <div class="enlaces__cookie">
+                <a class="reach" href="#" target="_blank">Aviso Legal</a>
+                <a class="reach" href="#" target="_blank">Política de Privacidad</a>
+            </div>
 
         <div class="cookie__buttons">
             <button class="btn__aceptar" id="accept-cookies">
@@ -28,28 +30,58 @@
 
 <style>
     .banner__cookie{
-        display: none;
         position: fixed;
+        bottom: -10px;
+        left: 75%;
+        transform: translate(-75%, 0);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: opacity 0.4s ease, transform 0.4s ease;
         z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: white;
+    }
+
+    .banner__cookie.show{
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
     }
 
     .content{
-        background-color: var(color-primary);
+        background-color: var(--color-secondary);
         margin: 15% auto;
-        padding: 25px;
+        padding: 10px;
         border-radius: 10px;
-        width: 90%;
-        max-width: 450px;
+
+        max-width: 500px;
         text-align: center;
     }
 
+    .p__cookie{
+        align-items: left;
+        text-align: justify;
+        padding: 8px;
+        font-weight: 500;
+    }
+
+    .enlaces__cookie{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reach{
+        text-decoration: none;
+    }
+
+    .reach:hover{
+        text-decoration: underline;
+    }
+
+
     .cookie__buttons{
         margin-top: 20px;
+        gap: 20px;
     }
 
     .btn__aceptar{
@@ -59,6 +91,11 @@
         border-radius: 5px;
     }
 
+    .btn__aceptar:hover{
+        background-color: var(--color-primary);
+        color: var(--color-tertiary);
+    }
+
     .btn__rechazar{
         border: none;
         padding: 10px 20px;
@@ -66,36 +103,110 @@
         border-radius: 5px;
         margin-left: 10px;
     }
+
+    .btn__rechazar:hover{
+        background-color: var(--color-primary);
+        color: var(--color-tertiary);
+    }
+
+    h3{
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+
+    @media (max-width: 480px){
+
+    .banner__cookie{
+        left: 50%;
+        bottom: 10px;
+        transform: translate(-50%, 10px);
+        width: 95%;
+    }
+
+    .banner__cookie.show{
+        transform: translate(-50%, 0);
+    }
+
+    .content{
+        max-width: 100%;
+        padding: 18px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+
+    .cookie__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn__rechazar{
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+
+    .banner__cookie{
+        left: 90%;
+        bottom: 15px;
+        transform: translate(-50%, 10px);
+        width: 80%;
+    }
+
+    .banner__cookie.show{
+        transform: translate(-50%, 0);
+    }
+
+    .cookie__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content{
+        max-width: 450px;
+        padding: 22px;
+    }
+
+    h3{
+        font-size: 17px;
+    }
+
+}
+
+
 </style>
 
 <script is:inline>
-document.addEventListener("astro:page-load", () => {
-    // 1. CAMBIA ESTO: Nombre de la página donde quieres que aparezca
-    const paginaObjetivo = "/"; 
+document.addEventListener("DOMContentLoaded", () => {
 
-    // 2. Verificar si estamos en la página correcta
-    if (window.location.pathname.includes(paginaObjetivo)) {
         const popup = document.getElementById("cookie-popup");
         const acceptBtn = document.getElementById("accept-cookies");
         const rejectBtn = document.getElementById("reject-cookies");
 
-        // Solo mostrar si no hay una decisión guardada previamente
-      if (popup && acceptBtn && rejectBtn) {
+        if (!popup || !acceptBtn || !rejectBtn) return;
+
         if (!localStorage.getItem("cookieConsent")) {
-          popup.style.display = "block";
+            setTimeout(() => {
+                popup.classList.add("show");
+            }, 300);
         }
 
-        // Acciones al hacer clic
-        acceptBtn.onclick = function() {
+        acceptBtn.onclick = () => {
             localStorage.setItem("cookieConsent", "accepted");
-            popup.style.display = "none";
+            popup.classList.remove("show");
         }
 
-        rejectBtn.onclick = function() {
+        rejectBtn.onclick = () => {
             localStorage.setItem("cookieConsent", "rejected");
-            popup.style.display = "none";
+            popup.classList.remove("show")
         };
-    }
-    }
 });
 </script>
