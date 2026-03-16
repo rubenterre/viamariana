@@ -18,24 +18,26 @@
     
             <div class="footer__menu">
                 <p class="menu--title">Mapa del sitio</p>
-                <a href="#">Via mariana</a>
-                <a href="#">La ruta</a>
-                <a href="#">Patrimonio</a>
-                <a href="#">El proyecto</a>
+                <a href="/">Inicio</a>
+                <a href="/via-mariana">Via mariana</a>
+                <a href="/la-ruta">La ruta</a>
+                <a href="/patrimonio">Patrimonio</a>
+                <a href="/el-proyecto">El proyecto</a>
             </div>
     
             <div class="footer__menu">
-                <p class="menu--title">Contact</p>
-                <a href="#">Soporte</a>
-                <a href="#">Ayuda</a>
+                <p class="menu--title">Contacto</p>
+                <a href="/contacto">Soporte</a>
+                <a href="/contacto">Ayuda</a>
+                <a href="/AvisoLegal">Aviso legal</a>
                 
             </div>
     
             <div class="footer__menu">
-                <p class="menu--title">Encuentranos</p>
+                <p class="menu--title">Encuéntranos</p>
                 <a href="#">(62) 1111 2222</a>
                 <a href="#">viamariana@gmail.com</a>
-                <p>Villagarcia de Arousa</p>
+                <p>Villagarcía de Arousa</p>
             </div>
         </div>
 </footer>
@@ -80,5 +82,61 @@
     a{
         text-decoration: none;
         color: white;
+    }
+
+    @media (max-width:1024px) {
+        .footer{
+            flex-direction: row;
+            gap: 30px;
+        }
+        
+    }
+
+
+    @media (max-width:768px) {
+        .footer{
+            flex-direction: column;
+            gap: 30px;
+        }
+        .footer__social{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .footer__menus{
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .footer__menu{
+            justify-content: start;
+            align-items: center;
+        }
+    }
+    @media (max-width:480px) {
+        .footer{
+            flex-direction: column;
+            gap: 30px;
+        }
+        .footer__title{
+            width: 100%;
+        }
+        .footer__title p{
+            text-align: center;
+        }
+        .footer__social{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .footer__menus{
+            flex-direction: column;
+            gap: 30px;
+        }
+        
     }
 </style>
