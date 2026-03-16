@@ -8,10 +8,11 @@
             <img src="img/Bitmap.png" alt="via mariana">
             <p>La Vía Mariana Luso-Galaica recupera y promueve un itinerario de peregrinación entre santuarios marianos.</p>
             <div class="footer__social">
-                <button><img src="img/facebook.svg" alt="facebook"></button>
-                <button><img src="img/instagram.svg" alt="instagram"></button>
-                <button><img src="img/linkedin.svg" alt="linkedin"></button>
+                <a href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES" target="_blank" class="social__a"><img src="img/facebook.svg" alt="facebook"></a>
+                <a href="https://www.instagram.com/viamarianalusogalaica/?hl=es" target="_blank"  class="social__a"><img src="img/instagram.svg" alt="instagram"></a>
+                <a href="https://www.youtube.com/channel/UCVTh7Knr_AjCWzj1jRYKnEA?view_as=subscriber" target="_blank" class="social__a"><img src="img/youtube-antiguo.svg" alt="youtube"></a>
             </div>
+            
     
         </div>
         <div class="footer__menus">
@@ -60,6 +61,21 @@
 
     }
 
+    .footer__social{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer__social img{
+        transition: transform 0.3s ease;
+    }
+
+    .footer__social img:hover{
+        transform: scale(1.2);
+    }
+
     button{
         background:none;
         border: none;
@@ -79,9 +95,14 @@
         flex-direction: column;
         gap: 30px;
     }
+
     a{
         text-decoration: none;
         color: white;
+    }
+
+    a:hover{
+        color: var(--color-secondary);
     }
 
     @media (max-width:1024px) {
@@ -100,8 +121,9 @@
         }
         .footer__social{
             display: flex;
-            gap: 10px;
+            gap: 3rem;
             justify-content: center;
+            align-items: center;
         }
         .footer__menus{
             width: 100%;
@@ -129,7 +151,7 @@
         }
         .footer__social{
             display: flex;
-            gap: 20px;
+            gap: 3rem;
             justify-content: center;
         }
 
