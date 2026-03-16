@@ -5,7 +5,10 @@
 <footer class="footer">
 
         <div class="footer__title">
-            <img src="img/Bitmap.png" alt="via mariana">
+
+            <div class="title__img">
+                <img src="img/Bitmap.png" alt="via mariana">
+            </div>
             <p>La Vía Mariana Luso-Galaica recupera y promueve un itinerario de peregrinación entre santuarios marianos.</p>
             <div class="footer__social">
                 <a href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES" target="_blank" class="social__a"><img src="img/facebook.svg" alt="facebook"></a>
@@ -13,7 +16,6 @@
                 <a href="https://www.youtube.com/channel/UCVTh7Knr_AjCWzj1jRYKnEA?view_as=subscriber" target="_blank" class="social__a"><img src="img/youtube-antiguo.svg" alt="youtube"></a>
             </div>
             
-    
         </div>
         <div class="footer__menus">
     
@@ -49,7 +51,6 @@
         color: white;
         background-color: rgba(0, 55, 143, 1);
         width: 100%;
-
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -58,6 +59,11 @@
     }
     .footer__title{
         width: 355px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
 
     }
 
@@ -120,6 +126,7 @@
             gap: 30px;
         }
         .footer__social{
+            width: 100%;
             display: flex;
             gap: 3rem;
             justify-content: center;
@@ -143,9 +150,19 @@
             flex-direction: column;
             gap: 30px;
         }
+
         .footer__title{
             width: 100%;
+            padding: 0 2rem;
         }
+
+        .title__img{
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .footer__title p{
             text-align: center;
         }
@@ -153,6 +170,7 @@
             display: flex;
             gap: 3rem;
             justify-content: center;
+            padding-top: 1rem;
         }
 
         .footer__menus{
