@@ -2,85 +2,56 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import HeroSections from "../components/layout/HeroSections.astro";
+import Footer from "../components/layout/Footer.astro";
 ---
 
 <Layout>
   <Header />
-  <HeroSections title="Contacto"/>
+  <HeroSections title="Contacto" />
   <main class="contact-page">
     <div class="contact-page__container">
       <h1 class="contact-page__title">Contacto</h1>
-
       <div class="contact-page__grid">
         <aside class="info-card">
           <h2 class="info-card__title">Información</h2>
-
           <div class="info-card__item">
             <div class="info-card__content">
               <p class="info-card__label">WhatsApp</p>
               <p class="info-card__value">*Lorem, ipsum 123</p>
             </div>
           </div>
-
           <div class="info-card__item">
             <div class="info-card__content">
               <p class="info-card__label">Email</p>
               <p class="info-card__value">viamarianalusogalaica@gmail.com</p>
             </div>
           </div>
-
           <div class="info-card__social">
             <p class="info-card__label">Redes</p>
             <div class="info-card__links">
-              <a
-                href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES"
-                class="info-card__link"
-                ><img
-                  class="info-card__icon"
-                  src="./img/facebook.svg"
-                  alt="Icono facebook"
-                />
+              <a href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES" class="info-card__link" >
+                <img class="info-card__icon" src="./img/facebook.svg" alt="Icono facebook" />
               </a>
-              <a
-                href="https://www.instagram.com/viamarianalusogalaica/?hl=es"
-                class="info-card__link"
-                ><img
-                  class="info-card__icon"
-                  src="./img/instagram.svg"
-                  alt="Icono Instagram"
-                />
+              <a href="https://www.instagram.com/viamarianalusogalaica/?hl=es" class="info-card__link" >
+                <img class="info-card__icon" src="./img/instagram.svg" alt="Icono Instagram" />
               </a>
             </div>
           </div>
         </aside>
-
         <section class="form-card">
           <h2 class="form-card__title">Escríbenos</h2>
           <form class="form-card__form">
-            <input
-              class="form-card__input"
-              type="text"
-              placeholder="Nombre"
-              required
-            />
-            <input
-              class="form-card__input"
-              type="email"
-              placeholder="Email"
-              required
-            />
+            <input class="form-card__input" type="text" placeholder="Nombre" required />
+            <input class="form-card__input" type="email" placeholder="Email" required />
             <input class="form-card__input" type="text" placeholder="Asunto" />
-            <textarea
-              class="form-card__textarea"
-              placeholder="Mensaje"
-              rows="4"
-              required></textarea>
+            <textarea class="form-card__textarea" placeholder="Mensaje" rows="4" required></textarea>
             <button class="form-card__button" type="submit">Enviar</button>
           </form>
         </section>
       </div>
     </div>
   </main>
+  <Footer/>
 </Layout>
 
 <style>
