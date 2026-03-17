@@ -5,62 +5,26 @@
 <section>
   <h2 class="h2">Entes colaboradores</h2>
   <div class="img-1">
-    <img
-      class="img-1-1"
-      src="./img/colaboradores/Logo_GDR_TierraAgua.png"
-      alt="Logo GDR tierra y agua"
-    />
-    <img
-      class="img-1-1"
-      src="./img/colaboradores/Logo_GaliciaSuroeste.png"
-      alt="Logo Galicia suroeste"
-    />
-    <img
-      class="img-1-1"
-      src="./img/colaboradores/Logo_GDR_PontevedraMorrazo.png"
-      alt="Logo GDR Pontevedra Morrazo"
-    />
-    <img
-      class="img-1-1"
-      src="./img/colaboradores/Logo_Deloa.png"
-      alt="Logo Deloa"
-    />
-    <img
-      class="img-1-1"
-      src="./img/colaboradores/Logo_TierrasCompostela.png"
-      alt="Logo Tierras de compostela"
-    />
+    <img class="img-1-1" src="./img/colaboradores/Logo_GDR_TierraAgua.png" alt="GDR tierra y agua" />
+    <img class="img-1-1" src="./img/colaboradores/Logo_GaliciaSuroeste.png" alt="Galicia suroeste" />
+    <img class="img-1-1-1" src="./img/colaboradores/Logo_GDR_PontevedraMorrazo.png" alt="GDR Pontevedra Monrazo" />
+    <img class="img-1-1-1" src="./img/colaboradores/Logo_Deloa.png" alt="Deloa" />
+    <img class="img-1-1" src="./img/colaboradores/Logo_GDR_CostaMorte.png" alt="GDR Costa da morte" />
   </div>
   <div class="img-2">
-    <img
-      class="img-2-1"
-      src="./img/colaboradores/Logo_GDR_CostaMorte.png"
-      alt="Logo GDR Costa da morte"
-    />
-    <img
-      class="img-2-1"
-      src="./img/colaboradores/Logo_XuntaGalicia.png"
-      alt="Logo Xunta de Galicia"
-    />
-    <img
-      class="img-2-1"
-      src="./img/colaboradores/Logo_FinanciacionEuropea.png"
-      alt="Logo Finanaciación Europea"
-    />
-    <img
-      class="img-2-1"
-      src="./img/colaboradores/Logo_MinisterioAgricultura.png"
-      alt="Logo Ministerio de Agricultura"
-    />
+    <img class="img-2-1" src="./img/colaboradores/Logo_TierrasCompostela.png" alt="Tierras de compostela" />
+    <img class="img-2-1" src="./img/colaboradores/Logo_XuntaGalicia.png" alt="Xunta_Galicia" />
+    <img class="img-2-1" src="./img/colaboradores/Logo_FinanciacionEuropea.png" alt="Union_Europea" />
+    <img class="img-2-1" src="./img/colaboradores/Logo_MinisterioAgricultura.png" alt="Gobierno de españa" />
   </div>
 </section>
 
 <style>
   .h2 {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 5%;
     font-family: var(--font-primary);
-    color: var(--grey);
+    color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,43 +39,38 @@
   }
 
   .img-1 {
+    margin-bottom: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   .img-1-1 {
-    width: 130px;
-  }
-
-  .img-2 {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .img-2-1 {
-    padding-bottom: 30px;
     width: 200px;
   }
 
-  @media (max-width: 768px) {
-    .img-1-1 {
-      width: 75px;
-    }
+  .img-1-1-1 {
+    width: 150px;
+  }
 
-    .img-2-1 {
-      width: 150px;
-    }
+  .img-2 {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .img-2-1 {
+    width: 250px;
   }
 
   @media (max-width: 480px) {
     .img-1-1 {
       width: 50px;
     }
+
     .img-2 {
       padding-top: 10px;
     }
