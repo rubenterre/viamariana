@@ -4,6 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import Colaboradores from "../components/layout/Colaboradores.astro";
+import PopUp from "../components/layout/PopUp.astro";
+import Gallery from "../components/layout/Gallery.astro";
 import Testimonio from "../components/layout/Testimonio.astro";
 ---
 
@@ -24,6 +26,13 @@ import Testimonio from "../components/layout/Testimonio.astro";
             </p>
         </div>
         <div class="col col--img">
+            <img src="img/mapa_2.png" alt="image" class="etapas__img">
+        </div>
+    </div>
+    <h2 class="main__h2">Galería</h2>
+    
+    <Gallery />
+    
             <img src="img/mapa_2.png" alt="image" class="etapas__img" />
         </div>
     </div>
@@ -47,6 +56,18 @@ import Testimonio from "../components/layout/Testimonio.astro";
         align-items: center;
         justify-content: center;
     }
+
+    .col--text {
+        padding: 0 80px;
+    }
+
+    .col--img {
+        filter: drop-shadow(10px 8px 8px rgba(0, 0, 0, 0.25));
+    }
+
+
+
+
 
     @media (max-width: 768px) {
         .row {
