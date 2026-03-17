@@ -93,7 +93,7 @@
                         <p class="slider-p">Via Mariana es lo mas y me encanta.</p>
                         <div class="div-perfil">
                             <img class="perfil-f" src="../img/foto_perfil.png" alt="Perfil">
-                            <div>
+                            <div class="div-perfil-np">
                                 <p class="perfil-n">Sara Martínez</p>
                                 <p class="perfil-p">Betanzos</p>
                             </div>
@@ -130,7 +130,7 @@
         max-width: 405px;
         color: var(--dark);
         font-family: var(--font-primary);
-        font-size: 48px;
+        font-size: 30px;
         text-align: center;
     }
 
@@ -138,7 +138,7 @@
         max-width: 445px;
         color: var(--grey);
         font-family: var(--font-primary);
-        font-size: 30px;
+        font-size: 14px;
         text-align: center;
     }
 
@@ -150,15 +150,14 @@
 
     .slider-container {
         padding-bottom: 40px;
-        width: 90%;
+        width: 70%;
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
     }
 
     .slider {
         overflow: hidden;
-        width: 100%;
     }
 
     .track {
@@ -167,14 +166,13 @@
     }
 
     .card {
+        width: 200px;
         margin-right: 10px;
         background: var(--light);
         display: flex;
         flex-direction: column;
-        align-items: estrellat;
         justify-content: center;
-        flex: 0 0 600px;
-        font-size: 30px;
+        flex: 0 0 300px;
     }
 
     .div-estrella {
@@ -182,15 +180,15 @@
     }
 
     .estrella {
-        width: 30px;
-        height: 30px;
+        width: 10px;
+        height: 10px;
     }
 
     .slider-p {
-        padding: 80px 30px;
+        padding: 20px 30px;
         color: var(--grey);
         font-family: var(--font-primary);
-        font-size: 32px;
+        font-size: 15px;
     }
 
     .div-perfil {
@@ -201,24 +199,20 @@
     }
 
     .perfil-f {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
 
     .perfil-n {
-        width: 147px;
-        height: 26px;
         color: var(--color-primary);
         font-family: var(--font-secondary);
-        font-size: 20px;
+        font-size: 10px;
     }
 
     .perfil-p {
-        width: 130px;
-        height: 26px;
         color: var(--grey);
         font-family: var(--font-secondary);
-        font-size: 20px;
+        font-size: 10px;
     }
 
     @media (max-width: 768px) {
