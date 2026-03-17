@@ -1,0 +1,52 @@
+---
+const { image, text, alt } = Astro.props;
+---
+
+<div class="galery__img">
+  <img class="img--galery" src={image} alt={alt} />
+  <p class="gallery__text">{text}</p>
+</div>
+
+<style>
+    .galery__img {
+        position: relative;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: 1s ease-out;
+    }
+    
+    .img--galery {
+        width: 60%;
+        border-radius: 20px;
+
+    }
+    .gallery__text {
+        position:relative;
+        bottom: 40px;
+        font-size: 1.8em;
+        color:white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .galery__img:hover{
+        transform: scale(1.5);
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
+    }
+
+    @media (max-width:1024px) {
+        .galery__img {
+            width:65%;
+            height: auto;
+        }
+        .img--galery {
+            width:100%;
+        }
+        
+    }
+
+
+</style>
