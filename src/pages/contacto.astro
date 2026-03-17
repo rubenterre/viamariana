@@ -47,6 +47,14 @@ import Footer from "../components/layout/Footer.astro";
             <input class="form-card__input" type="text" placeholder="Nombre" required />
             <input class="form-card__input" type="email" placeholder="Email" required />
             <input class="form-card__input" type="text" placeholder="Asunto" />
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox" required/>
+                <p class="checkbox__p">He leído y acepto el tratamiento de mis datos según las condiciones indicadas.<span>*</span></p>
+            </div>
+            <p class="checkbox__p"><span>*</span> Información básica sobre protección de datos: Vía Mariana tratará sus datos para responder a su solicitud. 
+                  Puede ejercer sus derechos de acceso, rectificación o supresión en viamariana@gmail.com. <br>
+                  Lea nuestra <b>Política de Privacidad</b> completa <a href="src/pages/politica-privacidad.astro">aquí.</a>
+            </p>
             <textarea class="form-card__textarea" placeholder="Mensaje" rows="4" required></textarea>
             <button class="form-card__button" type="submit">Enviar</button>
           </form>
@@ -130,7 +138,7 @@ import Footer from "../components/layout/Footer.astro";
   }
 
   .info-card__value {
-    color: var(--dark);
+    color: var(--grey);
     font-size: 1rem;
     font-family: var(--font-primary);
   }
@@ -215,6 +223,40 @@ import Footer from "../components/layout/Footer.astro";
   .form-card__button:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
+  }
+
+  /*CHECHBOX*/
+
+  .checkbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #checkbox{
+    accent-color: var(--color-primary);
+  }
+
+  .checkbox__p{
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    color: var(--grey);
+  }
+
+  .checkbox__p span{
+    color: var(--color-primary);
+  }
+
+  .checkbox__p a{
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+
+  .checkbox__p a:hover{
+    color: var(--color-secondary);
   }
 
   @media (max-width: 480px) {
