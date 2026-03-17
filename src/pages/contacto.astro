@@ -1,84 +1,68 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
+import HeroSections from "../components/layout/HeroSections.astro";
+import Footer from "../components/layout/Footer.astro";
 ---
 
 <Layout>
   <Header />
+  <HeroSections title="Contacto" />
   <main class="contact-page">
     <div class="contact-page__container">
       <h1 class="contact-page__title">Contacto</h1>
-
       <div class="contact-page__grid">
         <aside class="info-card">
           <h2 class="info-card__title">Información</h2>
-
           <div class="info-card__item">
             <div class="info-card__content">
               <p class="info-card__label">WhatsApp</p>
               <p class="info-card__value">*Lorem, ipsum 123</p>
             </div>
           </div>
-
           <div class="info-card__item">
             <div class="info-card__content">
               <p class="info-card__label">Email</p>
               <p class="info-card__value">viamarianalusogalaica@gmail.com</p>
             </div>
           </div>
-
           <div class="info-card__social">
             <p class="info-card__label">Redes</p>
             <div class="info-card__links">
-              <a
-                href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES"
-                class="info-card__link"
-                ><img
-                  class="info-card__icon"
-                  src="./img/facebook.svg"
-                  alt="Icono facebook"
-                />
+              <a href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES" class="info-card__link" >
+                <img class="info-card__icon" src="./img/facebook.svg" alt="Icono facebook" />
               </a>
-              <a
-                href="https://www.instagram.com/viamarianalusogalaica/?hl=es"
-                class="info-card__link"
-                ><img
-                  class="info-card__icon"
-                  src="./img/instagram.svg"
-                  alt="Icono Instagram"
-                />
+              <a href="https://www.instagram.com/viamarianalusogalaica/?hl=es" class="info-card__link" >
+                <img class="info-card__icon" src="./img/instagram.svg" alt="Icono Instagram" />
+              </a>
+              <a href="https://www.youtube.com/@asociacionviamarianaluso-g9811" class="info-card__link" >
+                <img class="info-card__icon" src="./img/youtube-antiguo.svg" alt="Icono Youtube" />
               </a>
             </div>
           </div>
         </aside>
-
         <section class="form-card">
           <h2 class="form-card__title">Escríbenos</h2>
           <form class="form-card__form">
-            <input
-              class="form-card__input"
-              type="text"
-              placeholder="Nombre"
-              required
-            />
-            <input
-              class="form-card__input"
-              type="email"
-              placeholder="Email"
-              required
-            />
+            <input class="form-card__input" type="text" placeholder="Nombre" required />
+            <input class="form-card__input" type="email" placeholder="Email" required />
             <input class="form-card__input" type="text" placeholder="Asunto" />
-            <textarea
-              class="form-card__textarea"
-              placeholder="Mensaje"
-              rows="4"
-              required></textarea>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox" required/>
+                <p class="checkbox__p">He leído y acepto el tratamiento de mis datos según las condiciones indicadas.<span>*</span></p>
+            </div>
+            <p class="checkbox__p"><span>*</span> Información básica sobre protección de datos: Vía Mariana tratará sus datos para responder a su solicitud. 
+                  Puede ejercer sus derechos de acceso, rectificación o supresión en <b>viamariana@gmail.com.</b> <br>
+                  Lea nuestra <b>Política de Privacidad</b> completa <a href="/politica-privacidad">aquí.</a>
+            </p>
+            <textarea class="form-card__textarea" placeholder="Mensaje" rows="4" required></textarea>
             <button class="form-card__button" type="submit">Enviar</button>
           </form>
         </section>
       </div>
     </div>
   </main>
+  <Footer/>
 </Layout>
 
 <style>
@@ -154,7 +138,7 @@ import Header from "../components/layout/Header.astro";
   }
 
   .info-card__value {
-    color: var(--dark);
+    color: var(--grey);
     font-size: 1rem;
     font-family: var(--font-primary);
   }
@@ -234,5 +218,50 @@ import Header from "../components/layout/Header.astro";
     cursor: pointer;
     font-family: var(--font-secondary);
     margin-top: 0.5rem;
+  }
+
+  .form-card__button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+  }
+
+  /*CHECHBOX*/
+
+  .checkbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #checkbox{
+    accent-color: var(--color-primary);
+  }
+
+  .checkbox__p{
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    color: var(--grey);
+  }
+
+  .checkbox__p span{
+    color: var(--color-primary);
+  }
+
+  .checkbox__p a{
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+
+  .checkbox__p a:hover{
+    color: var(--color-secondary);
+  }
+
+  @media (max-width: 480px) {
+    .contact-page__grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

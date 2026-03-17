@@ -13,41 +13,15 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
     <section class="section">
        <div class="main__div">
-        <h1 class="tittle">La ruta</h1>
-        <h2 class="second__tittle">Trazado completo</h2>
+        
+        <h2 class="second__title">TRAZADO COMPLETO</h2>
         <h3 class="text">La Vía Mariana recorre más de 350km desde Braga (Portugal) hasta Muxía (Galicia), atravesando 6 GDR gallegos y múltiples ayuntamientos. Su trazado conecta santuarios marianos, espacios naturales, aldeas y villas, configurando una ruta de gran riqueza paisajística y cultural.</h3>
        </div>
       </section>
 
       <section class="section__two">
-        <h2 class="etapas">Etapas</h2>
-        <!-- 
-            <div class="controles">
-            <div class="slider">
-        <div class="slide active">Slide 1</div>
-        <div class="slide">Slide 2</div>
-        <div class="slide">Slide 3</div> -->
-    
-   
-         <!-- <div class="buttons">
-      <button id="00" class="rutas">00</button>
-      <button id="01" class="rutas">01</button>
-      <button id="02" class="rutas">02</button>
-      <button id="03" class="rutas">03</button>
-      <button id="04" class="rutas">04</button>
-      <button id="05" class="rutas">05</button>
-      <button id="06" class="rutas">06</button>
-      <button id="07" class="rutas">07</button>
-      <button id="08" class="rutas">08</button>
-      <button id="09-10" class="rutas">09-10</button>
-      <button id="11" class="rutas">11</button>
-      <button id="12" class="rutas">12</button>
-      <button id="13" class="rutas">13</button>
-      <button id="14" class="rutas">14</button>
-      <button id="15" class="rutas">15</button>
-      <button id="16" class="rutas">16</button>
-      <button id="17" class="rutas">17</button>
-    </div> -->
+        <h2 class="etapas">ETAPAS</h2>
+       
     <div class="mapa">
         <iframe
         id="map"
@@ -56,7 +30,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
         width="850"
         height="500"
         ></iframe>
-        <div style="color: #777; font-size: 11px; line-height: 16px">
+        <div style="color: #00378f; font-size: 11px; line-height: 16px">
             Powered by&nbsp;<a
             style="color: #4c8c2b; font-size: 11px; line-height: 16px"
             target="_blank"
@@ -69,12 +43,39 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <!-- <button id="prev"> -->
             <img class="arrow" id="prev" src={flecha.src} alt="flecha">
         <!-- </button> -->
+         <p class="contador" id="contador">0</p>
         <!-- <button id="next"> -->
             <img class="arrow--next" id="next" src={flecha.src} alt="flecha">
         <!-- </button> -->
     </div>
       </section>
 
+      <div class="div__pdf">
+      <h3 class="text__h3">
+        <img class="pdf" src="public/img/img__pdf.avif" alt="Icono PDF">
+         Descarga más información de tu ruta en PDF</h3>
+         </div>
+
+      <div class="div__etapas">
+        <a class="div__a" href="public/archivos/VMLG-00.pdf" download="ruta__00" >0</a>
+        <a class="div__a" href="public/archivos/VMLG-01.pdf" download="ruta__01">1</a>
+        <a class="div__a" href="public/archivos/VMLG-02.pdf" download="ruta__02">2</a>
+        <a class="div__a" href="public/archivos/VMLG-03.pdf" download="ruta__03">3</a>
+        <a class="div__a" href="public/archivos/VMLG-04.pdf" download="ruta__04">4</a>
+        <a class="div__a" href="public/archivos/VMLG-05.pdf" download="ruta__05">5</a>
+        <a class="div__a" href="public/archivos/VMLG-06.pdf" download="ruta__06">6</a>
+        <a class="div__a" href="public/archivos/VMLG-07.pdf" download="ruta__07">7</a>
+        <a class="div__a" href="public/archivos/VMLG-08.pdf" download="ruta__08">8</a>
+        <a class="div__a" href="public/archivos/VMLG-09.pdf" download="ruta__09">9</a>
+        <a class="div__a" href="public/archivos/VMLG-10.pdf" download="ruta__10">10</a>
+        <a class="div__a" href="public/archivos/VMLG-11.pdf" download="ruta__11">11</a>
+        <a class="div__a" href="public/archivos/VMLG-12.pdf" download="ruta__12">12</a>
+        <a class="div__a" href="public/archivos/VMLG-13.pdf" download="ruta__13">13</a>
+        <a class="div__a" href="public/archivos/VMLG-14.pdf" download="ruta__14">14</a>
+        <a class="div__a" href="public/archivos/VMLG-15.pdf" download="ruta__15">15</a>
+        <a class="div__a" href="public/archivos/VMLG-16.pdf" download="ruta__16">16</a>
+        <a class="div__a" href="public/archivos/VMLG.17.pdf" download="ruta__17">17</a>
+      </div>
     </main>
    <Footer/>
 </Layout>
@@ -91,14 +92,24 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .main__div{
   margin-top: 1rem;
   margin: 2rem;
+  
 }
 
-.second__tittle{
+
+.second__title{
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+  font-size: 25px;
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .text{
+  font-family: var(--font-tertiary);
+  font-size: 14px;
   margin-top: 1.5rem;
+  font-weight: 400;
   color: var(--grey);
 }
 
@@ -116,9 +127,14 @@ import HeroSections from "../components/layout/HeroSections.astro"
   align-items: center;
 }
 .etapas{
+  font-family: var(--font-secondary);
+  font-size: 25px;
+  color: var(--color-primary);
   margin-top: 3rem;
   margin: 2rem;
+  
 }
+
 
 
 
@@ -129,65 +145,354 @@ import HeroSections from "../components/layout/HeroSections.astro"
   justify-content: center;
  align-items: center;
   gap: 1.5rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
 
 }
 
 .arrow{
   transform: scaleX(-1);
 }
+
+/* Enlaces PDF */
+
+.div__pdf{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.text__h3{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-primary);
+  font-size: 20px;
+  color: var(--color-primary);
+  gap: 0.8rem;
+  
+}
+
+
+.pdf{
+
+  width: 30px;
+}
+
+.div__etapas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+
+.div__a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: var(--color-primary);
+  color: var(--color-tertiary);
+  font-family: var(--font-primary);
+  justify-content: center;
+  border-radius: 100px;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.div__a:hover{
+ background-color: var(--color-secondary);
+ color: var(--color-primary);
+ font-weight: 600;
+}
+
+
+
+/* Media queries */
+ @media (max-width: 480px) {
+  
+ 
+
+.main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.main__div{
+  margin: 1rem;
+  text-align: center;
+}
+
+.second__tittle{
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+}
+
+.text{
+  margin-top: 1rem;
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
+.section__two{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.etapas{
+  margin: 1.5rem;
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+.mapa iframe{
+  max-width: 100%;
+  height: 500px;
+  
+}
+
+.contador{
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.mapa{
+  max-width: 100%;
+  height: 500px;
+  border: solid 2px rgb(0, 0, 0);
+}
+
+/* Botones mapa */
+
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.arrow{
+  --direccion: -1;
+  transform: scaleX(var(--direccion));
+  width: 35px;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover{
+  transform: scaleX(var(--direccion)) scale(1.2);
+}
+
+.arrow--next{
+  --direccion: 1;
+  transform: scaleX(var(--direccion));
+  width: 35px;
+  transition: transform 0.3s ease;
+}
+
+.arrow--next:hover{
+  transform: scaleX(var(--direccion)) scale(1.2);
+  
+}
+
+
+ .text__h3{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.pdf{
+  width: 22px;
+  height: 22px;
+}
+
+.div__etapas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.div__a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--color-primary);
+  color: var(--color-tertiary);
+  font-family: var(--font-primary);
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+}
+
+@media (min-width: 768px){
+
+.main__div{
+  max-width: 700px;
+  margin: auto;
+}
+
+.second__tittle{
+  font-size: 2rem;
+}
+
+.text{
+  font-size: 1.1rem;
+}
+
+.mapa iframe{
+  width: 750px;
+  height: 420px;
+}
+
+.arrow,
+.arrow--next{
+  width: 45px;
+}
+
+}
+
+.text__h3{
+    font-size: 22px;
+    margin-bottom: 2rem;
+  }
+
+  .div__etapas{
+    gap: 1.5rem;
+  }
+
+  .div__a{
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+
+
+@media (min-width: 1920px){
+
+.main{
+  max-width: 1400px;
+  margin: auto;
+}
+
+.main__div{
+  max-width: 900px;
+}
+
+.second__tittle{
+  font-size: 2.5rem;
+}
+
+.text{
+  font-size: 1.25rem;
+}
+
+.mapa iframe{
+  width: 1000px;
+  height: 550px;
+}
+
+.botones{
+  gap: 2rem;
+}
+
+.arrow,
+.arrow--next{
+  width: 55px;
+}
+ .text__h3{
+    font-size: 28px;
+  }
+
+  .div__etapas{
+    gap: 2rem;
+  }
+
+  .div__a{
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+}
+
 </style>
 
 <script>
     const rutas = {
-    "0": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252719171&elevation=off&images=off&maptype=H",
-    "1": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941955&elevation=off&images=off&maptype=H",
-    "2": "https://es.wikiloc.com/wikiloc/embedv2.do?id=253051127&elevation=off&images=off&maptype=H",
-    "3": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941078&elevation=off&images=off&maptype=H",
-    "4":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252827474&elevation=off&images=off&maptype=H",
-     "5":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252730617&elevation=off&images=off&maptype=H",
-    "6":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252940609&elevation=off&images=off&maptype=H",
-  "7":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252827878&elevation=off&images=off&maptype=H",
-  "8": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252847567&elevation=off&images=off&maptype=H",
-  "9":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252941458&elevation=off&images=off&maptype=H",
-  "10": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252836166&elevation=off&images=off&maptype=H",
-  "11": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252835799&elevation=off&images=off&maptype=H",
-  "12":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252828322&elevation=off&images=off&maptype=H",
-  "13": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252739322&elevation=off&images=off&maptype=H",
-  "14": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252829209&elevation=off&images=off&maptype=H",
-  "15": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848987&elevation=off&images=off&maptype=H",
-  "16": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848215&elevation=off&images=off&maptype=H",
-  "17":"https://es.wikiloc.com/wikiloc/embedv2.do?id=252820716&elevation=off&images=off&maptype=H"
+        "0": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252719171&elevation=off&images=off&maptype=H",
+        "1": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941955&elevation=off&images=off&maptype=H",
+        "2": "https://es.wikiloc.com/wikiloc/embedv2.do?id=253051127&elevation=off&images=off&maptype=H",
+        "3": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941078&elevation=off&images=off&maptype=H",
+        "4": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252827474&elevation=off&images=off&maptype=H",
+        "5": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252730617&elevation=off&images=off&maptype=H",
+        "6": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252940609&elevation=off&images=off&maptype=H",
+        "7": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252827878&elevation=off&images=off&maptype=H",
+        "8": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252847567&elevation=off&images=off&maptype=H",
+        "9": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252941458&elevation=off&images=off&maptype=H",
+        "10": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252836166&elevation=off&images=off&maptype=H",
+        "11": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252835799&elevation=off&images=off&maptype=H",
+        "12": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252828322&elevation=off&images=off&maptype=H",
+        "13": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252739322&elevation=off&images=off&maptype=H",
+        "14": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252829209&elevation=off&images=off&maptype=H",
+        "15": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848987&elevation=off&images=off&maptype=H",
+        "16": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252848215&elevation=off&images=off&maptype=H",
+        "17": "https://es.wikiloc.com/wikiloc/embedv2.do?id=252820716&elevation=off&images=off&maptype=H"
+    };
 
-};
+    const mapElement = document.getElementById("map");
+    const contadorElement = document.getElementById("contador"); // El elemento que muestra el número
+    const next = document.getElementById("next");
+    const prev = document.getElementById("prev");
+    let index = 0;
 
-const srcMap = document.getElementById("map").getAttribute("src");
-const changeSrcMap = (src)=>{
-    document.getElementById("map").setAttribute("src", src);
-}
-const buttons = document.querySelectorAll(".rutas");
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
-let index = 0;
-changeSrcMap(rutas[index]);
+    // Función que actualiza el iframe y el número visual
+    const updateRoute = (idx) => {
+        mapElement.setAttribute("src", rutas[idx]);
+        if (contadorElement) {
+            // Mostramos idx + 1 para que el usuario vea "1" en vez de "0"
+            contadorElement.textContent = idx + 0;
+        }
+    };
 
+    // Inicializar
+    updateRoute(index);
 
-  next.addEventListener("click", () => {
-      index++;
-      if (index >= 18) {
-          index = 0;
-      }
-      changeSrcMap(rutas[index]);
-      console.log(index);
-  });
+    next.addEventListener("click", () => {
+        index++;
+        if (index >= 18) {
+            index = 0; // Reinicia al primero
+        }
+        updateRoute(index);
+    });
 
-
-
-  prev.addEventListener("click", () => {
-      index--;
-      if (index <= -1) {
-          index = 17;
-      }
-      changeSrcMap(rutas[index]);
-  });
-
+    prev.addEventListener("click", () => {
+        index--;
+        if (index < 0) {
+            index = 17; // Salta al último
+        }
+        updateRoute(index);
+    });
 </script>
