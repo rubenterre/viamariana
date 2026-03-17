@@ -5,6 +5,7 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import Colaboradores from "../components/layout/Colaboradores.astro";
 import PopUp from "../components/layout/PopUp.astro";
+import Gallery from "../components/layout/Gallery.astro";
 ---
 
 <Layout>
@@ -28,53 +29,9 @@ import PopUp from "../components/layout/PopUp.astro";
         </div>
     </div>
     <h2 class="main__h2">Galería</h2>
-    <div class="galery">
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-    </div>
+    
+    <Gallery />
+    
     <Colaboradores />
     <PopUp />
     <Footer />
@@ -110,31 +67,9 @@ import PopUp from "../components/layout/PopUp.astro";
         filter: drop-shadow(10px 8px 8px rgba(0, 0, 0, 0.25));
     }
 
-    .galery {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
-    .img--galery {
-        width: 80%;
-        border-radius: 20px;
-        transition: 1s ease-out;
-    }
 
-    .galery__img {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-    }
 
-    .img--galery:hover {
-        transform: scale(1.5);
-    }
 
     @media (max-width: 768px) {
         .row {
