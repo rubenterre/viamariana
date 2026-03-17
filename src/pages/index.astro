@@ -6,14 +6,15 @@ import Footer from "../components/layout/Footer.astro";
 import Colaboradores from "../components/layout/Colaboradores.astro";
 import PopUp from "../components/layout/PopUp.astro";
 import Gallery from "../components/layout/Gallery.astro";
+import Testimonio from "../components/layout/Testimonio.astro";
 ---
 
 <Layout>
     <Header />
     <HomeHero />
     <div class="row">
-        <div class="col col--text">
-            <h2 class="main__h2">Etapas</h2>
+        <div class="col">
+            <h2>Etapas</h2>
             <p class="etapas__p">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
                 reiciendis voluptate nemo ducimus deleniti tempora facilis
@@ -32,19 +33,16 @@ import Gallery from "../components/layout/Gallery.astro";
     
     <Gallery />
     
+            <img src="img/mapa_2.png" alt="image" class="etapas__img" />
+        </div>
+    </div>
+    <Testimonio />
     <Colaboradores />
-    <PopUp />
     <Footer />
 </Layout>
 
 <style>
-    .main__h2 {
-        text-align: center;
-        font-size: xx-large;
-    }
-
     .row {
-        padding: 50px 0px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -78,10 +76,6 @@ import Gallery from "../components/layout/Gallery.astro";
 
         .col {
             width: 100%;
-        }
-
-        .col--text {
-            padding: 50px 0;
         }
 
         .etapas__img {
