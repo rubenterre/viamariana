@@ -4,15 +4,15 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import Colaboradores from "../components/layout/Colaboradores.astro";
-import PopUp from "../components/layout/PopUp.astro";
+import Testimonio from "../components/layout/Testimonio.astro";
 ---
 
 <Layout>
     <Header />
     <HomeHero />
     <div class="row">
-        <div class="col col--text">
-            <h2 class="main__h2">Etapas</h2>
+        <div class="col">
+            <h2>Etapas</h2>
             <p class="etapas__p">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
                 reiciendis voluptate nemo ducimus deleniti tempora facilis
@@ -27,67 +27,13 @@ import PopUp from "../components/layout/PopUp.astro";
             <img src="img/mapa_2.png" alt="image" class="etapas__img">
         </div>
     </div>
-    <h2 class="main__h2">Galería</h2>
-    <div class="galery">
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-        <div class="galery__img">
-            <img class="img--galery" src="img/image.png" alt="image">
-        </div>
-    </div>
+    <Testimonio />
     <Colaboradores />
-    <PopUp />
     <Footer />
 </Layout>
 
 <style>
-    .main__h2 {
-        text-align: center;
-        font-size: xx-large;
-    }
-
     .row {
-        padding: 50px 0px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -102,40 +48,6 @@ import PopUp from "../components/layout/PopUp.astro";
         justify-content: center;
     }
 
-    .col--text {
-        padding: 0 80px;
-    }
-
-    .col--img {
-        filter: drop-shadow(10px 8px 8px rgba(0, 0, 0, 0.25));
-    }
-
-    .galery {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .img--galery {
-        width: 80%;
-        border-radius: 20px;
-        transition: 1s ease-out;
-    }
-
-    .galery__img {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-    }
-
-    .img--galery:hover {
-        transform: scale(1.5);
-    }
-
     @media (max-width: 768px) {
         .row {
             flex-direction: column;
@@ -143,10 +55,6 @@ import PopUp from "../components/layout/PopUp.astro";
 
         .col {
             width: 100%;
-        }
-
-        .col--text {
-            padding: 50px 0;
         }
 
         .etapas__img {
