@@ -21,33 +21,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
       <section class="section__two">
         <h2 class="etapas">Etapas</h2>
-        <!-- 
-            <div class="controles">
-            <div class="slider">
-        <div class="slide active">Slide 1</div>
-        <div class="slide">Slide 2</div>
-        <div class="slide">Slide 3</div> -->
-    
-   
-         <!-- <div class="buttons">
-      <button id="00" class="rutas">00</button>
-      <button id="01" class="rutas">01</button>
-      <button id="02" class="rutas">02</button>
-      <button id="03" class="rutas">03</button>
-      <button id="04" class="rutas">04</button>
-      <button id="05" class="rutas">05</button>
-      <button id="06" class="rutas">06</button>
-      <button id="07" class="rutas">07</button>
-      <button id="08" class="rutas">08</button>
-      <button id="09-10" class="rutas">09-10</button>
-      <button id="11" class="rutas">11</button>
-      <button id="12" class="rutas">12</button>
-      <button id="13" class="rutas">13</button>
-      <button id="14" class="rutas">14</button>
-      <button id="15" class="rutas">15</button>
-      <button id="16" class="rutas">16</button>
-      <button id="17" class="rutas">17</button>
-    </div> -->
+       
     <div class="mapa">
         <iframe
         id="map"
@@ -56,7 +30,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
         width="850"
         height="500"
         ></iframe>
-        <div style="color: #777; font-size: 11px; line-height: 16px">
+        <div style="color: #00378f; font-size: 11px; line-height: 16px">
             Powered by&nbsp;<a
             style="color: #4c8c2b; font-size: 11px; line-height: 16px"
             target="_blank"
@@ -75,7 +49,13 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <!-- </button> -->
     </div>
       </section>
-      <h3 class="text__h3">Descarga más información de tu ruta</h3>
+
+      <div class="div__pdf">
+      <h3 class="text__h3">
+        <img class="pdf" src="public/img/img__pdf.avif" alt="Icono PDF">
+         Descarga más información de tu ruta en PDF</h3>
+         </div>
+
       <div class="div__etapas">
         <a class="div__a" href="public/archivos/VMLG-00.pdf" download="ruta__00" >0</a>
         <a class="div__a" href="public/archivos/VMLG-01.pdf" download="ruta__01">1</a>
@@ -112,11 +92,15 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .main__div{
   margin-top: 1rem;
   margin: 2rem;
+  
 }
 
 .second__title{
   font-family: var(--font-primary);
+  color: var(--color-primary);
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .text{
@@ -140,8 +124,10 @@ import HeroSections from "../components/layout/HeroSections.astro"
 }
 .etapas{
   font-family: var(--font-primary);
+  color: var(--color-primary);
   margin-top: 3rem;
   margin: 2rem;
+  
 }
 
 
@@ -164,6 +150,12 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 /* Enlaces PDF */
 
+.div__pdf{
+  display: flex;
+  justify-content: center;
+  
+}
+
 .text__h3{
   display: flex;
   justify-content: center;
@@ -171,7 +163,14 @@ import HeroSections from "../components/layout/HeroSections.astro"
   font-family: var(--font-primary);
   font-size: 20px;
   color: var(--color-primary);
+  gap: 0.8rem;
   
+}
+
+
+.pdf{
+
+  width: 30px;
 }
 
 .div__etapas{
@@ -209,7 +208,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
 /* Media queries */
  @media (max-width: 480px) {
   
- }
+ 
 
 .main{
   display: flex;
@@ -225,13 +224,15 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 .second__tittle{
   margin-top: 1.5rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-family: var(--font-primary);
+  color: var(--color-primary);
 }
 
 .text{
   margin-top: 1rem;
   color: var(--grey);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .section__two{
@@ -244,6 +245,9 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .etapas{
   margin: 1.5rem;
   text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  color: var(--color-primary);
 }
 
 .mapa iframe{
@@ -259,8 +263,12 @@ import HeroSections from "../components/layout/HeroSections.astro"
 }
 
 .mapa{
+  max-width: 100%;
+  height: 500px;
   border: solid 2px rgb(0, 0, 0);
 }
+
+/* Botones mapa */
 
 .botones{
   display: flex;
@@ -294,7 +302,6 @@ import HeroSections from "../components/layout/HeroSections.astro"
 }
 
 
-
  .text__h3{
   display: flex;
   justify-content: center;
@@ -303,6 +310,11 @@ import HeroSections from "../components/layout/HeroSections.astro"
   font-size: 18px;
   color: var(--color-primary);
   text-align: center;
+}
+
+.pdf{
+  width: 22px;
+  height: 22px;
 }
 
 .div__etapas{
@@ -326,7 +338,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
   height: 40px;
   font-size: 16px;
 }
-
+}
 
 @media (min-width: 768px){
 
