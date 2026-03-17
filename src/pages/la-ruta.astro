@@ -14,13 +14,13 @@ import HeroSections from "../components/layout/HeroSections.astro"
     <section class="section">
        <div class="main__div">
         
-        <h2 class="second__title">Trazado completo</h2>
+        <h2 class="second__title">TRAZADO COMPLETO</h2>
         <h3 class="text">La Vía Mariana recorre más de 350km desde Braga (Portugal) hasta Muxía (Galicia), atravesando 6 GDR gallegos y múltiples ayuntamientos. Su trazado conecta santuarios marianos, espacios naturales, aldeas y villas, configurando una ruta de gran riqueza paisajística y cultural.</h3>
        </div>
       </section>
 
       <section class="section__two">
-        <h2 class="etapas">Etapas</h2>
+        <h2 class="etapas">ETAPAS</h2>
        
     <div class="mapa">
         <iframe
@@ -95,17 +95,21 @@ import HeroSections from "../components/layout/HeroSections.astro"
   
 }
 
+
 .second__title{
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   color: var(--color-primary);
+  font-size: 25px;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
 
 .text{
-  font-family: var(--font-primary);
+  font-family: var(--font-tertiary);
+  font-size: 14px;
   margin-top: 1.5rem;
+  font-weight: 400;
   color: var(--grey);
 }
 
@@ -123,12 +127,14 @@ import HeroSections from "../components/layout/HeroSections.astro"
   align-items: center;
 }
 .etapas{
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
+  font-size: 25px;
   color: var(--color-primary);
   margin-top: 3rem;
   margin: 2rem;
   
 }
+
 
 
 
