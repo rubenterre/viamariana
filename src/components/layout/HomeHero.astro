@@ -7,7 +7,10 @@ import ButtonPrimary from "../ui/ButtonPrimary.astro";
 <section class="home__hero">
     <div class="textabove">
         <h1 class="h1__hero">VIA MARIANA</h1>
-        <p class="hero__p">Ruta que combina espiritualidad, natureza, patrimonio e identidad rural.</p>
+        <div class="text__superior">
+            <img src="../public/img/arrow-yellow.svg" alt="icono check" class="superior__icon">
+            <p class="hero__p">Ruta que combina espiritualidad, natureza, patrimonio e identidad rural.</p>
+        </div>
         <ButtonPrimary/>
       </div>
 </section>
@@ -51,6 +54,20 @@ h2{
  
 }
 
+.text__superior{
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: center;
+}
+
+.superior__icon{
+  width: 15px;
+  height: 15px;
+}
+
 .hero__p{
   font-size: 14px;
   font-family: var(--font-primary);
@@ -58,8 +75,6 @@ h2{
   /* letter-spacing: 1px; */
   color: var(--light);
   text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 1rem;
 }
 
 /*MEDIA QUERY */
