@@ -1,0 +1,184 @@
+---
+const {title} = Astro.props
+
+import Layout from "../../layouts/Layout.astro"
+---
+
+<Layout>
+
+<section class="hero">
+
+    <div class="hero__text">
+        <div class="text__superior">
+            <img src="../public/img/arrow-yellow.svg" alt="icono check" class="superior__icon">
+            <p class="superior__p">Ruta que combina espiritualidad, natureza, patrimonio e identidad rural.</p>
+        </div>
+
+        <h1 class="text__h1">{title}</h1>
+
+        <p class="inferior__p">Una escapada donde el patrimonio, la cultura y la religiosidad se convierten en una experiencia inolvidable.</p>
+    </div>
+
+</section>
+
+</Layout>
+
+<style>
+
+.hero{
+    width: 100%;
+    height: 80vh;
+    background-image: url(../public/img/image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__text{
+    width: 45rem;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-top: 14rem;
+    gap: 2rem;
+}
+
+.text__superior{
+    width: 22rem;
+    height: auto;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: center;
+}
+
+.superior__icon{
+    width: 15px;
+    height: 15px;
+}
+
+.superior__p{
+    font-family: var(--font-tertiary);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--light);
+}
+
+.text__h1{
+    font-family: var(--font-secondary);
+    font-size: 55px;
+    font-weight: 400;
+    color: var(--light);
+    text-transform: uppercase;
+}
+
+.inferior__p{
+    width: 37rem;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--light);
+}
+
+/*MEDIA QUERY*/
+
+/*1920PX*/
+
+@media (min-width: 1920px) {
+
+    .hero__text{
+        width: 50vw;
+        height: auto;
+        padding-left: 8rem;
+        padding-top: 19rem;
+    }
+
+    .text__superior{
+        width: 24vw;
+    }
+
+    .superior__icon{
+        width: 18px;
+        height: 18px;
+    }
+
+    .superior__p{
+        font-size: 17px;
+    }
+
+    .text__h1{
+        height: auto;
+        width: 50vw;
+        font-size: 90px;
+    }
+
+    .inferior__p{
+        width: 40vw;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero{
+        height: 70vh;
+    }
+ 
+    .hero__text{
+        padding-left: 6rem;
+        padding-top: 10rem;
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+
+    .hero__text{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        padding-left: 0;
+        gap: 0.5rem;
+    }
+
+    .text__superior{
+        width: 50vw;
+    }
+
+    .superior__icon{
+        width: 18px;
+        height: 18px;
+    }
+
+    .superior__p{
+        font-size: 10px;
+    }
+
+    .text__h1{
+        height: auto;
+        width: 55vw;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .inferior__p{
+        width: 70vw;
+        font-size: 11px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+</style>
