@@ -3,7 +3,13 @@
 ---
 
     <button class="button__primary">
-<img src="public/img/vector triangulo video.png" alt="vector">  Ver Vídeo
+<<<<<<< Updated upstream
+<img class="icon__default" src="public/img/Play.svg" alt="vector">
+<img class="icon__hover" src="public/img/Play-Blue.svg" alt="vector blue">  Ver Vídeo
+=======
+<img class="vector__default" src="public/img/Play.svg" alt="vector">
+<img class="vector__hover" src="public/img/Play-Blue.svg" alt="vector">  Ver Vídeo
+>>>>>>> Stashed changes
     </button>
 
     <style>
@@ -11,15 +17,63 @@
 display: flex;
 justify-content: start;
 align-items: center;
-padding-left: 35px;
-width: 303px;
-height: 67px;
+<<<<<<< Updated upstream
+padding-left: 25px;
+width: 180px;
+height: 50px;
+margin-top: 10px;
 gap: 10px;
-border: 1px solid var(--color-tertiary);
+border:none;
 border-radius: 999px;
-background-color: var(--color-tertiary);
-font-size: 20px;
-color: var(--grey);
+background-color: var(--color-primary);
+font-size: 18px;
+color: var(--color-tertiary);
+font-family: var(--font-secondary);
 
 }
+.icon__hover {
+  display: none;
+}
+
+.button__primary:hover .icon__default {
+  display: none;
+}
+
+.button__primary:hover .icon__hover {
+  display: block;
+}
+.button__primary:hover{
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+=======
+padding-left: 35px;
+width: 200px;
+height: 50px;
+gap: 10px;
+border: none;
+border-radius: 999px;
+margin-top: 15px;
+background-color: var(--color-primary);
+font-size: 18px;
+font-family: var(--font-secondary);
+color: var(--color-tertiary);
+>>>>>>> Stashed changes
+
+}
+.vector__hover{
+    display:none;
+}
+
+.button__primary:hover{
+background-color: var(--color-secondary);
+color: var(--color-primary);
+
+}
+.button__primary:hover .vector__default{
+    display: none;
+}
+.button__primary:hover .vector__hover{
+    display: block;
+}
+
     </style>

@@ -4,13 +4,13 @@
 
 <section>
     <div class="div-hp">
-        <h2 class="h2-1">Testimonios de esta experiencia</h2>
+        <h2 class="h2-1">TESTIMONIO DE ESTA EXPERIENCIA</h2>
         <p class="p-1">Escuche a los viajeros que descubrieron la ruta y momentos inolvidables en Via Mariana.</p>
     </div>
     <div class="centro">
         <div class="slider-container">
             <button id="prev">
-                <img class="flechas" src="../img/arrow_blue_r.png" alt="flecha">
+                <img class="flechas" src="../img/arrow-blue_r.png" alt="flecha">
             </button>
             <div class="slider">
                 <div class="track" id="track">
@@ -129,17 +129,18 @@
     .h2-1 {
         max-width: 405px;
         color: var(--dark);
-        font-family: var(--font-primary);
-        font-size: 48px;
+        font-family: var(--font-secondary);
+        font-size: 21px;
         text-align: center;
     }
 
     .p-1 {
         max-width: 445px;
         color: var(--grey);
-        font-family: var(--font-primary);
-        font-size: 30px;
+        font-family: var(--font-tertiary);
+        font-size: 14px;
         text-align: center;
+        font-weight: 400;
     }
 
     .centro {
@@ -150,15 +151,14 @@
 
     .slider-container {
         padding-bottom: 40px;
-        width: 90%;
+        width: 70%;
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
     }
 
     .slider {
         overflow: hidden;
-        width: 100%;
     }
 
     .track {
@@ -167,14 +167,13 @@
     }
 
     .card {
+        width: 200px;
         margin-right: 10px;
         background: var(--light);
         display: flex;
         flex-direction: column;
-        align-items: estrellat;
         justify-content: center;
-        flex: 0 0 600px;
-        font-size: 30px;
+        flex: 0 0 300px;
     }
 
     .div-estrella {
@@ -182,15 +181,15 @@
     }
 
     .estrella {
-        width: 30px;
-        height: 30px;
+        width: 10px;
+        height: 10px;
     }
 
     .slider-p {
-        padding: 80px 30px;
+        padding: 20px 30px;
         color: var(--grey);
         font-family: var(--font-primary);
-        font-size: 32px;
+        font-size: 15px;
     }
 
     .div-perfil {
@@ -201,24 +200,20 @@
     }
 
     .perfil-f {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
 
     .perfil-n {
-        width: 147px;
-        height: 26px;
         color: var(--color-primary);
         font-family: var(--font-secondary);
-        font-size: 20px;
+        font-size: 10px;
     }
 
     .perfil-p {
-        width: 130px;
-        height: 26px;
         color: var(--grey);
         font-family: var(--font-secondary);
-        font-size: 20px;
+        font-size: 10px;
     }
 
     @media (max-width: 768px) {
@@ -236,6 +231,10 @@
 
         .slider-p {
             width: 50%;
+        }
+
+        .p-1 {
+            max-width: 400px;
         }
     }
 </style>
