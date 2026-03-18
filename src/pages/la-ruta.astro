@@ -57,24 +57,80 @@ import HeroSections from "../components/layout/HeroSections.astro"
          </div>
 
       <div class="div__etapas">
+        <ul class="div__ul">
+          <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-00.pdf" download="ruta__00" >0</a>
+        <a href="public/archivos/VMLG-00.pdf" class="div_a--descripcion">Ruta VMLG-00</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-01.pdf" download="ruta__01">1</a>
+        <a href="public/archivos/VMLG-01.pdf" class="div_a--descripcion">Ruta VMLG-01</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-02.pdf" download="ruta__02">2</a>
+        <a href="public/archivos/VMLG-02.pdf" class="div_a--descripcion">Ruta VMLG-02</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-03.pdf" download="ruta__03">3</a>
+        <a href="public/archivos/VMLG-03.pdf" class="div_a--descripcion">Ruta VMLG-03</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-04.pdf" download="ruta__04">4</a>
+        <a href="public/archivos/VMLG-04.pdf" class="div_a--descripcion">Ruta VMLG-04</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-05.pdf" download="ruta__05">5</a>
+        <a href="public/archivos/VMLG-05.pdf" class="div_a--descripcion">Ruta VMLG-05</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-06.pdf" download="ruta__06">6</a>
+        <a href="public/archivos/VMLG-06.pdf" class="div_a--descripcion">Ruta VMLG-06</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-07.pdf" download="ruta__07">7</a>
+        <a href="public/archivos/VMLG-07.pdf" class="div_a--descripcion">Ruta VMLG-07</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-08.pdf" download="ruta__08">8</a>
+        <a href="public/archivos/VMLG-08.pdf" class="div_a--descripcion">Ruta VMLG-08</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-09.pdf" download="ruta__09">9</a>
+        <a href="public/archivos/VMLG-09.pdf" class="div_a--descripcion">Ruta VMLG-09</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-10.pdf" download="ruta__10">10</a>
+        <a href="public/archivos/VMLG-10.pdf" class="div_a--descripcion">Ruta VMLG-10</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-11.pdf" download="ruta__11">11</a>
+        <a href="public/archivos/VMLG-11.pdf" class="div_a--descripcion">Ruta VMLG-11</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-12.pdf" download="ruta__12">12</a>
+        <a href="public/archivos/VMLG-12.pdf" class="div_a--descripcion">Ruta VMLG-12</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-13.pdf" download="ruta__13">13</a>
+        <a href="public/archivos/VMLG-13.pdf" class="div_a--descripcion">Ruta VMLG-13</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-14.pdf" download="ruta__14">14</a>
+        <a href="public/archivos/VMLG-14.pdf" class="div_a--descripcion">Ruta VMLG-14</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-15.pdf" download="ruta__15">15</a>
+        <a href="public/archivos/VMLG-15.pdf" class="div_a--descripcion">Ruta VMLG-15</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG-16.pdf" download="ruta__16">16</a>
+        <a href="public/archivos/VMLG-16.pdf" class="div_a--descripcion">Ruta VMLG-16</a>
+        </li>
+        <li class="div__lista">
         <a class="div__a" href="public/archivos/VMLG.17.pdf" download="ruta__17">17</a>
+        <a href="" class="div_a--descripcion">Ruta VMLG-17</a>
+        </li>
+        </ul>
       </div>
     </main>
    <Footer/>
@@ -180,11 +236,22 @@ import HeroSections from "../components/layout/HeroSections.astro"
 }
 
 .div__etapas{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  
+}
+
+.div__ul{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 2rem;
+}
+
+.div__lista{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-secondary);
   
 }
 
@@ -207,6 +274,10 @@ import HeroSections from "../components/layout/HeroSections.astro"
  background-color: var(--color-secondary);
  color: var(--color-primary);
  font-weight: 600;
+}
+
+.div_a--descripcion{
+  text-decoration: none;
 }
 
 
