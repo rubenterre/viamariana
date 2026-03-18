@@ -34,5 +34,19 @@ const { image, text, alt } = Astro.props;
 
     .galery__img:hover{
         transform: scale(1.5);
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
     }
+
+    @media (max-width:1024px) {
+        .galery__img {
+            width:65%;
+            height: auto;
+        }
+        .img--galery {
+            width:100%;
+        }
+        
+    }
+
+
 </style>
