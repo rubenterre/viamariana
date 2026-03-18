@@ -11,14 +11,14 @@ import HeroSections from "../components/layout/HeroSections.astro";
     <main class="main">
         <section class="container">
             <img
-                src="public/img/Picture.png"
+                src="public/img/religioso/sra-del-sameiro.png"
                 alt="img provisional"
                 width="350px"
                 class="img__container"
             />
 
             <div class="text">
-                <h1 class="text__h1">¿Por qué?</h1>
+                <h1 class="text__h1">¿POR QUÉ?</h1>
                 <p class="text__p">
                     Es una oportunidad para poner en valor el patrimonio de las
                     comarcas que atraviesa y reforzar la identidad compartida
@@ -36,12 +36,12 @@ import HeroSections from "../components/layout/HeroSections.astro";
             <div class="historia" id="historia">
                 <img
                     class="img__historia"
-                    src="public/img/Picture.png"
+                    src="public/img/religioso/historiaimg.png"
                     alt="img provisional"
                     id="img__historia"
                 />
                 <div class="text__historia">
-                    <h1 class="h1__historia">Historia</h1>
+                    <h1 class="h1__historia">HISTORIA</h1>
                     <p class="p__historia" id="p__historia">
                         A finales la década de 2010 surgió la idea de trazar un
                         camino de largo recorrido que rescatara y uniera
@@ -53,17 +53,17 @@ import HeroSections from "../components/layout/HeroSections.astro";
                         ruta fue en 2019.
                     </p>
                 </div>
-                <button class="button" id="open1">Saber más </button>
+                <button class="button" id="open1">SABER MÁS </button>
             </div>
             <div class="tradicion" id="tradicion">
                 <img
                     class="img__tradicion"
-                    src="public/img/Picture.png"
+                    src="public/img/patrimonio/tradicionimg.png"
                     alt="img provisional"
                     id="img__tradicion"
                 />
                 <div class="text__tradicion">
-                    <h1 class="h1__tradicion">Tradición</h1>
+                    <h1 class="h1__tradicion">TRADICIÓN</h1>
                     <p class="p__tradicion" id="p__tradicion">
                         La tradición mariana se remonta a la época de la
                         Gallaecia romana y se mantiene viva hasta el día de hoy.
@@ -73,7 +73,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
                         nuestra cultura.
                     </p>
                 </div>
-                <button class="button" id="open2">Saber más</button>
+                <button class="button" id="open2">SABER MÁS</button>
             </div>
         </section>
         <section class="container__modal">
@@ -83,7 +83,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
                     <span id="close1" class="pechar" onclick="cerrarPopups()"
                         >&times;</span
                     >
-                    <h2 class="modal1__h2">Saber más</h2>
+                    <h2 class="modal1__h2">SABER MÁS</h2>
                     <p class="modal1__p">
                         La Vía Mariana fue concebida al margen de la red oficial
                         de Caminos de Santiago, con su propia identidad,
@@ -101,7 +101,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
                     <span id="close2" class="pechar" onclick="cerrarPopups()"
                         >&times;</span
                     >
-                    <h2 class="modal2__h2">Saber más</h2>
+                    <h2 class="modal2__h2">SABER MÁS</h2>
                     <p class="modal2__p">
                         La ruta permite revivir estas prácticas poniendo en
                         valor espacios como el Santuario de la Virgen de la
@@ -147,9 +147,11 @@ import HeroSections from "../components/layout/HeroSections.astro";
     .img__container {
         width: 250px;
         padding: 10px;
+         border-radius: 25px;
     }
     .text__h1 {
         color: #00378f;
+        font-family: var(--color-secondary);
     }
     .text {
         display: flex;
@@ -196,6 +198,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
 
     .h1__historia {
         color: var(--color-primary);
+        font-family: var(--color-secondary);
     }
     .text__historia {
         color: var(--grey);
@@ -207,6 +210,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
 
     .img__historia {
         width: 20%;
+         border-radius: 25px;
     }
     .tradicion {
         width: 50%;
@@ -218,7 +222,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
         /* border: 2px solid var(--color-primary);
          border-radius: 5px;
         box-shadow: inset 0px 0px 10px 5px var(--color-secondary); */
-        margin: 5px;
+        /* margin: 5px; */
         padding-top: 1rem;
     }
 
@@ -228,6 +232,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
 
     .h1__tradicion {
         color: var(--color-primary);
+        font-family: var(--color-secondary);
     }
     .text__tradicion {
         color: var(--grey);
@@ -238,6 +243,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
     }
     .img__tradicion {
         width: 20%;
+        border-radius: 25px;
     }
 
     .modal__content {
@@ -261,7 +267,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
     }
     .modal2__h2 {
         color: var(--color-primary);
-        font-family: var(--font-tertiary);
+        font-family: var(--color-secondary);
         font-size: 26px;
         font-weight: 400;
         gap: 5px;
@@ -279,7 +285,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
     }
     .modal1__h2 {
         color: var(--color-primary);
-        font-family: var(--font-tertiary);
+        font-family: var(--color-secondary);
         font-size: 26px;
         font-weight: 400;
         gap: 5px;

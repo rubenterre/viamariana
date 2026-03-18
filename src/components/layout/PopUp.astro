@@ -12,8 +12,8 @@
             Puedes obtener más información haciendo click en los siguientes enlaces:
         </p>
             <div class="enlaces__cookie">
-                <a class="reach" href="#" target="_blank">Aviso Legal</a>
-                <a class="reach" href="#" target="_blank">Política de Privacidad</a>
+                <a class="reach" href="/aviso-legal" target="_blank">Aviso Legal</a>
+                <a class="reach" href="/politica-privacidad" target="_blank">Política de Privacidad</a>
             </div>
 
         <div class="cookie__buttons">
@@ -33,7 +33,7 @@
         position: fixed;
         bottom: -10px;
         left: 75%;
-        transform: translate(-75%, 0);
+        transform: translate(100%, -50%);
 
         opacity: 0;
         visibility: hidden;
@@ -45,7 +45,7 @@
     .banner__cookie.show{
         opacity: 1;
         visibility: visible;
-        transform: translate(-50%, 0);
+        transform: translate(-5%, -50%);
     }
 
     .content{
@@ -63,6 +63,8 @@
         text-align: justify;
         padding: 8px;
         font-weight: 500;
+        font-family: var(--font-tertiary);
+        font-size: 14px;
     }
 
     .enlaces__cookie{
@@ -72,6 +74,7 @@
 
     .reach{
         text-decoration: none;
+        font-family: var(--font-secondary);
     }
 
     .reach:hover{
@@ -89,6 +92,8 @@
         padding: 10px 20px;
         cursor: pointer;
         border-radius: 5px;
+        font-family: var(--font-tertiary);
+        font-size: 14px;
     }
 
     .btn__aceptar:hover{
@@ -102,6 +107,8 @@
         cursor: pointer;
         border-radius: 5px;
         margin-left: 10px;
+        font-family: var(--font-tertiary);
+        font-size: 14px;
     }
 
     .btn__rechazar:hover{
@@ -111,9 +118,10 @@
 
     h3{
         text-transform: uppercase;
-        padding: 10px;
+        padding: 5px;
         font-size: 18px;
         font-weight: 700;
+        font-family: var(--font-secondary);
     }
 
 
