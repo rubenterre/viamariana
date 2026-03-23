@@ -1,7 +1,7 @@
 ---
 import ImageGallery from "../ui/ImageGallery.astro";
 ---
-
+<h2 class="main__h2">GALERÍA</h2>
 <div class="galery">
   <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
   <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
@@ -22,5 +22,11 @@ import ImageGallery from "../ui/ImageGallery.astro";
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .main__h2 {
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    margin-top: 3rem;
+    text-align: center;
   }
 </style>

@@ -1,53 +1,52 @@
 ---
-
 ---
 
 <footer class="footer">
-
-        <div class="footer__title">
-
-            <div class="title__img">
-                <img src="img/Bitmap.png" alt="via mariana">
-            </div>
-            <p>La Vía Mariana Luso-Galaica recupera y promueve un itinerario de peregrinación entre santuarios marianos.</p>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES" target="_blank" class="social__a"><img src="img/facebook.svg" alt="facebook"></a>
-                <a href="https://www.instagram.com/viamarianalusogalaica/?hl=es" target="_blank"  class="social__a"><img src="img/instagram.svg" alt="instagram"></a>
-                <a href="https://www.youtube.com/channel/UCVTh7Knr_AjCWzj1jRYKnEA?view_as=subscriber" target="_blank" class="social__a"><img src="img/youtube-antiguo.svg" alt="youtube"></a>
-            </div>
-            
+    <div class="footer__title">
+        <div class="title__img">
+            <img src="img/Bitmap.png" alt="via mariana">
         </div>
-        <div class="footer__menus">
-    
-            <div class="footer__menu">
-                <p class="menu--title">Mapa del sitio</p>
-                <a href="/">Inicio</a>
-                <a href="/via-mariana">Via mariana</a>
-                <a href="/la-ruta">La ruta</a>
-                <a href="/patrimonio">Patrimonio</a>
-                <a href="/el-proyecto">El proyecto</a>
-            </div>
-    
-            <div class="footer__menu">
-                <p class="menu--title">Contacto</p>
-                <a href="/contacto">Soporte</a>
-                <a href="/contacto">Ayuda</a>
-                <a href="/AvisoLegal">Aviso legal</a>
-                
-            </div>
-    
-            <div class="footer__menu">
-                <p class="menu--title">Encuéntranos</p>
-                <a href="#">(62) 1111 2222</a>
-                <a href="#">viamariana@gmail.com</a>
-                <p>Villagarcía de Arousa</p>
-            </div>
+        <p>
+            La Vía Mariana Luso-Galaica recupera y promueve un itinerario de peregrinación entre santuarios marianos.
+        </p>
+        <div class="footer__social">
+            <a href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES" target="_blank" class="social__a">
+                <img src="img/facebook.svg" alt="facebook">
+            </a>
+            <a href="https://www.instagram.com/viamarianalusogalaica/?hl=es" target="_blank" class="social__a">
+                <img src="img/instagram.svg" alt="instagram">
+            </a>
+            <a href="https://www.youtube.com/channel/UCVTh7Knr_AjCWzj1jRYKnEA?view_as=subscriber" target="_blank" class="social__a">
+                <img src="img/youtube-antiguo.svg" alt="youtube">
+            </a>
         </div>
+    </div>
+    <div class="footer__menus">
+        <div class="footer__menu">
+            <p class="menu--title">Mapa del sitio</p>
+            <a href="/">Inicio</a>
+            <a href="/via-mariana">Via mariana</a>
+            <a href="/la-ruta">La ruta</a>
+            <a href="/patrimonio">Patrimonio</a>
+            <a href="/el-proyecto">El proyecto</a>
+        </div>
+        <div class="footer__menu">
+            <p class="menu--title">Contacto</p>
+            <a href="/contacto">Soporte</a>
+            <a href="/politica-privacidad">Política de Privacidad</a>
+            <a href="/aviso-legal">Aviso legal</a>
+        </div>
+        <div class="footer__menu">
+            <p class="menu--title">Encuéntranos</p>
+            <a href="#">(62) 1111 2222</a>
+            <a href="#">viamarianagl@gmail.com</a>
+            <p>Vilagarcía de Arousa</p>
+        </div>
+    </div>
 </footer>
 
 <style>
-
-    .footer{
+    .footer {
         color: white;
         background-color: rgba(0, 55, 143, 1);
         width: 100%;
@@ -56,84 +55,83 @@
         justify-content: space-around;
         align-items: center;
         padding: 30px 0;
-
     }
-    .footer__title{
+
+    .footer__title {
         width: 355px;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
         gap: 1rem;
-
     }
 
-    .footer__social{
+    .footer__social {
         display: flex;
         justify-content: left;
         align-items: center;
         gap: 1rem;
     }
 
-    .footer__social img{
+    .footer__social img {
         transition: transform 0.3s ease;
     }
 
-    .footer__social img:hover{
+    .footer__social img:hover {
         transform: scale(1.2);
     }
 
-    button{
-        background:none;
+    button {
+        background: none;
         border: none;
     }
-    .menu--title{
+    .menu--title {
         font-size: 20px;
         font-weight: bold;
     }
 
-    .footer__menus{
-        display:flex;
+    .footer__menus {
+        display: flex;
         gap: 100px;
     }
 
-    .footer__menu{
-        display:flex;
+    .footer__menu {
+        display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: white;
     }
 
-    a:hover{
+    a:hover {
         color: var(--color-secondary);
     }
 
-    @media (max-width:1024px) {
-        .footer{
+    @media (max-width: 1024px) {
+        .footer {
             flex-direction: row;
             gap: 30px;
         }
-        
     }
 
-
-    @media (max-width:768px) {
-        .footer{
+    @media (max-width: 768px) {
+        .footer {
             flex-direction: column;
             gap: 30px;
         }
-        .footer__social{
+
+        .footer__social {
             width: 100%;
             display: flex;
             gap: 3rem;
             justify-content: center;
             align-items: center;
         }
-        .footer__menus{
+
+        .footer__menus {
             width: 100%;
             flex-direction: row;
             flex-wrap: wrap;
@@ -141,43 +139,44 @@
             gap: 50px;
         }
 
-        .footer__menu{
+        .footer__menu {
             justify-content: start;
             align-items: center;
         }
     }
-    @media (max-width:480px) {
-        .footer{
+
+    @media (max-width: 480px) {
+        .footer {
             flex-direction: column;
             gap: 30px;
         }
 
-        .footer__title{
+        .footer__title {
             width: 100%;
             padding: 0 2rem;
         }
 
-        .title__img{
+        .title__img {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .footer__title p{
+        .footer__title p {
             text-align: center;
         }
-        .footer__social{
+
+        .footer__social {
             display: flex;
             gap: 3rem;
             justify-content: center;
             padding-top: 1rem;
         }
 
-        .footer__menus{
+        .footer__menus {
             flex-direction: column;
             gap: 30px;
         }
-        
     }
 </style>
