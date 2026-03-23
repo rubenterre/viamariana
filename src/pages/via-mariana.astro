@@ -10,13 +10,6 @@ import HeroSections from "../components/layout/HeroSections.astro";
     <HeroSections title="Vía Mariana" />
     <main class="main">
         <section class="container">
-            <img
-                src="public/img/religioso/sra-del-sameiro.png"
-                alt="img provisional"
-                width="350px"
-                class="img__container"
-            />
-
             <div class="text">
                 <h1 class="text__h1">¿POR QUÉ?</h1>
                 <p class="text__p">
@@ -31,6 +24,12 @@ import HeroSections from "../components/layout/HeroSections.astro";
                     espacios naturales, aldeas y elementos etnográficos
                 </p>
             </div>
+            <img
+                src="public/img/religioso/sra-del-sameiro.png"
+                alt="img provisional"
+                width="350px"
+                class="img__container"
+            />
         </section>
         <section class="container2">
             <div class="historia" id="historia">
@@ -136,6 +135,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
         background-color: var(--color-tertiary);
         margin: 30px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -145,19 +145,21 @@ import HeroSections from "../components/layout/HeroSections.astro";
     }
 
     .img__container {
-        width: 250px;
-        padding: 10px;
-         border-radius: 25px;
+        width: 500px;
+        padding: 2rem;
+        border-radius: 50px;
     }
     .text__h1 {
         color: #00378f;
         font-family: var(--color-secondary);
+        padding-top: 1rem;
     }
     .text {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        padding: 10px;
+        padding-left: 3rem;
+        padding-right: 3rem;
         justify-content: center;
         align-items: center;
         gap: 1rem;
@@ -179,7 +181,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
     }
     .historia {
         width: 50%;
-        height: auto;
+        height: auto; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -187,7 +189,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
          /* border: 2px solid var(--color-primary);
         box-shadow: inset 0px 0px 10px 5px var(--color-secondary); */
         background-color: var(--color-tertiary);
-        margin: 3px;
+        margin: 10px;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
@@ -199,6 +201,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
     .h1__historia {
         color: var(--color-primary);
         font-family: var(--color-secondary);
+        font-size: 24px;
     }
     .text__historia {
         color: var(--grey);
@@ -233,6 +236,7 @@ import HeroSections from "../components/layout/HeroSections.astro";
     .h1__tradicion {
         color: var(--color-primary);
         font-family: var(--color-secondary);
+        font-size: 24px;
     }
     .text__tradicion {
         color: var(--grey);
@@ -361,7 +365,10 @@ import HeroSections from "../components/layout/HeroSections.astro";
             font-size: 13px;
         }
 
-        
+        .img__container{
+            width: 80%;
+            
+        }
 
         .text__historia{
             font-size: 12px;
