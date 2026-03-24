@@ -257,11 +257,11 @@ import HeroSections from "../components/layout/HeroSections.astro"
     }
 
     .quienes__p p{
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .objetivo__p p{
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .espec__card{
@@ -270,7 +270,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
     }
 
     .p__espec{
-        font-size: 18px;
+        font-size: 19px;
     }
     
 }
@@ -304,10 +304,14 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 }
 
-@media (max-width: 480px){
+@media (min-width:240px) and (max-width: 480px){
 
     .quienes__h2{
-        font-size: 30px;
+        font-size: 1.7em;
+    }
+
+    .quienes__img{
+        height: 15em;
     }
 
     .quienes__p p{
@@ -326,9 +330,10 @@ import HeroSections from "../components/layout/HeroSections.astro"
     }
 
     .p__espec{
-        font-size: 16px;
+        font-size: 15px;
     }
 
 }
+
 
 </style>
