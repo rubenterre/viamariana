@@ -153,13 +153,16 @@ import HeroSections from "../components/layout/HeroSections.astro"
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+    background-color: var(--color-tertiary);
+    padding: 1.5rem;
+    border-radius: 25px;
 }
 
 .quienes__img{
     background: url(public/img/religioso/bomjesus2.png);
-    width: 100%;
-    height: 400px;
+    width: 80%;
+    height: 550px;
     border-radius: 25px;
     background-position: center;
     background-repeat: no-repeat;
@@ -168,9 +171,6 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 .quienes__p{
     width: 100%;
-    border-radius: 25px;
-    background-color: var(--color-tertiary);
-    padding: 1.5rem;
 }
 
 .quienes__p p{
@@ -279,6 +279,10 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
     .quienes__h2{
         font-size: 30px;
+    }
+
+    .quienes__img{
+        width: 100%;
     }
 
     .quienes__p p{
