@@ -1,49 +1,163 @@
 ---
-import ButtonContacto from "../ui/ButtonContacto.astro"
+import ButtonContacto from "../ui/ButtonContacto.astro";
 ---
 
 <header class="header__all">
-  <a href="/"><img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img" /></a>
-
-  <nav class="header__navbar">
+  <a href="/">
+    <img
+      src="/img/LogoViaMariana.png"
+      alt="Logo Via Mariana"
+      class="logo__img"
+    />
+  </a>
+  <button class="burger" id="burger" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="header__navbar" id="navbar">
     <a href="/via-mariana" class="navbar__a">Vía Mariana</a>
-    <a href="/la-ruta" class="navbar__a">La ruta</a>
-    <a href="/patrimonio" class="navbar__a">Patrimonio</a>
-    <a href="/el-proyecto" class="navbar__a">El proyecto</a>
+    <a href="/la-ruta" class="navbar__a">La Ruta</a>
+    <a href="/patrimonio" class="navbar__a">El Patrimonio</a>
+    <a href="/el-proyecto" class="navbar__a">El Proyecto</a>
+
+    <div class="navbar__contact">
+      <ButtonContacto />
+    </div>
   </nav>
-  <ButtonContacto />
+  <div class="header__contact">
+    <ButtonContacto />
+  </div>
 </header>
 
 <style>
-
   .logo__img {
-    max-width: 165px;
+    max-width: 18vw;
+    min-width: 192px;
+    min-height: 78px;
+    padding-top: 0.5rem;
   }
 
   .header__all {
+    padding: 8px 24px;
+    height: 96px;
     display: flex;
-    justify-content: space-between;
-    overflow: hidden;
     align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
     border-radius: 999px;
-    height: 120px;
-    background-color: var(--light)
-    padding: 0 30px;
+    background-color: var(--light);
   }
 
   .header__navbar {
+    width: 48vw;
     display: flex;
+    gap: 1.5rem;
     justify-content: space-between;
     align-items: center;
-    width: 640px;
+    padding: 8px 0;
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .navbar-top,
+  .navbar-bot {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    width: 310px;
   }
 
   .navbar__a {
-    text-decoration: none;
     color: var(--color-primary);
     font-family: var(--font-secondary);
     font-size: 20px;
     font-weight: 500;
+    text-decoration: none;
     line-height: 26px;
+    transition: color 0.3s ease;
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+
+  .navbar__a:hover {
+    color: var(--color-secondary);
+  }
+
+  .navbar__contact {
+    display: none;
+  }
+
+  .header__contact {
+    display: block;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger span {
+    width: 32px;
+    height: 4px;
+    background: var(--color-primary);
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .burger {
+      display: flex;
+    }
+
+    .header__contact {
+      display: none;
+    }
+
+    .header__navbar {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background: var(--light);
+      display: none;
+      padding: 24px 0;
+      gap: 1rem;
+    }
+
+    .navbar-top,
+    .navbar-bot {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      width: 310px;
+    }
+
+    .header__navbar.active {
+      display: flex;
+    }
+
+    .navbar__contact {
+      display: block;
+      margin-top: 10px;
+    }
   }
 </style>
+
+<script>
+  const burger = document.querySelector("#burger");
+  const navbar = document.querySelector("#navbar");
+
+  burger?.addEventListener("click", () => {
+    navbar?.classList.toggle("active");
+  });
+</script>
