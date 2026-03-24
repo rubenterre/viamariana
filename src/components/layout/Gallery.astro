@@ -1,20 +1,61 @@
 ---
 import ImageGallery from "../ui/ImageGallery.astro";
+
+const religiousImages = [
+  "aguasantas.png",
+  "aguasantas2.png",
+  "bomjesus.png",
+  "bomjesus1.png",
+  "bomjesus2.png",
+  "bomjesus3.png",
+  "bomjesus4.png",
+  "bomjesus5.png",
+  "bomjesus6.png",
+  "Capilla-los-Martores.jpg",
+  "Casa ReitoBarcia-de- Mera.jpg",
+  "Catedral-Braga.png",
+  "historiaimg.png",
+  "Iglesia-de-Fiaes.jpg",
+  "iglesia-iria-flavia.jpg",
+  "iglesia-moraime.png",
+  "Iglesia-moraime2.png",
+  "iglesia-mª-baños.png",
+  "los-milagros-de-amil.png",
+  "milagros-de-amil.jpg",
+  "parroquia-dos-anxeles-brion 2.png",
+  "parroquia-dos-anxeles-brion.png",
+  "Parroquia_de_Santa_María_la_Antigua_de_la_Corticela.jpg",
+  "santa-maria-de-aguasantas.png",
+  "Soajo.jpg",
+  "sra-da-escravitude.jpg",
+  "sra-da-franqueira.jpg",
+  "sra-da-peneda.jpg",
+  "sra-de-sameiro.png",
+  "sra-del-sameiro.png",
+  "sra-do-sameiro.jpg",
+  "sra-do-sameiro1.jpg",
+  "sra-do-sameiro2.png",
+  "sta-de-sacos.jpg",
+  "virgen-da-barca.png",
+  "virxen-da-barca.png",
+].map((file) => {
+  const text = file
+    .replace(/\.[^/.]+$/, "")
+    .replace(/[\-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return {
+    image: `img/religioso/${file}`,
+    text: text.charAt(0).toUpperCase() + text.slice(1),
+    alt: text,
+  };
+});
 ---
 <h2 class="main__h2">GALERÍA</h2>
 <div class="galery">
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
-  <ImageGallery image="img/image.png" text="Lorem ipsum" alt="image" />
+  {religiousImages.map((item) => (
+    <ImageGallery image={item.image} text={item.text} alt={item.alt} />
+  ))}
 </div>
 <style>
   .galery {
