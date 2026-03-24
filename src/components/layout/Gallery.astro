@@ -2,39 +2,60 @@
 import ImageGallery from "../ui/ImageGallery.astro";
 
 const religiousImages = [
-  { file: "bomjesus.png", alt: "Bom Jesus" },
-  { file: "bomjesus1.png", alt: "Bom Jesus 1" },
-  { file: "bomjesus2.png", alt: "Bom Jesus 2" },
-  { file: "bomjesus3.png", alt: "Bom Jesus 3" },
-  { file: "bomjesus4.png", alt: "Bom Jesus 4" },
-  { file: "bomjesus5.png", alt: "Bom Jesus 5" },
-  { file: "Capilla-los-Martores.jpg", alt: "Capilla los Martores" },
-  { file: "Casa ReitoBarcia-de- Mera.jpg", alt: "Casa ReitoBarcia de Mera" },
-  { file: "Catedral-Braga.png", alt: "Catedral Braga" },
-  { file: "historiaimg.png", alt: "Historia" },
-  { file: "Iglesia-de-Fiaes.jpg", alt: "Iglesia de Fiaes" },
-  { file: "iglesia-mª-baños.png", alt: "Iglesia María Baños" },
-  { file: "iglesia-moraime.png", alt: "Iglesia Moraime" },
-  { file: "Iglesia-moraime2.png", alt: "Iglesia Moraime 2" },
-  { file: "milagros-de-amil.jpg", alt: "Milagros de Amil" },
-  { file: "Soajo.jpg", alt: "Soajo" },
-  { file: "sra-da-escravitude.jpg", alt: "Senhora da Escravitude" },
-  { file: "sra-da-franqueira.jpg", alt: "Senhora da Franqueira" },
-  { file: "sra-da-peneda.jpg", alt: "Senhora da Peneda" },
-  { file: "sra-de-sameiro.png", alt: "Senhora do Sameiro" },
-  { file: "sra-del-sameiro.png", alt: "Senhora do Sameiro" },
-  { file: "sra-do-sameiro.jpg", alt: "Senhora do Sameiro" },
-  { file: "sra-do-sameiro1.jpg", alt: "Senhora do Sameiro" },
-  { file: "sta-de-sacos.jpg", alt: "Sta de Sacos" },
-  { file: "virgen-da-barca.png", alt: "Virgen da Barca" },
-  { file: "virxen da barca.png", alt: "Virxen da Barca" },
-];
+  "aguasantas.png",
+  "aguasantas2.png",
+  "bomjesus.png",
+  "bomjesus1.png",
+  "bomjesus2.png",
+  "bomjesus3.png",
+  "bomjesus4.png",
+  "bomjesus5.png",
+  "bomjesus6.png",
+  "Capilla-los-Martores.jpg",
+  "Casa ReitoBarcia-de- Mera.jpg",
+  "Catedral-Braga.png",
+  "historiaimg.png",
+  "Iglesia-de-Fiaes.jpg",
+  "iglesia-iria-flavia.jpg",
+  "iglesia-moraime.png",
+  "Iglesia-moraime2.png",
+  "iglesia-mª-baños.png",
+  "los-milagros-de-amil.png",
+  "milagros-de-amil.jpg",
+  "parroquia-dos-anxeles-brion 2.png",
+  "parroquia-dos-anxeles-brion.png",
+  "Parroquia_de_Santa_María_la_Antigua_de_la_Corticela.jpg",
+  "santa-maria-de-aguasantas.png",
+  "Soajo.jpg",
+  "sra-da-escravitude.jpg",
+  "sra-da-franqueira.jpg",
+  "sra-da-peneda.jpg",
+  "sra-de-sameiro.png",
+  "sra-del-sameiro.png",
+  "sra-do-sameiro.jpg",
+  "sra-do-sameiro1.jpg",
+  "sra-do-sameiro2.png",
+  "sta-de-sacos.jpg",
+  "virgen-da-barca.png",
+  "virxen-da-barca.png",
+].map((file) => {
+  const text = file
+    .replace(/\.[^/.]+$/, "")
+    .replace(/[\-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return {
+    image: `img/religioso/${file}`,
+    text: text.charAt(0).toUpperCase() + text.slice(1),
+    alt: text,
+  };
+});
 ---
 
 <h2 class="main__h2">GALERÍA</h2>
 <div class="galery">
-  {religiousImages.map(({ file, alt }) => (
-    <ImageGallery image={`img/religioso/${file}`} text={alt} alt={alt} />
+  {religiousImages.map((item) => (
+    <ImageGallery image={item.image} text={item.text} alt={item.alt} />
   ))}
 </div>
 
