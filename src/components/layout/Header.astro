@@ -4,11 +4,7 @@ import ButtonContacto from "../ui/ButtonContacto.astro";
 
 <header class="header__all">
   <a href="/">
-    <img
-      src="/img/LogoViaMariana.png"
-      alt="Logo Via Mariana"
-      class="logo__img"
-    />
+    <img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img">
   </a>
   <button class="burger" id="burger" aria-label="Abrir menú">
     <span></span>
@@ -112,7 +108,13 @@ import ButtonContacto from "../ui/ButtonContacto.astro";
     border-radius: 4px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1042px) {
+    .navbar__a {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 831px) {
     .burger {
       display: flex;
     }
