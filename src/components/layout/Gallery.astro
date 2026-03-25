@@ -1,5 +1,4 @@
 ---
-import { file } from "astro/loaders";
 import ImageGallery from "../ui/ImageGallery.astro";
 
 const religiousImages = [
@@ -11,7 +10,7 @@ const religiousImages = [
   {file:"bomjesus3.png", alt:"Bom Jesus", text:"Bom Jesus"},
   {file:"bomjesus4.png", alt:"Bom Jesus", text:"Bom Jesus"},
   {file:"bomjesus5.png", alt:"Bom Jesus", text:"Bom Jesus"},
-  {file:"bomjesus6.png", alt:"Bom Jesus", text:"Bom Jesus"},,
+  {file:"bomjesus6.png", alt:"Bom Jesus", text:"Bom Jesus"},
   {file:"Capilla-los-Martores.jpg", alt:"Capilla-los-Martores", text:"Capilla los Martores"},
   {file:"Casa ReitoBarcia-de- Mera.jpg" , alt:"Casa-Reito-Barcia-de-Mera", text:"Casa Reito Barcia de Mera"},
   {file:"Catedral-Braga.png", alt:"Catedral-Braga", text:"Catedral Braga"},
@@ -44,7 +43,7 @@ const religiousImages = [
 <h2 class="main__h2">GALERÍA</h2>
 <div class="galery">
   {religiousImages.map((item) => (
-    <ImageGallery image={item?.file} text={item?.text} alt={item?.alt} />
+    <ImageGallery image={"img/religioso/"+item?.file} text={item?.text} alt={item?.alt} />
   ))}
 </div>
 
