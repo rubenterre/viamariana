@@ -4,132 +4,284 @@ import ButtonPrimary from "../ui/ButtonPrimary.astro";
 
 ---
 
-<section class="home__hero">
-    <div class="textabove">
+<section class="home__hero" id="hero-section">
+    <div class="textabove" id="hero-content">
         <h1 class="h1__hero">VIA MARIANA</h1>
         <div class="text__superior">
-            <img src="../public/img/arrow-yellow.svg" alt="icono check" class="superior__icon">
             <p class="hero__p">Ruta que combina espiritualidad, natureza, patrimonio e identidad rural.</p>
         </div>
+
+        <div id="play-button-container">
         <ButtonPrimary/>
       </div>
+    </div>
+
+     <div id="video-wrapper">
+      <video id="hero-video" playsinline preload="auto">
+        <source src="/video/video-presentacion-vmlg.mp4" type="video/mp4">
+      </video>
+
+ <div class="video-controls">
+        <div class="volume-container">
+            <span id="vol-icon">🔊</span>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.3">
+        </div>
+        <button id="close-btn" class="control-btn">✕ Cerrar</button>
+    </div>
+</div>
 </section>
 
 <style>
-  .home__hero{
-      width: 100%;
-  display: flex;
-  background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.35) 100%), url(/img/santuario-bom-jesus.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 80vh;
-  
+  .home__hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.35) 100%), url('/img/santuario-bom-jesus.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+#hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.textabove{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  margin: 0px 5rem;
-  gap: 20px;
+  #video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.8s ease, visibility 0.8s;
+    background: #000;
+  }
+
+    #video-wrapper.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+   #vol-icon {
+    color: white;
+    font-size: 1.2rem;
+    cursor: default;
+  }
+
+    #volume-slider {
+    cursor: pointer;
+    width: 80px;
+    accent-color: var(--light, #fff);
+  }
+
+    .video-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 100;
+  }
+
+   .control-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+   .control-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .textabove {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 5rem;
+    gap: 20px;
+    transition: opacity 0.5s ease;
 }
 
-h1{
-  font-family: var(--font-secondary);
-  font-size: 55px;
-  font-weight: 400;
-  color: var(--light);
-  text-align: center;
-  margin: 0px;
- }
+  .h1__hero {
+    font-family: var(--font-secondary);
+    font-size: 55px;
+    font-weight: 400;
+    color: var(--light);
+    margin: 0;
+  }
 
-h2{
-  font-family: var(--font-secondary);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--light);
-  text-align: justify;
- 
-}
-
-.text__superior{
-    width: auto;
-    height: auto;
+  .text__superior {
     display: flex;
     gap: 0.5rem;
-    justify-content: left;
     align-items: center;
-}
+  }
 
-.superior__icon{
-  width: 15px;
-  height: 15px;
-}
-
-.hero__p{
-  font-size: 14px;
-  font-family: var(--font-primary);
-  font-weight: 400;
-  /* letter-spacing: 1px; */
-  color: var(--light);
-  text-align: justify;
-}
+  .hero__p {
+    font-size: 14px;
+    font-family: var(--font-primary);
+    color: var(--light);
+  }
 
 /*MEDIA QUERY */
 
 @media (max-width: 768px) {
-
-    .home__hero{
-        height: 70vh;
+    .home__hero {
+      height: 70vh;
     }
 
-    .h1__hero{
+    .h1__hero {
       font-size: 55px;
     }
 
-    .hero__p{
+    .hero__p {
       font-size: 16px;
       font-weight: 400;
       letter-spacing: 0px;
     }
 
+        #hero-video {
+        object-fit: cover; 
+  }
 }
 
-@media (max-width: 480px) {
+  @media (max-width: 480px) {
+    .home__hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
 
-  .home__hero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
+    .textabove {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      gap: 0.5rem;
+    }
+
+    .h1__hero {
+      height: auto;
+      width: 80vw;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .hero__p {
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      letter-spacing: 0px;
+      padding: 0 1rem;
+    }
+
+        .video-controls {
+        top: 10px;   
+        right: 10px;
+        left: 10px;   
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .volume-container {
+        padding: 5px 10px; 
+    }
+
+    #volume-slider {
+        width: 60px;
+    }
+
+    .control-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
   }
-
-  .textabove{
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 0;
-        padding-left: 0;
-        gap: 0.5rem;
-  }
-
-  .h1__hero{
-    height: auto;
-    width: 55vw;
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .hero__p{
-    font-size: 13px;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0px;
-  }
-
-}
 </style>
+
+
+<script>
+  const setupHeroVideo = () => {
+    const video = document.querySelector('#hero-video');
+    const wrapper = document.querySelector('#video-wrapper');
+    const content = document.querySelector('#hero-content');
+    const playBtn = document.querySelector('#play-button-container');
+    const closeBtn = document.querySelector('#close-btn');
+    const volSlider = document.querySelector('#volume-slider');
+    const volIcon = document.querySelector('#vol-icon');
+
+    if (!video || !playBtn || !volSlider) return;
+
+    // Configuración inicial (30%)
+    video.volume = 0.3;
+
+    // Control del Slider
+    volSlider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      video.volume = val;
+      
+      // Cambiar icono según volumen
+      if (val == 0) {
+        volIcon.textContent = '🔇';
+        video.muted = true;
+      } else if (val < 0.5) {
+        volIcon.textContent = '🔉';
+        video.muted = false;
+      } else {
+        volIcon.textContent = '🔊';
+        video.muted = false;
+      }
+    });
+
+    // Función de apertura (ya corregida)
+    playBtn.addEventListener('click', () => {
+      content.style.opacity = '0';
+      wrapper.classList.add('is-visible');
+      video.play();
+    });
+
+    // Función de cierre
+    const closeVideo = () => {
+      wrapper.classList.remove('is-visible');
+      setTimeout(() => {
+        video.pause();
+        content.style.opacity = '1';
+        video.load();
+      }, 500);
+    };
+
+    closeBtn.addEventListener('click', closeVideo);
+    video.onended = closeVideo;
+  };
+
+  setupHeroVideo();
+  document.addEventListener('astro:page-load', setupHeroVideo);
+</script>
