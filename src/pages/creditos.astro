@@ -15,8 +15,230 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 <HeroSections title="Créditos"/>
 
+<main class="main">
 
+    <section class="licencias">
+
+        <h2 class="licencias__h2">LICENCIAS</h2>  
+
+        <p class="imagenes__p">Imágenes usadas para el apartado de La Ruta: </p>
+                
+        <p class="imagenes__p"><a href="https://www.flaticon.es/iconos-gratis/iglesia" title="iglesia iconos" target="_blank">Iglesia iconos creados por Freepik - Flaticon</a></p> 
+
+        <p class="imagenes__p"><a href="https://www.freepik.es/icono/tambor-giratorio_6302639" target="_blank">Icono de tambor giratorio</a></p>  
+
+    </section>
+
+    <section class="colaboradores">
+
+        <h2 class="colaboradores__h2">OBJETIVOS</h2>
+
+        <div class="objetivos">
+            <ul class="objetivos__ul">
+                <li>Diseñar y maquetar la web del proyecto Vía Mariana (Home, Vía Mariana, Ruta, Patrimonio, Proyecto, Contacto).</li>
+                <li>Aplicar un kit de UI común a todos los wireframes definidos por el equipo.</li>
+                <li>Practicar un flujo de trabajo basado en: Notion, GitHub, Astro + Netlify</li>
+            </ul>
+
+            <p class="objetivos__p">Para sabes más sobre el proyecto y el flujo de trabajo puedes verlo <a href="https://github.com/rubenterre/viamariana">aquí</a></p>
+        </div>
+
+        <h2 class="colaboradores__h2">COLABORADORES</h2>
+
+        <div class="equipo">
+
+            <p class="equipo__p">
+                La página web fue desarrollada por el alumnado en prácticas del AFD de Confección y publicación de páginas web<span>*</span> junto con el diseñador
+                <a href="https://github.com/rubenterre" target="_blank">Rubén Terré</a> para la empresa <a href="https://dosespacios.com/" target="_blank">Dos Espacios</a>.
+            </p>
+
+            <ul class="equipo__2">
+
+                <li><span>*</span>Alumnado del curso de Confección y publicación de páginas web:</li>
+                <li>Jose Manuel Moldes Santórum</li>
+                <li>Inés de Prada Martínez</li>
+                <li>Jose Benito Camiña González</li>
+                <li>Iago Prack Agraso</li>
+                <li>Rubén Piñeiro Fernández</li>
+                <li>Nahuel Pastor Oubiña</li>
+                <li>Clara Bayón Rodrdíguez</li>
+                <li>Alba Prieto Núñez </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+</main>
 
 <Footer/>
 
 </Layout>
+
+<style>
+
+.main{
+    width: 100%;
+    height: auto;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*LICENCIAS */
+
+.licencias{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.licencias__h2{
+    font-family: var(--font-secondary);
+    font-size: 25px;
+    color: var(--color-primary);
+}
+
+.imagenes__p{
+    font-family: var(--font-tertiary);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--grey);
+}
+
+.imagenes__p a{
+    font-family: var(--font-tertiary);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.imagenes__p a:hover{
+    color: var(--color-secondary);
+}
+
+/*COLABORADORES */
+
+.colaboradores{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.colaboradores__h2{
+    font-family: var(--font-secondary);
+    font-size: 25px;
+    color: var(--color-primary);
+}
+
+.objetivos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--color-tertiary);
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+.objetivos__ul{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.objetivos__ul li{
+    font-family: var(--font-tertiary);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--grey);
+    list-style: none;
+}
+
+.objetivos__p{
+    font-family: var(--font-tertiary);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--grey);
+}
+
+.objetivos__p a{
+    font-family: var(--font-tertiary);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.objetivos__p a:hover{
+    color: var(--color-secondary);
+}
+
+/*EQUIPO*/
+
+.equipo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--color-tertiary);
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+.equipo__p{
+    font-family: var(--font-tertiary);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--grey);
+}
+
+.equipo__p a{
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.equipo__p a:hover{
+    color: var(--color-secondary);
+}
+
+.equipo__p span{
+    color: var(--color-primary);
+}
+
+.equipo__2{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    flex-direction: column;
+}
+</style>
