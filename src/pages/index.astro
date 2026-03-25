@@ -7,8 +7,6 @@ import Colaboradores from "../components/layout/Colaboradores.astro";
 import PopUp from "../components/layout/PopUp.astro";
 import Gallery from "../components/layout/Gallery.astro";
 import Testimonio from "../components/layout/Testimonio.astro";
-
-// ESTE INDEX FUNCIONA CORRRECTA MENTE
 ---
 
 <Layout>
@@ -27,7 +25,7 @@ import Testimonio from "../components/layout/Testimonio.astro";
       </p>
     </div>
     <div class="col col--img">
-      <img src="img/mapa_2.png" alt="image" class="etapas__img" />
+      <img class="img-w" src="img/mapa_2.png" alt="image" class="etapas__img" />
     </div>
   </div>
   <Gallery />
@@ -36,10 +34,12 @@ import Testimonio from "../components/layout/Testimonio.astro";
   <PopUp />
   <Footer />
 </Layout>
+
 <style>
   .main__h2 {
     text-align: center;
     font-size: xx-large;
+    color: var(--color-primary);
   }
 
   .row {
@@ -92,39 +92,35 @@ import Testimonio from "../components/layout/Testimonio.astro";
     transform: scale(1.5);
   }
 
-  .etapas__p{
+  .etapas__p {
     text-align: justify;
+    color: var(--grey);
+  }
+
+  @media (max-width: 1000px) {
+    .img-w {
+      width: 350px;
+    }
   }
 
   @media (max-width: 768px) {
     .row {
       flex-direction: column;
     }
-
     .col {
       width: 100%;
     }
+    .col--text {
+      padding: 50px 0;
+    }
 
-  }
+    .etapas__p {
+      padding: 0 40px;
+    }
+    .etapas__img {
+      width: 70%;
+    }
 
-    @media (max-width:768px) {
-        .row{
-            flex-direction: column;
-        }
-        .col{
-            width: 100%;
-        }
-        .col--text{
-            padding: 50px 0;
-        }
-
-        .etapas__p{
-            padding: 0 40px;
-        }
-        .etapas__img{
-            width: 70%;
-        }
-        
     .col--text {
       padding: 50px 0;
     }
