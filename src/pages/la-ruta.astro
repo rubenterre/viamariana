@@ -12,6 +12,10 @@ import HeroSections from "../components/layout/HeroSections.astro"
     <main class="main">
 
     <section class="section">
+      <div class="container">
+
+      
+
       <h2 class="second__title">TRAZADO COMPLETO</h2>
        <div class="main__div">
         <h3 class="text">La Vía Mariana recorre más de 350km desde Braga (Portugal) hasta Muxía (Galicia), atravesando 6 GDR gallegos y múltiples ayuntamientos. Su trazado conecta santuarios marianos, espacios naturales, aldeas y villas, configurando una ruta de gran riqueza paisajística y cultural.</h3>
@@ -402,7 +406,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
           </p>
         </div>
         </div>
-          
+          </div>
 
         
       </section>
@@ -527,10 +531,19 @@ import HeroSections from "../components/layout/HeroSections.astro"
 
 <style>
 .section{
-   width: 100%;
-   padding-bottom: 2rem;
-  
+   padding: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 2rem;
 }
+
+.container{
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 5px var(--grey);
+}
+
+
   .main{
   display: flex;
   justify-content: center;
@@ -546,7 +559,9 @@ import HeroSections from "../components/layout/HeroSections.astro"
   gap: 2rem;
   max-width: 1200px; 
    margin:2rem auto;
+
 }
+
 
 
 .second__title{
@@ -586,7 +601,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
   color: var(--color-tertiary);
   cursor: pointer;
   padding: 18px;
-  width: 50%;
+  width: 60%;
   border: none;
   text-align: left;
   outline: none;
@@ -632,7 +647,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  width: 50%;
+  width: 60%;
   font-family: var(--font-primary);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
