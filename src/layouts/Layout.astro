@@ -1,3 +1,6 @@
+---
+import Organization from '../components/structured-data/Organization.astro';
+---
 <!doctype html>
 <html lang="es">
 	<head>
@@ -5,14 +8,13 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="icon" href="/favicon.png">
 		<meta name="generator" content={Astro.generator}>
-		<title>Via Mariana - Ruta luso-galaica</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+<!-- 		<title>Via Mariana - Ruta luso-galaica</title>
+ -->		<slot name="head" />
+			<slot name="meta"/>
 	</head>
 	<body>
 		<slot />
-		
-		 <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-		  <!-- <script client src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> -->
+		<Organization />
 	</body>
 </html>
 
@@ -22,6 +24,16 @@
 		padding: 0;
 		outline: 0;
 		box-sizing: border-box;
+	}
+
+	/* Visually hidden class for screen reader only content */
+	.visually-hidden {
+		position: absolute !important;
+		width: 1px; height: 1px;
+		padding: 0; margin: -1px;
+		overflow: hidden; clip: rect(0, 0, 0, 0);
+		white-space: nowrap; /* added line */
+		border: 0;
 	}
 
 	html {
@@ -48,12 +60,12 @@
 		--font-primary: Poppins-Regular;
 		--font-secondary: Poppins-Medium;
 		--font-tertiary: OpenSans;
-		--color-primary: #00378f;
+		--color-primary: #003387;
 		--color-secondary: #efb91f;
 		--color-tertiary: #f8f9fb;
-		--grey: #7f7f7f;
+		--color-dark: #1a1a1a;
+		--color-gray: #2b2b2b;
 		--light: #ffffff;
-		--dark: #1a1a1a;
 	}
 
 	body {

@@ -1,19 +1,21 @@
 ---
+import Layout from "../layouts/Layout.astro";
 
-import Layout from "../layouts/Layout.astro"
+import Header from "../components/layout/Header.astro";
 
-import Header from "../components/layout/Header.astro"
+import Colaboradores from "../components/layout/Colaboradores.astro";
 
-import Colaboradores from "../components/layout/Colaboradores.astro"
+import Footer from "../components/layout/Footer.astro";
 
-import Footer from "../components/layout/Footer.astro"
+import HeroSections from "../components/layout/HeroSections.astro";
 
-import HeroSections from "../components/layout/HeroSections.astro"
-
+title: "El Proyecto Vía Mariana - Equipo y Objetivos"
+description: "Conoce al equipo detrás del proyecto Vía Mariana y los objetivos de esta ruta de peregrinación luso-galaica."
 ---
 
 <Layout>
-
+<title slot="head">El Proyecto Vía Mariana - Equipo y Objetivos</title>
+<meta slot="meta" name="description" content="Conoce al equipo detrás del proyecto Vía Mariana y los objetivos de esta ruta de peregrinación luso-galaica." />
 <Header/>
 
 <HeroSections title="El Proyecto"/>

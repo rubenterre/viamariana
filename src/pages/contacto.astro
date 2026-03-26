@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import HeroSections from "../components/layout/HeroSections.astro";
 import Footer from "../components/layout/Footer.astro";
+
+title: "Contacto Vía Mariana - Formulario y Redes Sociales"
+description: "Contacta con el equipo de Vía Mariana mediante nuestro formulario o síguenos en nuestras redes sociales para estar al día de las novedades."
 ---
 
 <Layout>
@@ -41,24 +44,36 @@ import Footer from "../components/layout/Footer.astro";
             </div>
           </div>
         </aside>
-        <section class="form-card">
-          <h2 class="form-card__title">Escríbenos</h2>
-          <form class="form-card__form">
-            <input class="form-card__input" type="text" placeholder="Nombre" required />
-            <input class="form-card__input" type="email" placeholder="Email" required />
-            <input class="form-card__input" type="text" placeholder="Asunto" />
-            <div class="checkbox">
-                <input type="checkbox" id="checkbox" required/>
-                <p class="checkbox__p">He leído y acepto el tratamiento de mis datos según las condiciones indicadas.<span>*</span></p>
-            </div>
-            <p class="checkbox__p"><span>*</span> Información básica sobre protección de datos: Vía Mariana tratará sus datos para responder a su solicitud. 
-                  Puede ejercer sus derechos de acceso, rectificación o supresión en <b>viamariana@gmail.com.</b> <br>
-                  Lea nuestra <b>Política de Privacidad</b> completa <a href="/politica-privacidad">aquí.</a>
-            </p>
-            <textarea class="form-card__textarea" placeholder="Mensaje" rows="4" required></textarea>
-            <button class="form-card__button" type="submit">Enviar</button>
-          </form>
-        </section>
+<section class="form-card">
+           <h2 class="form-card__title">Escríbenos</h2>
+           <form class="form-card__form">
+             <div>
+               <label for="nombre" class="form-label">Nombre</label>
+               <input class="form-card__input" type="text" id="nombre" placeholder="Nombre" required aria-required="true" />
+             </div>
+             <div>
+               <label for="email" class="form-label">Email</label>
+               <input class="form-card__input" type="email" id="email" placeholder="Email" required aria-required="true" />
+             </div>
+             <div>
+               <label for="asunto" class="form-label">Asunto</label>
+               <input class="form-card__input" type="text" id="asunto" placeholder="Asunto" />
+             </div>
+             <div class="checkbox">
+                 <input type="checkbox" id="checkbox" required/>
+                 <label for="checkbox" class="checkbox__label">He leído y acepto el tratamiento de mis datos según las condiciones indicadas.<span class="asterisco">*</span></label>
+             </div>
+             <p class="checkbox__p"><span class="asterisco">*</span> Información básica sobre protección de datos: Vía Mariana tratará sus datos para responder a su solicitud. 
+                   Puede ejercer sus derechos de acceso, rectificación o supresión en <b>viamariana@gmail.com.</b> <br>
+                   Lea nuestra <b>Política de Privacidad</b> completa <a href="/politica-privacidad">aquí.</a>
+             </p>
+             <div>
+               <label for="mensaje" class="form-label">Mensaje</label>
+               <textarea class="form-card__textarea" id="mensaje" placeholder="Mensaje" rows="4" required aria-required="true"></textarea>
+             </div>
+             <button class="form-card__button" type="submit">Enviar</button>
+           </form>
+         </section>
       </div>
     </div>
   </main>

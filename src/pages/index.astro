@@ -7,14 +7,18 @@ import Colaboradores from "../components/layout/Colaboradores.astro";
 import PopUp from "../components/layout/PopUp.astro";
 import Gallery from "../components/layout/Gallery.astro";
 import Testimonio from "../components/layout/Testimonio.astro";
+
+title: "Vía Mariana - Ruta Luso-Galaica de Peregrinación Mariana"
+description: "Descubre la Vía Mariana, una ruta de peregrinación que conecta Braga (Portugal) con Muxía (Galicia) a través de un patrimonio natural, histórico y cultural único."
 ---
 
 <Layout>
-  <Header />
-  <HomeHero />
-  <div class="row">
-    <div class="col col--text">
-      <h2 class="main__h2">Etapas</h2>
+   <Header />
+   <HomeHero />
+   <h1 class="visually-hidden">Vía Mariana - Ruta Luso-Galaica de Peregrinación Mariana</h1>
+   <div class="row">
+     <div class="col col--text">
+       <h2 class="main__h2">Etapas</h2>
       <p class="etapas__p">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
         reiciendis voluptate nemo ducimus deleniti tempora facilis
@@ -24,9 +28,9 @@ import Testimonio from "../components/layout/Testimonio.astro";
         Adipisci cupiditate dolor impedit alias sunt facilis maiores modi?
       </p>
     </div>
-    <div class="col col--img">
-      <img class="img-w" src="img/mapa_2.png" alt="image" class="etapas__img" />
-    </div>
+<div class="col col--img">
+       <img class="img-w etapas__img" src="img/mapa_2.png" alt="Mapa de la ruta Vía Mariana mostrando las etapas desde Braga hasta Muxía" width="800" height="600" loading="lazy" />
+     </div>
   </div>
   <Gallery />
   <Testimonio />

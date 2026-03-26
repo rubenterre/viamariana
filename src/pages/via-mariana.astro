@@ -3,34 +3,39 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/layout/Footer.astro";
 import Header from "../components/layout/Header.astro";
 import HeroSections from "../components/layout/HeroSections.astro";
+
+title: "Vía María - Historia y Concepto de la Ruta"
+description: "Conoce la historia y el concepto detrás de la Vía Mariana, una ruta de peregrinación mariana luso-galaica."
 ---
 
 <Layout>
     <Header />
     <HeroSections title="Vía Mariana" />
     <main class="main">
-        <section class="container">
-            <div class="text">
-                <h1 class="text__h1">¿POR QUÉ?</h1>
-                <p class="text__p">
-                    Es una oportunidad para poner en valor el patrimonio de las
-                    comarcas que atraviesa y reforzar la identidad compartida
-                    entre los territorios. De este modo, se convierte en un
-                    recurso estratégico para el desarrollo sostenible del medio
-                    rural, al conectar lugares de culto mariano de gran
-                    tradición vinculados a romerías históricas y allegando un
-                    fuerte valor simbólico. Todo ello permite enriquecer la
-                    experiencia del caminante gracias al descubrimiento de
-                    espacios naturales, aldeas y elementos etnográficos
-                </p>
-            </div>
-            <img
-                src="public/img/religioso/sra-del-sameiro.png"
-                alt="img provisional"
-                width="350px"
-                class="img__container"
-            />
-        </section>
+<section class="container">
+             <div class="text">
+                 <h1 class="text__h1">¿POR QUÉ la Vía Mariana?</h1>
+                 <p class="text__p">
+                     Es una oportunidad para poner en valor el patrimonio de las
+                     comarcas que atraviesa y reforzar la identidad compartida
+                     entre los territorios. De este modo, se convierte en un
+                     recurso estratégico para el desarrollo sostenible del medio
+                     rural, al conectar lugares de culto mariano de gran
+                     tradición vinculados a romerías históricas y allegando un
+                     fuerte valor simbólico. Todo ello permite enriquecer la
+                     experiencia del caminante gracias al descubrimiento de
+                     espacios naturales, aldeas y elementos etnográficos
+                 </p>
+             </div>
+             <img
+                 src="public/img/religioso/sra-del-sameiro.png"
+                 alt="Santuario de la Virgen del Sameiro en Braga, Portugal"
+                 width="350"
+                 height="233"
+                 loading="lazy"
+                 class="img__container"
+             />
+         </section>
         <section class="container2">
             <div class="historia" id="historia">
                 <img
@@ -39,19 +44,19 @@ import HeroSections from "../components/layout/HeroSections.astro";
                     alt="img provisional"
                     id="img__historia"
                 />
-                <div class="text__historia">
-                    <h1 class="h1__historia">HISTORIA</h1>
-                    <p class="p__historia" id="p__historia">
-                        A finales la década de 2010 surgió la idea de trazar un
-                        camino de largo recorrido que rescatara y uniera
-                        antiguos senderos entre ermitas. Proyecto que fue
-                        impulsado con el objetivo de ofrecer una peregrinación
-                        diferente, potenciando el carácter histórico, natural y
-                        patrimonial de las distintas zonas rurales, enfocada en
-                        María en lugar de Santiago. La apertura oficial de la
-                        ruta fue en 2019.
-                    </p>
-                </div>
+<div class="text__historia">
+                     <h2 class="h1__historia">HISTORIA</h2>
+                     <p class="p__historia" id="p__historia">
+                         A finales la década de 2010 surgió la idea de trazar un
+                         camino de largo recorrido que rescatara y uniera
+                         antiguos senderos entre ermitas. Proyecto que fue
+                         impulsado con el objetivo de ofrecer una peregrinación
+                         diferente, potenciando el carácter histórico, natural y
+                         patrimonial de las distintas zonas rurales, enfocada en
+                         María en lugar de Santiago. La apertura oficial de la
+                         ruta fue en 2019.
+                     </p>
+                 </div>
                 <button class="button" id="open1">SABER MÁS </button>
             </div>
             <div class="tradicion" id="tradicion">
@@ -61,17 +66,17 @@ import HeroSections from "../components/layout/HeroSections.astro";
                     alt="img provisional"
                     id="img__tradicion"
                 />
-                <div class="text__tradicion">
-                    <h1 class="h1__tradicion">TRADICIÓN</h1>
-                    <p class="p__tradicion" id="p__tradicion">
-                        La tradición mariana se remonta a la época de la
-                        Gallaecia romana y se mantiene viva hasta el día de hoy.
-                        Esta vía recupera y da significado a la tradición de las
-                        romerías, caminos de fe y celebración del territorio,
-                        las cuales forman parte del patrimonio inmaterial de
-                        nuestra cultura.
-                    </p>
-                </div>
+<div class="text__tradicion">
+                     <h2 class="h1__tradicion">TRADICIÓN</h2>
+                     <p class="p__tradicion" id="p__tradicion">
+                         La tradición mariana se remonta a la época de la
+                         Gallaecia romana y se mantiene viva hasta el día de hoy.
+                         Esta vía recupera y da significado a la tradición de las
+                         romerías, caminos de fe y celebración del territorio,
+                         las cuales forman parte del patrimonio inmaterial de
+                         nuestra cultura.
+                     </p>
+                 </div>
                 <button class="button" id="open2">SABER MÁS</button>
             </div>
         </section>
@@ -155,11 +160,11 @@ import HeroSections from "../components/layout/HeroSections.astro";
         padding: 10px;
          border-radius: 25px;
     }
-    .text__h1 {
-        color: #00378f;
-        font-family: var(--font-secondary);
-        padding-top: 1rem;
-    }
+.text__h1 {
+         color: #003387;
+         font-family: var(--font-secondary);
+         padding-top: 1rem;
+       }
     .text {
         display: flex;
         flex-direction: column;
@@ -387,11 +392,11 @@ import HeroSections from "../components/layout/HeroSections.astro";
         box-shadow: 0px 0px 10px 5px var(--grey);
         }
     
-     .text__h1 {
-        color: #00378f;
-        font-family: var(--color-secondary);
-        padding-top: 1rem;
-        }
+.text__h1 {
+         color: #003387;
+         font-family: var(--font-secondary);
+         padding-top: 1rem;
+       }
     .text {
         display: flex;
         flex-direction: column;

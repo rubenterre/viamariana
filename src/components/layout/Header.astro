@@ -3,27 +3,27 @@ import ButtonContacto from "../ui/ButtonContacto.astro";
 ---
 
 <header class="header__all">
-  <a href="/">
-    <img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img">
-  </a>
-  <button class="burger" id="burger" aria-label="Abrir menú">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <nav class="header__navbar" id="navbar">
-    <a href="/via-mariana" class="navbar__a">Vía Mariana</a>
-    <a href="/la-ruta" class="navbar__a">La Ruta</a>
-    <a href="/patrimonio" class="navbar__a">El Patrimonio</a>
-    <a href="/el-proyecto" class="navbar__a">El Proyecto</a>
-    <div class="navbar__contact">
-      <ButtonContacto />
-    </div>
-  </nav>
-  <div class="header__contact">
-    <ButtonContacto />
-  </div>
-</header>
+   <a href="/">
+     <img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img">
+   </a>
+   <button class="burger" id="burger" aria-label="Abrir menú" aria-controls="navbar" aria-expanded="false">
+     <span></span>
+     <span></span>
+     <span></span>
+   </button>
+   <nav class="header__navbar" id="navbar" aria-label="Navegación principal">
+     <a href="/via-mariana" class="navbar__a">Vía Mariana</a>
+     <a href="/la-ruta" class="navbar__a">La Ruta</a>
+     <a href="/patrimonio" class="navbar__a">El Patrimonio</a>
+     <a href="/el-proyecto" class="navbar__a">El Proyecto</a>
+     <div class="navbar__contact">
+       <ButtonContacto />
+     </div>
+   </nav>
+   <div class="header__contact">
+     <ButtonContacto />
+   </div>
+ </header>
 
 <style>
   .logo__img {
@@ -160,10 +160,12 @@ import ButtonContacto from "../ui/ButtonContacto.astro";
 </style>
 
 <script>
-  const burger = document.querySelector("#burger");
-  const navbar = document.querySelector("#navbar");
+   const burger = document.querySelector("#burger");
+   const navbar = document.querySelector("#navbar");
 
-  burger?.addEventListener("click", () => {
-    navbar?.classList.toggle("active");
-  });
-</script>
+   burger?.addEventListener("click", () => {
+     const isExpanded = burger.getAttribute("aria-expanded") === "true";
+     burger.setAttribute("aria-expanded", String(!isExpanded));
+     navbar?.classList.toggle("active");
+   });
+ </script>
