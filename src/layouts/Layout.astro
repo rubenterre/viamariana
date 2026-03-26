@@ -8,13 +8,14 @@ import Organization from '../components/structured-data/Organization.astro';
 		<meta name="viewport" content="width=device-width">
 		<link rel="icon" href="/favicon.png">
 		<meta name="generator" content={Astro.generator}>
-<!-- 		<title>Via Mariana - Ruta luso-galaica</title>
- -->		<slot name="head" />
-			<slot name="meta"/>
+		<title>Via Mariana - Ruta luso-galaica</title>
+		<slot name="head" />
+		<slot name="meta"/>
 	</head>
 	<body>
 		<slot />
 		<Organization />
+		<slot name="scripts" />
 	</body>
 </html>
 

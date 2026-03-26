@@ -4,8 +4,10 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import HeroSections from "../components/layout/HeroSections.astro";
 ---
-
 <Layout>
+  <slot name="head">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  </slot>
   <Header />
   <main>
     <HeroSections title="Patrimonio" />
@@ -1309,24 +1311,27 @@ importante lugar de devoción mariana en la región.
   }
 </style>
 
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const swipers = document.querySelectorAll(".mySwiper");
+<slot name="scripts">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const swipers = document.querySelectorAll(".mySwiper");
 
-    swipers.forEach((swiperEl) => {
-      new Swiper(swiperEl, {
-        speed: 500,
-        loop: true,
-        spaceBetween: 30,
-        pagination: {
-          el: swiperEl.querySelector(".swiper-pagination"),
-          clickable: true,
-        },
-        navigation: {
-          nextEl: swiperEl.querySelector(".swiper-button-next"),
-          prevEl: swiperEl.querySelector(".swiper-button-prev"),
-        },
+      swipers.forEach((swiperEl) => {
+        new Swiper(swiperEl, {
+          speed: 500,
+          loop: true,
+          spaceBetween: 30,
+          pagination: {
+            el: swiperEl.querySelector(".swiper-pagination"),
+            clickable: true,
+          },
+          navigation: {
+            nextEl: swiperEl.querySelector(".swiper-button-next"),
+            prevEl: swiperEl.querySelector(".swiper-button-prev"),
+          },
+        });
       });
     });
-  });
-</script>
+  </script>
+</slot>
