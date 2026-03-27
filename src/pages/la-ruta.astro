@@ -5,8 +5,13 @@ import { Image } from 'astro:assets'
 import Header from "../components/layout/Header.astro"
 import Footer from "../components/layout/Footer.astro"
 import HeroSections from "../components/layout/HeroSections.astro"
+
+const pageTitle = "La Ruta"
 ---
-<Layout>
+<Layout title={pageTitle}>
+  <title slot="head">{pageTitle}</title>
+
+
   <Header/>
   <HeroSections title="La Ruta"/>
     <main class="main">
@@ -24,18 +29,18 @@ import HeroSections from "../components/layout/HeroSections.astro"
       <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
             <span class="acordeon__text">
             Santuario da Virxen da Barca. Muxía
           </span>
-          <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue"></button>
+          <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue"></button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__hotel" src="public/img/icono-H.png" alt="Icono de Hotel">
+              <img class="img__hotel" src="/img/icono H.webp" alt="Icono de Hotel">
               <span class="acordeon__text">
                 Brandomil. San Pedro. Baías
                 </span>
-                 <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+                 <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
                  Sto Antoiño. Calzada Romana, Berdoias.
           </p>
         </div>
@@ -43,15 +48,15 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
             <span class="acordeon__text">
             Negreira. Sta Comba. Zas. SM Brandoñas. Mazaricos. Vimianzo. Sra da Ó
             </span>
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
                 Sta Mª Figueiras. Ames. SM. Trasmone. SM.Portor. A Baña SM.Covas. SM.Ordoeste.
                 </span>
@@ -61,13 +66,13 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
             <span class="acordeon__text">
             Santiago de Compostela. Virxen do Portal. Sta María la Vieja-Sra da Corticeira.</span>
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
                <span class="acordeon__text">
                 Sra da Merced de Conxo. Colexiata de Sta María do Sar.
                 </span>
@@ -77,18 +82,18 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
             <span class="acordeon__text">
             Teo. Castro Lupario
             </span>
-          <img class="img__castro" src="public/img/espiral.png" alt="Icono de castro"></button>
+          <img class="img__castro" src="/img/espiral.webp" alt="Icono de castro"></button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
                 Santa María de Iria Flavia. Santuario da Escravitude 
                 </span>
-                <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+                <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
           </p>
         </div>
         </div>
@@ -96,14 +101,14 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="img/icono-capilla.webp" alt="Icono de una capilla">
             <span class="acordeon__text">
             Sta María de Herbón-Padrón 
             </span>
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue"></button>
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue"></button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
                 Valga - Os Mártores. Pontecesures.
                 </span>
@@ -114,9 +119,9 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__hotel" src="public/img/icono-H.png" alt="Icono de hotel">
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
-            <img class="img__castro" src="public/img/espiral.png" alt="Icono de castro">
+            <img class="img__hotel" src="/img/icono H.webp" alt="Icono de hotel">
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
+            <img class="img__castro" src="/img/espiral.webp" alt="Icono de castro">
             <span class="acordeon__text">
             Cuntis
           </span>
@@ -133,18 +138,18 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
             <span class="acordeon__text">
             Moraña. Sta.Lucía
           </span>
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
                Santuario dos Milagros de Amil. Cño de S. Roque. S. Pedro de Gargantáns
                </span>
-          <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+          <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               </p>
         </div>
         </div>
@@ -152,15 +157,15 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__hotel" src="public/img/icono-H.png" alt="Icono de Hotel">
+            <img class="img__hotel" src="/img/icono H.webp" alt="Icono de Hotel">
              <span class="acordeon__text">
             Campo Lameiro. S. Miguel
            </span>
-          <img class="img__castro" src="public/img/espiral.png" alt="Icono de castro">
+          <img class="img__castro" src="/img/espiral.webp" alt="Icono de castro">
         </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
               San Xusto. PRG-24. GR.54.
             </span>
@@ -171,15 +176,15 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
             <span class="acordeon__text">
             Sta María de Sacos. PRG-24
            </span>
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
             Valongo. Sra do Libramento. Santiago de Loureiro. Cotobade.
             </span>
@@ -190,14 +195,14 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
             <span class="acordeon__text"></span>
             Sta Mariña de Aguas Santas
           </span>
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
                 S. Martiño. Verducido. Caritel Sta María. Portafurada. PRG-109-Foxo do Lobo.
                 </span>
@@ -208,20 +213,20 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
-            <img class="img__castro" src="public/img/espiral.png" alt="Icono de castro">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
+            <img class="img__castro" src="/img/espiral.webp" alt="Icono de castro">
             <span class="acordeon__text">
             Santa María de Estacas
             </span>
-          <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+          <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
         </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
                 S. Martiño de Barcia de Mera. Senda do Río Alen. S.Xoan do Mosteiro
                 </span>
-                <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+                <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
           </p>
         </div>
         </div>
@@ -229,31 +234,31 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
              <span class="acordeon__text">
             Santiago de Covelo.
             </span>
-             <img class="img__hotel" src="public/img/icono-H.png" alt="Icono de hotel">
+             <img class="img__hotel" src="/img/icono H.webp" alt="Icono de hotel">
               <span class="acordeon__text">
               Santa Mariña.
               </span>
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
              <span class="acordeon__text">
              Sta Cruz de Valdomar
              </span>
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
            </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
                <span class="acordeon__text">
               Santuario de A Franqueira 
               </span>
-              <img class="img__cubiertos" src="public/img/tenedor.png" alt="Imagen de cubiertos">
+              <img class="img__cubiertos" src="/img/icono-tenedor.webp" alt="Imagen de cubiertos">
               <span class="acordeon__text">
                Santiago de Prado PRG-119-Lamosa-Sra do Libramento
                </span>
-          <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+          <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
             </p>
         </div>
         </div>
@@ -261,18 +266,18 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
             <span class="acordeon__text">
             Santiago de Parada de Achas. PRG-165 
             </span>
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
           </button>
         <div class="panel">
             <p class="panel__p">
                <span class="acordeon__text">
               Arbo. Senda da Moura. Mouretan-S Cristobal. S Roque de Barcia
               </span>
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
           </p>
         </div>
         </div>
@@ -280,18 +285,18 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
             <span class="acordeon__text">
             Melgaço. Sta María da Porta.
             </span>
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__cubiertos" src="public/img/tenedor.png" alt="Imagen de cubiertos">
+              <img class="img__cubiertos" src="/img/icono-tenedor.webp" alt="Imagen de cubiertos">
               <span class="acordeon__text">
               Lamas de Mouro. S Joao - Fiaes. Sta María
               </span>
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
           </p>
         </div>
         </div>
@@ -299,15 +304,15 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
-            <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
+            <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
             <span class="acordeon__text">
             Santuario da Sra da Peneda
             </span>
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__castro" src="public/img/espiral.png" alt="Icono de castro">
+              <img class="img__castro" src="/img/espiral.webp" alt="Icono de castro">
               <span class="acordeon__text">
               Tibo, Baleiral. PR2-AVV.
               </span>
@@ -318,19 +323,19 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
              <span class="acordeon__text">
             PR29-AVV. Ermelo-Sta Mª/Sº Bento. Soajo. Parque Nacional da Peneda Gerés.
             </span>
-            <img class="img__hotel" src="public/img/icono-H.png" alt="Icono de hotel">
-          <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue"></button>
+            <img class="img__hotel" src="/img/icono H.webp" alt="Icono de hotel">
+          <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue"></button>
             <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
                <span class="acordeon__text">
               VN de Múia. Sta. María. Sra da Paz-Touvedo
               </span>
-              <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
+              <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
           </p>
         </div>
         </div>
@@ -338,7 +343,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__hotel" src="public/img/icono-H.png" alt="Icono de hotel">
+            <img class="img__hotel" src="/img/icono H.webp" alt="Icono de hotel">
             <span class="acordeon__text">
             Ponte da Barca. Mosteiro de Crasto. Sra da Pegadinha. Bravaes-S. Salvador.
             </span>
@@ -348,7 +353,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
               <span class="acordeon__text">
               Sra da Conceiçao. Sra do Livramento, Santiago. Sta Rita PR1/2 VVD/PTB
               </span>
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
           </p>
         </div>
         </div>
@@ -362,7 +367,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+              <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
               <span class="acordeon__text">
              Sao Frutuoso-Vila de Prado-Sao Tiago-Penegate.
              </span>
@@ -373,7 +378,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
              <span class="acordeon__text">
             BRAGA. Sta María da Sé de Braga. Sra do Leite.
             </span>
@@ -383,7 +388,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
               <span class="acordeon__text">
              Circuito dos Santuarios de Braga. Sta Marta. Falperra-Mª Madalena-Bom Jesus
              </span>
-             <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+             <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
           </p>
         </div>
         </div>
@@ -391,15 +396,15 @@ import HeroSections from "../components/layout/HeroSections.astro"
         <div class="boxes">
 
           <button class="acordeon">
-            <img class="img__capilla" src="public/img/icono-capilla.png" alt="Icono de una capilla">
+            <img class="img__capilla" src="/img/icono-capilla.webp" alt="Icono de una capilla">
              <span class="acordeon__text">
             Santuario de Nossa Sra do Sameiro
             </span>
           </button>
         <div class="panel">
             <p class="panel__p">
-              <img class="img__albergue" src="public/img/icono-albergue.png" alt="Icono de albergue">
-            <img class="img_info" src="public/img/icono-informacion.png" alt="Icono de información">
+              <img class="img__albergue" src="/img/icono-albergue.webp" alt="Icono de albergue">
+            <img class="img_info" src="/img/icono-informacion.webp" alt="Icono de información">
             <span class="acordeon__text">
               Credencial. Sello/Carimbo.Stamp
               </span>
@@ -541,6 +546,8 @@ import HeroSections from "../components/layout/HeroSections.astro"
 .container{
   border-radius: 25px;
   box-shadow: 0px 0px 10px 5px var(--grey);
+  padding: 1rem;
+  
 }
 
 
@@ -601,7 +608,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
   color: var(--color-tertiary);
   cursor: pointer;
   padding: 18px;
-  width: 60%;
+  width: 90%;
   border: none;
   text-align: left;
   outline: none;
@@ -647,7 +654,7 @@ import HeroSections from "../components/layout/HeroSections.astro"
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  width: 60%;
+  width: 90%;
   font-family: var(--font-primary);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;

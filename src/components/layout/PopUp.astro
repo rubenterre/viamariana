@@ -1,64 +1,56 @@
 ---
 
-
-
 ---
-
 
 <div class="banner__cookie" id="cookie-popup">
     <div class="content">
         <h3>Aviso de Cookies</h3>
-        <p class="p__cookie">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.
-            Puedes obtener más información haciendo click en los siguientes enlaces:
+        <p class="p__cookie">
+            Utilizamos cookies propias y de terceros para mejorar nuestros
+            servicios. Puedes obtener más información haciendo click en los
+            siguientes enlaces:
         </p>
-            <div class="enlaces__cookie">
-                <a class="reach" href="/aviso-legal" target="_blank">Aviso Legal</a>
-                <a class="reach" href="/politica-privacidad" target="_blank">Política de Privacidad</a>
-            </div>
-
+        <div class="enlaces__cookie">
+            <a class="reach" href="/aviso-legal" target="_blank">Aviso Legal</a>
+            <a class="reach" href="/politica-privacidad" target="_blank">Política de Privacidad</a>
+        </div>
         <div class="cookie__buttons">
-            <button class="btn__aceptar" id="accept-cookies">
-                Aceptar
-            </button>
-            <button class="btn__rechazar" id="reject-cookies">
-                Rechazar
-            </button>
+            <button class="btn__aceptar" id="accept-cookies">Aceptar</button>
+            <button class="btn__rechazar" id="reject-cookies">Rechazar</button>
         </div>
     </div>
 </div>
 
-
 <style>
-    .banner__cookie{
+    .banner__cookie {
         position: fixed;
         bottom: -10px;
         left: 75%;
         transform: translate(100%, -50%);
-
         opacity: 0;
         visibility: hidden;
-
-        transition: opacity 0.4s ease, transform 0.4s ease;
+        transition:
+            opacity 0.4s ease,
+            transform 0.4s ease;
         z-index: 9999;
     }
 
-    .banner__cookie.show{
+    .banner__cookie.show {
         opacity: 1;
         visibility: visible;
         transform: translate(-5%, -50%);
     }
 
-    .content{
+    .content {
         background-color: var(--color-secondary);
         margin: 15% auto;
         padding: 10px;
         border-radius: 10px;
-
         max-width: 500px;
         text-align: center;
     }
 
-    .p__cookie{
+    .p__cookie {
         align-items: left;
         text-align: justify;
         padding: 8px;
@@ -67,27 +59,26 @@
         font-size: 14px;
     }
 
-    .enlaces__cookie{
+    .enlaces__cookie {
         display: flex;
         flex-direction: column;
     }
 
-    .reach{
+    .reach {
         text-decoration: none;
         font-family: var(--font-secondary);
     }
 
-    .reach:hover{
+    .reach:hover {
         text-decoration: underline;
     }
 
-
-    .cookie__buttons{
+    .cookie__buttons {
         margin-top: 20px;
         gap: 20px;
     }
 
-    .btn__aceptar{
+    .btn__aceptar {
         border: none;
         padding: 10px 20px;
         cursor: pointer;
@@ -96,12 +87,12 @@
         font-size: 14px;
     }
 
-    .btn__aceptar:hover{
+    .btn__aceptar:hover {
         background-color: var(--color-primary);
         color: var(--color-tertiary);
     }
 
-    .btn__rechazar{
+    .btn__rechazar {
         border: none;
         padding: 10px 20px;
         cursor: pointer;
@@ -111,12 +102,12 @@
         font-size: 14px;
     }
 
-    .btn__rechazar:hover{
+    .btn__rechazar:hover {
         background-color: var(--color-primary);
         color: var(--color-tertiary);
     }
 
-    h3{
+    h3 {
         text-transform: uppercase;
         padding: 5px;
         font-size: 18px;
@@ -124,77 +115,70 @@
         font-family: var(--font-secondary);
     }
 
+    @media (max-width: 480px) {
+        .banner__cookie {
+            left: 50%;
+            bottom: 10px;
+            transform: translate(-50%, 10px);
+            width: 95%;
+        }
 
-    @media (max-width: 480px){
+        .banner__cookie.show {
+            transform: translate(-50%, 0);
+        }
 
-    .banner__cookie{
-        left: 50%;
-        bottom: 10px;
-        transform: translate(-50%, 10px);
-        width: 95%;
+        .content {
+            max-width: 100%;
+            padding: 18px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .cookie__buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn__rechazar {
+            margin-left: 0;
+        }
     }
 
-    .banner__cookie.show{
-        transform: translate(-50%, 0);
+    @media (min-width: 480px) and (max-width: 768px) {
+        .banner__cookie {
+            left: 90%;
+            bottom: 15px;
+            transform: translate(-50%, 10px);
+            width: 80%;
+        }
+
+        .banner__cookie.show {
+            transform: translate(-50%, 0);
+        }
+
+        .cookie__buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            max-width: 450px;
+            padding: 22px;
+        }
+
+        h3 {
+            font-size: 17px;
+        }
     }
-
-    .content{
-        max-width: 100%;
-        padding: 18px;
-    }
-
-    h3{
-        font-size: 16px;
-    }
-
-    .cookie__buttons{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .btn__rechazar{
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 768px){
-
-    .banner__cookie{
-        left: 90%;
-        bottom: 15px;
-        transform: translate(-50%, 10px);
-        width: 80%;
-    }
-
-    .banner__cookie.show{
-        transform: translate(-50%, 0);
-    }
-
-    .cookie__buttons{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .content{
-        max-width: 450px;
-        padding: 22px;
-    }
-
-    h3{
-        font-size: 17px;
-    }
-
-}
-
-
 </style>
 
 <script is:inline>
-document.addEventListener("DOMContentLoaded", () => {
-
+    document.addEventListener("DOMContentLoaded", () => {
         const popup = document.getElementById("cookie-popup");
         const acceptBtn = document.getElementById("accept-cookies");
         const rejectBtn = document.getElementById("reject-cookies");
@@ -210,11 +194,11 @@ document.addEventListener("DOMContentLoaded", () => {
         acceptBtn.onclick = () => {
             localStorage.setItem("cookieConsent", "accepted");
             popup.classList.remove("show");
-        }
+        };
 
         rejectBtn.onclick = () => {
             localStorage.setItem("cookieConsent", "rejected");
-            popup.classList.remove("show")
+            popup.classList.remove("show");
         };
-});
+    });
 </script>
