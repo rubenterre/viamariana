@@ -1,6 +1,8 @@
 ---
 import ImageGallery from "../ui/ImageGallery.astro";
 
+// imagenes sacadas de public / img / religioso
+
 const religiousImages = [
   {file:"aguasantas.webp", alt:"Agua Santas", text:"Agua Santas"},
   {file:"aguasantas2.webp", alt:"Agua Santas", text:"Agua Santas"},
@@ -42,6 +44,7 @@ const religiousImages = [
 
 <h2 class="main__h2">GALERÍA</h2>
 <div class="galery">
+  //renderizado de imagenes de la galeria religioso
   {religiousImages.map((item) => (
     <ImageGallery image={"img/religioso/"+item?.file} text={item?.text} alt={item?.alt} />
   ))}
