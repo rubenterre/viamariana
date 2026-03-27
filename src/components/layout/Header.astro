@@ -90,7 +90,9 @@ const navigation = [
     width: clamp(192px, 20vw, 280px);
     height: 72px; /* Fixed height instead of min-height */
     object-fit: contain;
-    padding-top: 0;
+    object-position: center 30%; /* Adjust vertical position to show more logo */
+    transform: scale(1.15); /* Slightly scale up the logo within its container */
+    transform-origin: center;
   }
 
   /* Header container */
@@ -294,7 +296,9 @@ const navigation = [
     .logo__img {
       width: clamp(150px, 38vw, 180px);
       height: 56px; /* Fixed height instead of min-height */
-      padding-top: 0;
+      object-position: center 30%; /* Match desktop adjustment */
+      transform: scale(1.15); /* Match desktop scaling */
+      transform-origin: center;
     }
 
     .header__navbar {
