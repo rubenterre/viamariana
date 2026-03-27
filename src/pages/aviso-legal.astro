@@ -6,6 +6,8 @@ import Header from "../components/layout/Header.astro";
 
 import Footer from "../components/layout/Footer.astro";
 
+const pageTitle = "Aviso Legal"
+
 ---
 
 <script>
@@ -28,7 +30,8 @@ for (i = 0; i < acc.length; i++) {
 
 </script>
 
-<Layout>
+<Layout title={pageTitle}>
+  <title slot="head">{pageTitle}</title>
 <Header/>
     
     <main class="main__aviso">
