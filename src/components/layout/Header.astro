@@ -97,7 +97,7 @@ const navigation = [
   /* Header container */
   .header__all {
     padding: 8px 20px;
-    min-height: 88px; /* Reduced from 92px (power of 2: 64, 128 -> 88 is even) */
+    height: 88px; /* CHANGED from min-height to height for testing */
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -106,6 +106,9 @@ const navigation = [
     background-color: var(--light);
     position: relative;
     z-index: 100;
+    /* Debug: add border to see actual size */
+    border: 2px solid red !important;
+    box-sizing: border-box !important;
   }
 
   /* Navigation */
