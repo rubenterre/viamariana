@@ -1,3 +1,7 @@
+---
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -5,8 +9,30 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="icon" href="/favicon.png">
 		<meta name="generator" content={Astro.generator}>
-		<title>Via Mariana - Ruta luso-galaica</title>
+
+		    <slot name="head">
+      			<title>{title}</title>
+    		</slot>
+<!-- 		<title>Via Mariana - Ruta luso-galaica</title>
+ -->		
+		<meta name="description" content="Esta es la página de Via Mariana">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+		<!-- Open Graph General (Facebook, LinkedIn, etc.) -->
+<meta property="og:title" content="Título atractivo de tu página" />
+<meta property="og:description" content="Breve descripción que invite a hacer clic (aprox. 155 caracteres)." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.tusitio.com" />
+<meta property="og:image" content="https://www.tusitio.com" />
+<meta property="og:site_name" content="Nombre de tu Marca o Sitio" />
+<meta property="og:locale" content="es_ES" />
+
+<!-- Etiquetas específicas para Twitter (X) -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Título para Twitter" />
+<meta name="twitter:description" content="Descripción optimizada para Twitter." />
+<meta name="twitter:image" content="https://www.tusitio.com" />
+
 	</head>
 	<body>
 		<slot />
