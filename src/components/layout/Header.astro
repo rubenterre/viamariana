@@ -89,15 +89,15 @@ const navigation = [
   .logo__img {
     width: clamp(192px, 20vw, 280px);
     height: auto;
-    min-height: 76px; /* Reduced from 78px (even number) */
+    min-height: 72px; /* Reduced from 76px for better vertical centering */
     object-fit: contain;
-    padding-top: 0.5rem;
+    padding-top: 0.25rem; /* Reduced from 0.5rem */
   }
 
   /* Header container */
   .header__all {
     padding: 8px 20px;
-    height: 88px; /* CHANGED from min-height to height for testing */
+    min-height: 88px; /* Back to min-height for flexibility */
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -106,9 +106,6 @@ const navigation = [
     background-color: var(--light);
     position: relative;
     z-index: 100;
-    /* Debug: add border to see actual size */
-    border: 2px solid red !important;
-    box-sizing: border-box !important;
   }
 
   /* Navigation */
@@ -297,7 +294,8 @@ const navigation = [
 
     .logo__img {
       width: clamp(150px, 38vw, 180px);
-      min-height: 56px; /* Reduced from 60px (even, multiple of 8) */
+      min-height: 56px; /* Kept at 56px (even, multiple of 8) */
+      padding-top: 0.25rem; /* Reduced to match desktop */
     }
 
     .header__navbar {
