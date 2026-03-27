@@ -1,89 +1,169 @@
 ---
 import ButtonContacto from "../ui/ButtonContacto.astro";
+
+// Navigation data structure for maintainability
+const navigation = [
+  { href: "/via-mariana", label: "Vía Mariana" },
+  { href: "/la-ruta", label: "La Ruta" },
+  { href: "/patrimonio", label: "El Patrimonio" },
+  { href: "/el-proyecto", label: "El Proyecto" },
+];
 ---
 
+<!-- Skip link for accessibility -->
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
 <header class="header__all">
-  <a href="/">
-    <img src="/img/LogoViaMariana.png" alt="Logo Via Mariana" class="logo__img">
+  <!-- Logo -->
+  <a href="/" class="logo__link" aria-label="Inicio - Vía Mariana">
+    <img 
+      src="/img/LogoViaMariana.png" 
+      alt="Logo Via Mariana" 
+      class="logo__img"
+      width="192"
+      height="78"
+    />
   </a>
-  <button class="burger" id="burger" aria-label="Abrir menú">
-    <span></span>
-    <span></span>
-    <span></span>
+
+  <!-- Mobile menu toggle -->
+  <button 
+    class="burger" 
+    id="burger" 
+    aria-label="Abrir menú"
+    aria-expanded="false"
+    aria-controls="navbar"
+  >
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
   </button>
-  <nav class="header__navbar" id="navbar">
-    <a href="/via-mariana" class="navbar__a">Vía Mariana</a>
-    <a href="/la-ruta" class="navbar__a">La Ruta</a>
-    <a href="/patrimonio" class="navbar__a">El Patrimonio</a>
-    <a href="/el-proyecto" class="navbar__a">El Proyecto</a>
+
+  <!-- Navigation -->
+  <nav 
+    class="header__navbar" 
+    id="navbar" 
+    aria-label="Navegación principal"
+  >
+    <div class="navbar__links">
+      {navigation.map((item) => (
+        <a 
+          href={item.href} 
+          class="navbar__a"
+          data-nav-item
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+    
+    <!-- Contact button (visible on mobile) -->
     <div class="navbar__contact">
       <ButtonContacto />
     </div>
   </nav>
+
+  <!-- Contact button (visible on desktop) -->
   <div class="header__contact">
     <ButtonContacto />
   </div>
 </header>
 
 <style>
+  /* Skip link - hidden until focused */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-primary);
+    color: var(--light);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s ease;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Logo */
+  .logo__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
   .logo__img {
-    max-width: 18vw;
-    min-width: 192px;
+    width: clamp(192px, 20vw, 280px);
+    height: auto;
     min-height: 78px;
+    object-fit: contain;
     padding-top: 0.5rem;
   }
 
+  /* Header container */
   .header__all {
-    padding: 8px 24px;
-    height: 96px;
-    display: flex;
+    padding: 8px 20px;
+    min-height: 92px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 2rem;
-    justify-content: space-between;
+    gap: 1.75rem;
     border-radius: 999px;
     background-color: var(--light);
+    position: relative;
+    z-index: 100;
   }
 
+  /* Navigation */
   .header__navbar {
-    width: 48vw;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    z-index: 999;
-  }
-
-  .navbar-links {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .navbar-top,
-  .navbar-bot {
     display: flex;
     justify-content: center;
-    text-align: center;
-    gap: 1rem;
-    width: 310px;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 8px 0;
+  }
+
+  .navbar__links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
   }
 
   .navbar__a {
     color: var(--color-primary);
     font-family: var(--font-secondary);
-    font-size: 20px;
+    font-size: clamp(16px, 1.25vw, 20px);
     font-weight: 500;
     text-decoration: none;
-    line-height: 26px;
-    transition: color 0.3s ease;
-    text-align: center;
-    padding-top: 0.5rem;
+    line-height: 1.3;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    position: relative;
+    outline: none;
   }
 
   .navbar__a:hover {
-    color: var(--color-secondary);
+    color: #002a6e;
   }
 
+  .navbar__a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(239, 185, 31, 0.3) 0%, var(--color-secondary) 100%);
+    transition: width 0.22s cubic-bezier(0.22, 0.61, 0.36, 1);
+    border-radius: 2px;
+  }
+
+  .navbar__a:hover::after {
+    width: 90%;
+  }
+
+  /* Contact buttons */
   .navbar__contact {
     display: none;
   }
@@ -92,6 +172,7 @@ import ButtonContacto from "../ui/ButtonContacto.astro";
     display: block;
   }
 
+  /* Burger menu */
   .burger {
     display: none;
     flex-direction: column;
@@ -99,22 +180,58 @@ import ButtonContacto from "../ui/ButtonContacto.astro";
     background: none;
     border: none;
     cursor: pointer;
+    padding: 8px;
   }
 
-  .burger span {
+  .burger__line {
     width: 32px;
     height: 4px;
     background: var(--color-primary);
     border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  @media (max-width: 1042px) {
+  .burger[aria-expanded="true"] .burger__line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .burger[aria-expanded="true"] .burger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger[aria-expanded="true"] .burger__line:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .header__all {
+      gap: 1.25rem;
+    }
+
+    .navbar__links {
+      gap: 0.75rem;
+    }
+
     .navbar__a {
-      font-size: 15px;
+      font-size: 16px;
+      padding: 0.4rem 0.5rem;
     }
   }
 
-  @media (max-width: 831px) {
+  @media (max-width: 940px) {
+    .navbar__a {
+      font-size: 15px;
+      padding: 0.35rem 0.45rem;
+    }
+  }
+
+  @media (max-width: 880px) {
+    .header__all {
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+    }
+
     .burger {
       display: flex;
     }
@@ -124,46 +241,123 @@ import ButtonContacto from "../ui/ButtonContacto.astro";
     }
 
     .header__navbar {
-      position: absolute;
-      top: 72px;
+      position: fixed;
+      top: 92px;
       left: 0;
+      right: 0;
       width: 100%;
       flex-direction: column;
       background: var(--light);
+      padding: 1.75rem 1.25rem;
+      gap: 1.25rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       display: none;
-      padding: 24px 0;
-      gap: 1rem;
+      z-index: 99;
     }
 
-    .navbar-top,
-    .navbar-bot {
+    .header__navbar[data-visible="true"] {
       display: flex;
+    }
+
+    .navbar__links {
       flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      width: 310px;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 400px;
     }
 
-    .header__navbar.active {
-      display: flex;
+    .navbar__a {
+      font-size: 18px;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgba(0, 55, 143, 0.1);
+      border-radius: 8px;
+    }
+
+    .navbar__a::after {
+      display: none;
     }
 
     .navbar__contact {
       display: block;
-      margin-top: 10px;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header__all {
+      padding: 8px 14px;
+      min-height: 76px;
     }
 
-    .navbar__a {
-      font-size: 20px;
+    .logo__img {
+      width: clamp(150px, 38vw, 180px);
+      min-height: 60px;
+    }
+
+    .header__navbar {
+      top: 76px;
+      padding: 1.5rem 1rem;
     }
   }
 </style>
 
 <script>
-  const burger = document.querySelector("#burger");
-  const navbar = document.querySelector("#navbar");
+  // Simple menu functionality
+  (function() {
+    const burger = document.getElementById('burger');
+    const navbar = document.getElementById('navbar');
+    
+    if (!burger || !navbar) return;
 
-  burger?.addEventListener("click", () => {
-    navbar?.classList.toggle("active");
-  });
+    function toggleMenu() {
+      const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !isExpanded);
+      navbar.setAttribute('data-visible', !isExpanded);
+      
+      if (!isExpanded) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+
+    function closeMenu() {
+      burger.setAttribute('aria-expanded', 'false');
+      navbar.setAttribute('data-visible', 'false');
+      document.body.style.overflow = '';
+    }
+
+    burger.addEventListener('click', toggleMenu);
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (
+        burger.getAttribute('aria-expanded') === 'true' &&
+        !navbar.contains(e.target) &&
+        !burger.contains(e.target)
+      ) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on navigation item click
+    document.querySelectorAll('[data-nav-item]').forEach(item => {
+      item.addEventListener('click', () => {
+        if (burger.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+        }
+      });
+    });
+  })();
 </script>
