@@ -2,9 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+
+const pageTitle = "Políca Privacidad"
 ---
 
-<Layout>
+<Layout title={pageTitle}>
+    <title slot="head">{pageTitle}</title>
     <Header />
     <div class="politicas">
         <div>
