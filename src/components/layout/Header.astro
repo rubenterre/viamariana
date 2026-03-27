@@ -84,6 +84,17 @@ const navigation = [
     display: flex;
     align-items: center;
     text-decoration: none;
+    margin-left: -16px; /* Shift logo 16px to the left */
+  }
+
+  .logo__img {
+    width: 224px; /* Fixed width instead of clamp to avoid bounce */
+    height: 72px; /* Fixed height instead of min-height */
+    object-fit: contain;
+    object-position: center 20%; /* Even higher position */
+    transform: scale(1.32); /* Reduced from 1.45 to 1.32 (32% larger) */
+    transform-origin: left center; /* Changed from center to left center */
+    transition: transform 0.2s ease; /* Smooth scaling */
   }
 
   .logo__img {
@@ -210,6 +221,10 @@ const navigation = [
       gap: 1.25rem;
     }
 
+    .logo__img {
+      width: 208px; /* Slightly smaller at 1024px */
+    }
+
     .navbar__links {
       gap: 0.75rem;
     }
@@ -222,6 +237,7 @@ const navigation = [
 
   @media (max-width: 980px) {
     .logo__img {
+      width: 192px; /* Smaller at 980px */
       transform: scale(1.3); /* Intermediate step at 980px */
       transform-origin: left center;
     }
@@ -229,12 +245,17 @@ const navigation = [
 
   @media (max-width: 960px) {
     .logo__img {
+      width: 184px; /* Smaller at 960px */
       transform: scale(1.28); /* Slightly smaller at 960px */
       transform-origin: left center;
     }
   }
 
   @media (max-width: 940px) {
+    .logo__img {
+      width: 176px; /* Smaller at 940px */
+    }
+
     .navbar__a {
       font-size: 15px;
       padding: 0.35rem 0.45rem;
@@ -308,8 +329,12 @@ const navigation = [
       min-height: 72px; /* Reduced from 76px (even, multiple of 8) */
     }
 
+    .logo__link {
+      margin-left: -12px; /* Slightly less shift on mobile */
+    }
+
     .logo__img {
-      width: clamp(150px, 38vw, 180px);
+      width: 144px; /* Fixed width for mobile */
       height: 56px; /* Fixed height instead of min-height */
       object-position: center 20%; /* Match desktop adjustment */
       transform: scale(1.3); /* Reduced from 1.45 to 1.3 (30% larger) */
