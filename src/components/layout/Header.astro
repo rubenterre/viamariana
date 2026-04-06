@@ -1,7 +1,6 @@
 ---
 import ButtonContacto from "../ui/ButtonContacto.astro";
 
-// Navigation data structure for maintainability
 const navigation = [
   { href: "/via-mariana", label: "Vía Mariana" },
   { href: "/la-ruta", label: "La Ruta" },
@@ -10,22 +9,19 @@ const navigation = [
 ];
 ---
 
-<!-- Skip link for accessibility -->
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
 <header class="header__all">
-  <!-- Logo -->
   <a href="/" class="logo__link" aria-label="Inicio - Vía Mariana">
-    <img 
-      src="/img/LogoViaMariana.webp" 
-      alt="Logo Via Mariana" 
+    <img
+      src="/img/LogoViaMariana.webp"
+      alt="Logo Via Mariana"
       class="logo__img"
       width="192"
       height="78"
     />
   </a>
 
-  <!-- Mobile menu toggle -->
   <button
     class="burger"
     id="burger"
@@ -37,7 +33,6 @@ const navigation = [
     <span class="burger__line"></span>
   </button>
 
-  <!-- Navigation -->
   <nav class="header__navbar" id="navbar" aria-label="Navegación principal">
     <div class="navbar__links">
       {
@@ -49,20 +44,17 @@ const navigation = [
       }
     </div>
 
-    <!-- Contact button (visible on mobile) -->
     <div class="navbar__contact">
       <ButtonContacto />
     </div>
   </nav>
 
-  <!-- Contact button (visible on desktop) -->
   <div class="header__contact">
     <ButtonContacto />
   </div>
 </header>
 
 <style>
-  /* Skip link - hidden until focused */
   .skip-link {
     position: absolute;
     top: -40px;
@@ -79,49 +71,46 @@ const navigation = [
     top: 0;
   }
 
-  /* Logo */
   .logo__link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-left: -16px; /* Shift logo 16px to the left */
+    margin-left: -16px;
   }
 
   .logo__img {
-    width: 224px; /* Fixed width instead of clamp to avoid bounce */
-    height: 72px; /* Fixed height instead of min-height */
+    width: 224px;
+    height: 72px;
     object-fit: contain;
-    object-position: center 20%; /* Even higher position */
-    transform: scale(1.32); /* Reduced from 1.45 to 1.32 (32% larger) */
-    transform-origin: left center; /* Changed from center to left center */
-    transition: transform 0.2s ease; /* Smooth scaling */
+    object-position: center 20%;
+    transform: scale(1.32);
+    transform-origin: left center;
+    transition: transform 0.2s ease;
   }
 
   .logo__img {
     width: clamp(192px, 20vw, 280px);
-    height: 72px; /* Fixed height instead of min-height */
+    height: 72px;
     object-fit: contain;
-    object-position: center 20%; /* Even higher position */
-    transform: scale(1.32); /* Reduced from 1.35 to 1.32 (32% larger) */
-    transform-origin: left center; /* Changed from center to left center */
-    transition: transform 0.2s ease; /* Smooth scaling */
+    object-position: center 20%;
+    transform: scale(1.32);
+    transform-origin: left center;
+    transition: transform 0.2s ease;
   }
 
-  /* Header container */
   .header__all {
-    padding: 8px 24px; /* Increased from 20px to 24px (even number) */
-    min-height: 88px; /* Back to min-height now that logo is fixed */
+    padding: 8px 24px;
+    min-height: 88px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 1.5rem; /* Reduced from 1.75rem to 1.5rem (even number) */
+    gap: 1.5rem;
     border-radius: 999px;
     background-color: var(--light);
     position: relative;
     z-index: 100;
   }
 
-  /* Navigation */
   .header__navbar {
     display: flex;
     justify-content: center;
@@ -173,7 +162,6 @@ const navigation = [
     width: 90%;
   }
 
-  /* Contact buttons */
   .navbar__contact {
     display: none;
   }
@@ -182,7 +170,6 @@ const navigation = [
     display: block;
   }
 
-  /* Burger menu */
   .burger {
     display: none;
     flex-direction: column;
@@ -215,14 +202,13 @@ const navigation = [
     transform: rotate(-45deg) translate(8px, -8px);
   }
 
-  /* Responsive styles */
   @media (max-width: 1024px) {
     .header__all {
       gap: 1.25rem;
     }
 
     .logo__img {
-      width: 208px; /* Slightly smaller at 1024px */
+      width: 208px;
     }
 
     .navbar__links {
@@ -237,23 +223,23 @@ const navigation = [
 
   @media (max-width: 980px) {
     .logo__img {
-      width: 192px; /* Smaller at 980px */
-      transform: scale(1.3); /* Intermediate step at 980px */
+      width: 192px;
+      transform: scale(1.3);
       transform-origin: left center;
     }
   }
 
   @media (max-width: 960px) {
     .logo__img {
-      width: 184px; /* Smaller at 960px */
-      transform: scale(1.28); /* Slightly smaller at 960px */
+      width: 184px;
+      transform: scale(1.28);
       transform-origin: left center;
     }
   }
 
   @media (max-width: 940px) {
     .logo__img {
-      width: 176px; /* Smaller at 940px */
+      width: 176px;
     }
 
     .navbar__a {
@@ -278,7 +264,7 @@ const navigation = [
 
     .header__navbar {
       position: fixed;
-      top: 88px; /* Updated from 92px to match new header height */
+      top: 88px;
       left: 0;
       right: 0;
       width: 100%;
@@ -326,30 +312,29 @@ const navigation = [
   @media (max-width: 480px) {
     .header__all {
       padding: 8px 14px;
-      min-height: 72px; /* Reduced from 76px (even, multiple of 8) */
+      min-height: 72px;
     }
 
     .logo__link {
-      margin-left: -12px; /* Slightly less shift on mobile */
+      margin-left: -12px;
     }
 
     .logo__img {
-      width: 144px; /* Fixed width for mobile */
-      height: 56px; /* Fixed height instead of min-height */
-      object-position: center 20%; /* Match desktop adjustment */
-      transform: scale(1.3); /* Reduced from 1.45 to 1.3 (30% larger) */
-      transform-origin: left center; /* Match desktop */
+      width: 144px;
+      height: 56px;
+      object-position: center 20%;
+      transform: scale(1.3);
+      transform-origin: left center;
     }
 
     .header__navbar {
-      top: 72px; /* Updated to match new height */
+      top: 72px;
       padding: 1.5rem 1rem;
     }
   }
 </style>
 
 <script>
-  // Simple menu functionality
   (function () {
     const burger = document.getElementById("burger");
     const navbar = document.getElementById("navbar");
@@ -376,7 +361,6 @@ const navigation = [
 
     burger.addEventListener("click", toggleMenu);
 
-    // Close menu on escape key
     document.addEventListener("keydown", (e) => {
       if (
         e.key === "Escape" &&
@@ -386,7 +370,6 @@ const navigation = [
       }
     });
 
-    // Close menu when clicking outside
     document.addEventListener("click", (e) => {
       if (
         burger.getAttribute("aria-expanded") === "true" &&
@@ -397,7 +380,6 @@ const navigation = [
       }
     });
 
-    // Close menu on navigation item click
     document.querySelectorAll("[data-nav-item]").forEach((item) => {
       item.addEventListener("click", () => {
         if (burger.getAttribute("aria-expanded") === "true") {
