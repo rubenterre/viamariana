@@ -10,9 +10,13 @@ import Footer from "../components/layout/Footer.astro"
 
 import HeroSections from "../components/layout/HeroSections.astro"
 
+const pageTitle = "El Proyecto"
+
 ---
 
-<Layout>
+<Layout title={pageTitle}>
+
+<title slot="head">{pageTitle}</title>
 
 <Header/>
 

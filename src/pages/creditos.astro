@@ -7,9 +7,13 @@ import Footer from "../components/layout/Footer.astro"
 
 import HeroSections from "../components/layout/HeroSections.astro"
 
+const pageTitle = "Créditos"
+
 ---
 
-<Layout>
+<Layout title={pageTitle}>
+
+    <title slot="head">{pageTitle}</title>
 
 <Header/>
 

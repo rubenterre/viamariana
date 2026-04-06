@@ -3,9 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import HeroSections from "../components/layout/HeroSections.astro";
 import Footer from "../components/layout/Footer.astro";
+
+const pageTitle = "Contacto"
 ---
 
-<Layout>
+<Layout title={pageTitle}>
+  <title slot="head">{pageTitle}</title>
   <Header />
   <HeroSections title="Contacto" />
   <main class="contact-page">
