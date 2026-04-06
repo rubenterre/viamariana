@@ -7,9 +7,13 @@ import Colaboradores from "../components/layout/Colaboradores.astro";
 import PopUp from "../components/layout/PopUp.astro";
 import Gallery from "../components/layout/Gallery.astro";
 import Testimonio from "../components/layout/Testimonio.astro";
+
+
+const pageTitle = "Inicio"
 ---
 
 <Layout>
+  <title slot="head">{pageTitle}</title>
   <Header />
   <HomeHero title="Vía Mariana"/>
   <div class="row">
