@@ -262,9 +262,55 @@ const pageTitle = "Contacto"
     color: var(--color-secondary);
   }
 
-  @media (max-width: 480px) {
+
+  /*MEDIA QUERY*/
+
+  /*481-759px */
+
+  @media (min-width: 481px) and (max-width:759px){
+
     .contact-page__grid {
       grid-template-columns: 1fr;
+    }
+
+    .info-card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .info-card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .info-card__label{
+      text-align: center;
+    }
+
+    .form-card__title{
+      text-align: center;
+    }
+
+  }
+
+  /*480px */
+
+  @media (max-width: 480px) {
+
+    .contact-page__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .info-card__title{
+      text-align: center;
+    }
+
+    .form-card__title{
+      text-align: center;
     }
   }
 </style>
