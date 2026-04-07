@@ -1114,7 +1114,8 @@ const pageTitle = "Patrimonio"
                   <p>
                     La Iglesia de Santa María de Estacas es un destacado ejemplo
                     de arquitectura religiosa tradicional gallega, construida
-                    principalmente en grandes bloques de granito labrado.
+                    principalmente en grandes bloques de granito labrado, ademas de albergar una imagen de Santa María sobre una
+peana. 
                   </p>
                   <div class="hover-text">
                     <a class="a__saber" href="#">Haz click para saber más</a>
@@ -2217,6 +2218,7 @@ Abalar y la Pedra dos Cadrís.
     text-decoration: none;
     color: var(--color-tertiary);
   }
+
   @media (max-width: 3800px) {
     .swiper {
       width: 18vw;
@@ -2227,13 +2229,49 @@ Abalar y la Pedra dos Cadrís.
   
     }
   }
-   @media (max-width:1500px) {
+     @media (max-width:1920px) {
+      .swiper {
+    width: 26vw;
+    height: auto;
+  }
+  .img{
+     width: 25vw;
+  }
+      .patrimonio__clasificado{
+        gap:3rem;
+      }
+    .patrimonio__pontevedra{
+      
+      max-width: none;
+    }
+    .patrimonio__portugal{
+      
+      max-width: none;
+  }
+  .patrimonio__acorunha{
+  max-width: none;
+ }
+
+
+}
+   /* @media (max-width:1500px) {
     .swiper {
       width:30vw;
       height: auto;
     }
     .img {
       width: 30vw;
+  
+    }
+  } */
+
+    @media (max-width:1300px) {
+    .swiper {
+      width:40vw;
+      height: auto;
+    }
+    .img {
+      width: 40vw;
   
     }
   }
