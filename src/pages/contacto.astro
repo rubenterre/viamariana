@@ -3,9 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import HeroSections from "../components/layout/HeroSections.astro";
 import Footer from "../components/layout/Footer.astro";
+
+const pageTitle = "Contacto"
 ---
 
-<Layout>
+<Layout title={pageTitle}>
+  <title slot="head">{pageTitle}</title>
   <Header />
   <HeroSections title="Contacto" />
   <main class="contact-page">
@@ -29,13 +32,13 @@ import Footer from "../components/layout/Footer.astro";
           <div class="info-card__social">
             <p class="info-card__label">Redes</p>
             <div class="info-card__links">
-              <a href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES" class="info-card__link" >
+              <a href="https://www.facebook.com/viamarianalusogalaica/?locale=es_ES" class="info-card__link" target="_blank">
                 <img class="info-card__icon" src="./img/facebook.svg" alt="Icono facebook" />
               </a>
-              <a href="https://www.instagram.com/viamarianalusogalaica/?hl=es" class="info-card__link" >
+              <a href="https://www.instagram.com/viamarianalusogalaica/?hl=es" class="info-card__link"  target="_blank">
                 <img class="info-card__icon" src="./img/instagram.svg" alt="Icono Instagram" />
               </a>
-              <a href="https://www.youtube.com/@asociacionviamarianaluso-g9811" class="info-card__link" >
+              <a href="https://www.youtube.com/@asociacionviamarianaluso-g9811" class="info-card__link" target="_blank">
                 <img class="info-card__icon" src="./img/youtube-antiguo.svg" alt="Icono Youtube" />
               </a>
             </div>
@@ -43,7 +46,7 @@ import Footer from "../components/layout/Footer.astro";
         </aside>
         <section class="form-card">
           <h2 class="form-card__title">Escríbenos</h2>
-          <form class="form-card__form">
+          <form class="form-card__form" method="GET" data-netlify="true">
             <input class="form-card__input" type="text" placeholder="Nombre" required />
             <input class="form-card__input" type="email" placeholder="Email" required />
             <input class="form-card__input" type="text" placeholder="Asunto" />
@@ -259,9 +262,72 @@ import Footer from "../components/layout/Footer.astro";
     color: var(--color-secondary);
   }
 
-  @media (max-width: 480px) {
+
+  /*MEDIA QUERY*/
+
+  /*481-759px */
+
+  @media (min-width: 481px) and (max-width:759px){
+
     .contact-page__grid {
       grid-template-columns: 1fr;
+    }
+
+    .info-card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .info-card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .info-card__label{
+      text-align: center;
+    }
+
+    .form-card__title{
+      text-align: center;
+    }
+
+  }
+
+  /*480px */
+
+  @media (max-width: 480px) {
+
+    .contact-page__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .info-card__title{
+      text-align: center;
+    }
+
+    .form-card__title{
+      text-align: center;
+    }
+  }
+
+  /*360px-479px */
+
+  @media (min-width: 360px) and (max-width: 479px) {
+
+    .contact-page__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .info-card__title{
+      text-align: center;
+    }
+
+    .form-card__title{
+      text-align: center;
     }
   }
 </style>

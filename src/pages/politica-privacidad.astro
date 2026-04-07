@@ -2,11 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+
+const pageTitle = "Politica Privacidad"
 ---
 
-<Layout>
+<Layout title={pageTitle}>
+    <title slot="head">{pageTitle}</title>
     <Header />
     <div class="politicas">
+        <h2 class="h2">POLÍTICA DE PRIVACIDAD</h2>
         <div>
             <h2 class="politicas-h2">1-Responsable del Tratamiento</h2>
             <p class="politicas-p">
@@ -100,10 +104,18 @@ import Footer from "../components/layout/Footer.astro";
         width: 90%;
     }
 
+    .h2{
+        font-family: var(--font-secondary);
+        font-size: 25px;
+        text-align: center;
+        color: var(--color-primary);
+    }
+
     .politicas-h2 {
         padding: 15px 0px;
         color: var(--dark);
         font-family: var(--font-tertiary);
+        color: var(--color-primary);
     }
 
     .politicas-encabezado {
@@ -116,5 +128,19 @@ import Footer from "../components/layout/Footer.astro";
         padding-bottom: 10px;
         color: var(--grey);
         font-family: var(--font-tertiary);
+    }
+
+    /*MEDIA QUERY*/
+
+    @media (min-width:320px) and (max-width:360px) {
+
+        .h2{
+            font-size: 1.5em;
+        }
+
+        .politicas-h2{
+            font-size: 1.3em;
+        }
+        
     }
 </style>

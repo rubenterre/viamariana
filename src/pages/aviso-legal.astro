@@ -6,6 +6,8 @@ import Header from "../components/layout/Header.astro";
 
 import Footer from "../components/layout/Footer.astro";
 
+const pageTitle = "Aviso Legal"
+
 ---
 
 <script>
@@ -28,7 +30,8 @@ for (i = 0; i < acc.length; i++) {
 
 </script>
 
-<Layout>
+<Layout title={pageTitle}>
+  <title slot="head">{pageTitle}</title>
 <Header/>
     
     <main class="main__aviso">
@@ -115,6 +118,13 @@ for (i = 0; i < acc.length; i++) {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  gap: 1rem;
+}
+
+.h2__box h2{
+  font-family: var(--font-secondary);
+  font-size: 25px;
+  color: var(--color-primary);
 }
 
 .acordeon {
@@ -152,5 +162,31 @@ for (i = 0; i < acc.length; i++) {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+/*MEDIA QUERY */
+
+@media (min-width:460px) and (max-width:507px) {
+
+  .h2__box h2{
+    font-size: 1.6rem;
+  }
+  
+}
+
+@media (min-width:360px) and (max-width:459px) {
+
+  .h2__box h2{
+    font-size: 1.2rem;
+  }
+  
+}
+
+@media (min-width:320px) and (max-width:359px) {
+
+  .h2__box h2{
+    font-size: 1rem;
+  }
+  
 }
 </style>
