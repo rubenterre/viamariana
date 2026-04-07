@@ -1114,7 +1114,8 @@ const pageTitle = "Patrimonio"
                   <p>
                     La Iglesia de Santa María de Estacas es un destacado ejemplo
                     de arquitectura religiosa tradicional gallega, construida
-                    principalmente en grandes bloques de granito labrado.
+                    principalmente en grandes bloques de granito labrado, ademas de albergar una imagen de Santa María sobre una
+peana. 
                   </p>
                   <div class="hover-text">
                     <a class="a__saber" href="#">Haz click para saber más</a>
@@ -2114,6 +2115,7 @@ Abalar y la Pedra dos Cadrís.
     color: var(--color-secondary);
     font-weight: bold;
     
+    
   }
 
   .swiper-pagination {
@@ -2217,37 +2219,95 @@ Abalar y la Pedra dos Cadrís.
     color: var(--color-tertiary);
   }
 
-  @media (max-width: 1125px) {
+  @media (max-width: 3800px) {
     .swiper {
-      width: 40vw;
+      width: 18vw;
+      height: auto;
+    }
+    .img {
+      width: 17vw;
+  
+    }
+  }
+     @media (max-width:1920px) {
+      .swiper {
+    width: 26vw;
+    height: auto;
+  }
+  .img{
+     width: 25vw;
+  }
+      .patrimonio__clasificado{
+        gap:3rem;
+      }
+    .patrimonio__pontevedra{
+      
+      max-width: none;
+    }
+    .patrimonio__portugal{
+      
+      max-width: none;
+  }
+  .patrimonio__acorunha{
+  max-width: none;
+ }
+
+
+}
+   /* @media (max-width:1500px) {
+    .swiper {
+      width:30vw;
+      height: auto;
+    }
+    .img {
+      width: 30vw;
+  
+    }
+  } */
+
+    @media (max-width:1300px) {
+    .swiper {
+      width:40vw;
       height: auto;
     }
     .img {
       width: 40vw;
+  
     }
   }
-
+  
   @media (max-width: 780px) {
     .swiper {
       width: 60vw;
       height: auto;
     }
     .img {
-      width: 60vw;
+      width: 50vw;
       margin-top: 0.8rem;
     }
   }
 
   @media (max-width: 480px) {
     .swiper {
-      width: 60vw;
+      width: 80vw;
       height: auto;
     }
     .img {
-      width: 60vw;
+      width: 85vw;
     }
   }
-
+  @media (max-width: 380px) {
+    .swiper {
+      width: 80vw;
+      height: auto;
+    }
+    .img {
+      width: 75vw;
+      height: 60vh;
+    }
+  }
+ 
+ 
   @media (max-width: 420px) {
     .rectangulo {
       display: flex;
