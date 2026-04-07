@@ -8,14 +8,13 @@ import PopUp from "../components/layout/PopUp.astro";
 import Gallery from "../components/layout/Gallery.astro";
 import Testimonio from "../components/layout/Testimonio.astro";
 
-
-const pageTitle = "Inicio"
+const pageTitle = "Inicio";
 ---
 
 <Layout>
   <title slot="head">{pageTitle}</title>
   <Header />
-  <HomeHero title="Vía Mariana"/>
+  <HomeHero title="Vía Mariana" />
   <div class="row">
     <div class="col col--text">
       <h2 class="main__h2">Etapas</h2>
@@ -29,7 +28,7 @@ const pageTitle = "Inicio"
       </p>
     </div>
     <div class="col col--img">
-      <img class="img-w" src="img/mapa_2.webp" alt="image" class="etapas__img" />
+      <img class="img-w" src="img/mapa_2.webp" alt="image" class="etapas__img">
     </div>
   </div>
   <Gallery />
@@ -42,7 +41,6 @@ const pageTitle = "Inicio"
 <style>
   .main__h2 {
     text-align: center;
-    font-size: xx-large;
     color: var(--color-primary);
   }
 
@@ -101,6 +99,16 @@ const pageTitle = "Inicio"
     color: var(--grey);
   }
 
+  @media (max-width: 1920px) {
+    .main__h2 {
+      font-size: 2rem;
+    }
+
+    .etapas__p {
+      font-size: 15px;
+    }
+  }
+
   @media (max-width: 1055px) {
     .img-w {
       width: 350px;
@@ -113,14 +121,15 @@ const pageTitle = "Inicio"
     }
   }
 
-
   @media (max-width: 768px) {
     .row {
       flex-direction: column;
     }
+
     .col {
       width: 100%;
     }
+
     .col--text {
       padding: 50px 0;
     }
@@ -128,6 +137,7 @@ const pageTitle = "Inicio"
     .etapas__p {
       padding: 0 40px;
     }
+
     .etapas__img {
       width: 70%;
     }
