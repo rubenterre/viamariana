@@ -76,7 +76,7 @@ La estructura puede evolucionar, pero el punto de partida previsto es:
 
 ```bash
 /
-├─ public/              # Recursos estáticos (imágenes, etc.)
+├─ /public              # Recursos estáticos (imágenes, etc.)
 ├─ src/
 │  ├─ components/       # Componentes compartidos
 │  │  ├─ ui/            # Componentes de interfaz (botones, inputs, etc.)
