@@ -17,62 +17,75 @@ import Layout from "../../layouts/Layout.astro";
 </Layout>
 
 <style>
-    .hero {
-        width: 100%;
-        height: 80vh;
-        background-image: url(../public/img/image.webp);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+   /* ===== HEADER BANNER ===== */
+  .hero {
+    width: 100%;
+    height: clamp(55vh, 45vw, 70vh);
+    background-image: url(../public/img/image.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    .hero__text {
-        width: 45rem;
-        height: auto;
-        display: flex;
-        justify-content: left;
-        flex-direction: column;
-        padding-left: 5rem;
-        padding-top: 14rem;
-        gap: 2rem;
-    }
+.hero__text {
+  width: 45rem;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-left: 5rem;
+  padding-top: 14rem;
+  gap: 2rem;
+  align-items: flex-start;
+}
 
-    .text__superior {
-        width: 22rem;
-        height: auto;
-        display: flex;
-        gap: 0.5rem;
-        justify-content: left;
-        align-items: center;
-    }
+  .text__superior {
+    width: 22rem;
+    height: auto;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: center;
+  }
 
-    .superior__icon {
-        width: 15px;
-        height: 15px;
-    }
+  .superior__icon {
+    width: 15px;
+    height: 15px;
+  }
 
-    .superior__p {
-        font-family: var(--font-tertiary);
-        font-size: 13px;
-        font-weight: 500;
-        color: var(--light);
-    }
+.superior__p {
+  font-family: var(--font-tertiary);
+  height: 64px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+}
 
-    .text__h1 {
-        font-family: var(--font-secondary);
-        font-size: 55px;
-        font-weight: 400;
-        color: var(--light);
-        text-transform: uppercase;
-    }
+.text__h1 {
+  font-family: var(--font-secondary);
+  font-size: 55px;
+  height: 64px;
+  font-weight: 400;
+  color: var(--light);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
 
-    .inferior__p {
-        width: 37rem;
-        font-family: var(--font-primary);
-        font-size: 16px;
-        line-height: 25px;
-        color: var(--light);
-    }
+.inferior__p {
+  width: 37rem;
+  height: 64px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
 
     /*MEDIA QUERY*/
 
@@ -111,103 +124,37 @@ import Layout from "../../layouts/Layout.astro";
         }
     }
 
-    @media (max-width: 768px) {
-        .hero {
-            height: 70vh;
-        }
 
-        .hero__text {
-            padding-left: 6rem;
-            padding-top: 10rem;
-            gap: 1rem;
-        }
-    }
 
-    @media (min-width: 469px) and (max-width: 650px){
+@media (max-width: 768px) {
+  .hero__text {
+    width: 90%;
+  }
 
-         .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 70vh;
-        }
+  .text__superior {
+    width: 100%;
+  }
 
-        .hero__text {
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 0;
-            padding-left: 0;
-            gap: 0.5rem;
-        }
+  .inferior__p {
+    width: 100%;
+  }
+}
 
-        .text__superior {
-             width: 22rem;
-            height: auto;
-            display: flex;
-            gap: 0.5rem;
-            justify-content: left;
-            align-items: center;
-        }
+@media (max-width: 480px) {
+  .hero__text {
+    width: 90%;
+    padding-left: 4.5rem;
+    padding-top: 14.5rem;
+    gap: 1rem;
+  }
 
-        .superior__icon {
-            width: 18px;
-            height: 18px;
-        }
+  .text__superior {
+    width: 100%;
+  }
 
-        .superior__p {
-            font-size: 10px;
-        }
-
-        .inferior__p {
-            width: 70vw;
-            font-size: 12px;
-            line-height: 20px;
-            text-align: center;
-        }
-
-    }
-
-    @media (max-width: 480px) {
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
-        }
-
-        .hero__text {
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 0;
-            padding-left: 0;
-            gap: 0.5rem;
-        }
-
-        .text__superior {
-            width: 50vw;
-        }
-
-        .superior__icon {
-            width: 18px;
-            height: 18px;
-        }
-
-        .superior__p {
-            font-size: 10px;
-        }
-
-        .text__h1 {
-            height: auto;
-            width: 55vw;
-            font-size: 40px;
-            text-align: center;
-        }
+  .text__h1 {
+    font-size: 42px;
+  }
 
         .inferior__p {
             width: 70vw;
