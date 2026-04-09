@@ -46,19 +46,19 @@ const pageTitle = "Contacto"
         </aside>
         <section class="form-card">
           <h2 class="form-card__title">Escríbenos</h2>
-          <form class="form-card__form" method="GET" data-netlify="true">
-            <input class="form-card__input" type="text" placeholder="Nombre" required />
-            <input class="form-card__input" type="email" placeholder="Email" required />
-            <input class="form-card__input" type="text" placeholder="Asunto" />
+          <form class="form-card__form" name="contact" netlify>
+            <input name="nombre" class="form-card__input" type="text" placeholder="Nombre" required />
+            <input name="email" class="form-card__input" type="email" placeholder="Email" required />
+            <input name="asunto" class="form-card__input" type="text" placeholder="Asunto" />
             <div class="checkbox">
-                <input type="checkbox" id="checkbox" required/>
+                <input name="legal" type="checkbox" id="checkbox" required/>
                 <p class="checkbox__p">He leído y acepto el tratamiento de mis datos según las condiciones indicadas.<span>*</span></p>
             </div>
             <p class="checkbox__p"><span>*</span> Información básica sobre protección de datos: Vía Mariana tratará sus datos para responder a su solicitud. 
                   Puede ejercer sus derechos de acceso, rectificación o supresión en <b>viamariana@gmail.com.</b> <br>
                   Lea nuestra <b>Política de Privacidad</b> completa <a href="/politica-privacidad">aquí.</a>
             </p>
-            <textarea class="form-card__textarea" placeholder="Mensaje" rows="4" required></textarea>
+            <textarea name="mensaje" class="form-card__textarea" placeholder="Mensaje" rows="4" required></textarea>
             <button class="form-card__button" type="submit">Enviar</button>
           </form>
         </section>
